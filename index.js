@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('client/dist/index.html'))
 })
 
-const PORT = process.env.PORT || 8050
+const PORT = process.env.PORT || 3000
 http.listen(PORT, () => {
   logger.info(`listening on *:${PORT}`)  
 })
