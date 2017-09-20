@@ -8,7 +8,7 @@
 
   return {
     api: function(path) {
-      path = 'http://localhost:8050/api' + path
+      path = '/api' + path
       return {
 	get: function(params) {
 	  params = params || {}
