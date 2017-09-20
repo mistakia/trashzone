@@ -1,0 +1,29 @@
+@import 'nib'
+@import 'variables.styl'
+
+header
+    position relative
+    width 970px
+    text-align center
+    margin 0 auto
+    border-bottom 3px solid $border
+    height 109px
+
+#tagline
+    font-family 'Old Standard TT', serif
+
+#title
+    max-width 400px
+
+.left-header
+    absolute left bottom
+    font-size 0.75rem
+    line-height 0.875rem
+    font-weight 700
+    div
+        display inline-block
+        + div:before
+            content " - "
+            margin 0 5px
+            text-align center
+        

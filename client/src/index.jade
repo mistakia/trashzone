@@ -1,0 +1,42 @@
+doctype html
+html
+    head
+        title.
+            TrashZone
+        meta(name='description', content='All the trash thats fit to stash')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
+        link(rel='stylesheet', href='app.css', inline='true')
+        link(href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One", rel="stylesheet")
+    body
+        header
+            img#title(src='/logo.png')
+            #tagline "All the trash that's fit to stash"
+            .left-header
+                #date
+                #current-week
+        main
+            section.main-section
+                h1 some major headline about the peasant king
+                p
+                    | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            section.side-section
+                #drops
+                    h4 Trash
+                    ul.side-news
+                #adds
+                    h4 Recycled
+                    ul.side-news
+                #nfl-news
+                    h4 NFL News
+                    ul.side-news
+                #matchups
+                    h1 This Weeks Matchups
+                #standings
+                    h4 Standings
+                    ol.side-news
+                #most-points
+                    h4 Point Leaders
+                    ol.side-news
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
+    script(src='vendor.js?__inline=true')
+    script(src='app.js?__inline=true')
