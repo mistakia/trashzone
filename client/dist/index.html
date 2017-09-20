@@ -370,7 +370,7 @@ App.api('/schedule').get().success((data) => {
 })
 
 App.api('/standings').get().success((data) => {
-  let standings = data.items
+  let standings = data.items.slice()
   let leaders = data.items.sort((a, b) => {
     return b.points_for - a.points_for
   }).slice(0,4)
