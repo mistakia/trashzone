@@ -2,18 +2,32 @@
 @import 'variables.styl'
 
 main
-    width 970px
+    max-width 970px
     margin 0 auto
 
-.main-section
+section
+    img
+        height auto
+        width 100%
+
+.ab-section
     float left
-    width 500px
+    width 59%
+    margin-bottom 10px
+
+.a-section
+    float left
+    width 30%
+    margin-right 3%
+
+.b-section
+    width 67%
+    float left
 
 .side-section
     float right
-    width 375px
-    padding-left 15px
-    margin-top 10px
+    width 39%
+    padding-left 1.5%
     border-left 1px solid $section-border
 
 .side-news
@@ -26,3 +40,11 @@ main
     display inline-block
     ul
         list-style none
+        padding-left 6%
+
+@media (max-width: 800px)
+    .ab-section
+    .a-section
+    .b-section
+    .side-section
+        width 100%

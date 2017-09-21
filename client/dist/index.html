@@ -1,8 +1,9 @@
-<!DOCTYPE html><html><head><title>TrashZone</title><meta name="description" content="All the trash thats fit to stash"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><style>html{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica Nueue,Arial,sans-serif}
-header{position:relative;width:970px;text-align:center;margin:0 auto;border-bottom:3px solid #000;height:109px}#tagline{font-family:'Old Standard TT',serif}#title{max-width:400px}.left-header{position:absolute;left:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700;}.left-header div{display:inline-block;}.left-header div + div:before{content:" - ";margin:0 5px;text-align:center}
-#matchups{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;text-align:center;}#matchups .matchup{margin-bottom:10px}#matchups span{font-size:.5rem;line-height:.6rem}
-main{width:970px;margin:0 auto}.main-section{float:left;width:500px}.side-section{float:right;width:375px;padding-left:15px;margin-top:10px;border-left:1px solid #d0d0d0}.side-news{font-size:.75rem;line-height:.875rem;font-weight:700}#drops,#adds{display:inline-block;}#drops ul,#adds ul{list-style:none}
-h1,h2,h3,h4,h5{text-transform:uppercase}h1{font-family:'Philosopher',sans-serif}h2{font-family:'IM Fell English',serif}h3{font-family:'Archivo Narrow',sans-serif}h4{font-family:'Raleway',sans-serif}h5{font-family:'Russo One',sans-serif}p,.text{font-family:'Old Standard TT',sans-serif}</style><link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One" rel="stylesheet"></head><body><header><img id="title" src="/logo.png"><div id="tagline">"All the trash that's fit to stash"</div><div class="left-header"><div id="date"></div><div id="current-week"></div></div></header><main><section class="main-section"><h1>some major headline about the peasant king</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p></section><section class="side-section"><div id="drops"><h4>Trash</h4><ul class="side-news"></ul></div><div id="adds"><h4>Recycled</h4><ul class="side-news"></ul></div><div id="nfl-news"><h4>NFL News</h4><ul class="side-news"></ul></div><div id="matchups"><h1>This Weeks Matchups</h1></div><div id="standings"><h4>Standings</h4><ol class="side-news"></ol></div><div id="most-points"><h4>Point Leaders</h4><ol class="side-news"></ol></div></section></main></body><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script><script>
+<!DOCTYPE html><html><head><title>TrashZone</title><meta name="description" content="All the trash thats fit to stash"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><style>html{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica Nueue,Arial,sans-serif}a{text-decoration:none;}a:hover{text-decoration:underline}
+header{position:relative;max-width:970px;text-align:center;margin:0 auto 10px;border-bottom:3px solid #000;height:109px}#tagline{font-family:'Old Standard TT',serif}#title{max-width:400px}.left-header{position:absolute;left:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700;}.left-header div{display:inline-block;}.left-header div + div:before{content:" - ";margin:0 5px;text-align:center}@media (max-width:800px){#title{max-width:300px}}
+#matchups{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;text-align:center;padding:10px 0;}#matchups h1{padding-bottom:20px}#matchups .matchup{margin-bottom:10px;}#matchups .matchup a{display:block}#matchups span{font-size:.5rem;line-height:.6rem}
+main{max-width:970px;margin:0 auto}section img{height:auto;width:100%}.ab-section{float:left;width:59%;margin-bottom:10px}.a-section{float:left;width:30%;margin-right:3%}.b-section{width:67%;float:left}.side-section{float:right;width:39%;padding-left:1.5%;border-left:1px solid #d0d0d0}.side-news{font-size:.75rem;line-height:.875rem;font-weight:700}#drops,#adds{display:inline-block;}#drops ul,#adds ul{list-style:none;padding-left:6%}@media (max-width:800px){.ab-section,.a-section,.b-section,.side-section{width:100%}}
+#trape-level{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;padding:10px 0;text-align:center;text-transform:uppercase;margin-bottom:10px;}#trape-level h2{font-size:1.3em;margin-bottom:10px}#trape-level .level{padding:10px;border-style:ridge}#trape-level .title{color:#fff;text-shadow:1px 1px 2px #000}#trape-level .sub-title{font-size:.5em}#trape-level .yellow{background-color:#ff0}
+h1,h2,h3,h4,h5{text-transform:uppercase;margin:0}h1{font-family:'Philosopher',sans-serif}h2{font-family:'Russo One',sans-serif}h3{font-family:'Archivo Narrow',sans-serif}h4{font-family:'Raleway',sans-serif}h5{font-family:'IM Fell English',serif}p,.text{font-family:'Old Standard TT',sans-serif}</style><link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One" rel="stylesheet"></head><body><header><img id="title" src="/logo.png"><div id="tagline">"All the trash that's fit to stash"</div><div class="left-header"><div id="date"></div><div id="current-week"></div></div></header><main><section class="ab-section"><section class="a-section"><h1>some major headline about the peasant king</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><h3>minor headline about trash</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p></section><section class="b-section"><img src="/week1-cartoon.png"><h1>some other headline about trash</h1><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p><div id="matchups"><h1>This Weeks Matchups</h1></div></section></section><section class="side-section"><div id="drops"><h4>Trash</h4><ul class="side-news"></ul></div><div id="adds"><h4>Recycled</h4><ul class="side-news"></ul></div><div id="nfl-news"><h4>NFL News</h4><ul class="side-news"></ul></div><div id="trape-level"><h2>Current Trape Threat Level</h2><div class="level yellow"><div class="title">Elevated</div><div class="sub-title">significant risk of trape attacks</div></div></div><div id="standings"><h4>Standings</h4><ol class="side-news"></ol></div><div id="most-points"><h4>Point Leaders</h4><ol class="side-news"></ol></div></section></main></body><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script><script>
 /* global ActiveXObject, XMLHttpRequest */
 
 (function (root, factory) {
@@ -330,7 +331,7 @@ App.api('/news/fantasy').get().success((data) => {
 
 App.api('/adds').get().success((data) => {
   var parent = document.querySelector('#adds ul')
-  var items = data.items.slice(0, 5)
+  var items = data.items.slice(0, 15)
   
   items.forEach(function(i) {
     console.log(i)
@@ -357,13 +358,23 @@ App.api('/schedule').get().success((data) => {
       parent: parent,
       className: 'matchup',
       childs: [{
+	tag: 'a',
+	attributes: {
+	  href: m.away_href,
+	  target: '_blank'
+	},
 	className: 'text',
 	text: m.away_team
       }, {
-	className: 'text',	
+	tag: 'a',
+	className: 'text',
+	attributes: {
+	  href: m.home_href,
+	  target: '_blank'
+	},
 	text: `at ${m.home_team}`
       }]
-    })    
+    })
   })
 }).error((message) => {
   console.log(message.error)
@@ -398,7 +409,7 @@ App.api('/standings').get().success((data) => {
 
 App.api('/drops').get().success((data) => {
   var parent = document.querySelector('#drops ul')
-  var items = data.items.slice(0, 5)
+  var items = data.items.slice(0, 15)
   
   items.forEach(function(i) {
     i.detail.forEach(function(d) {

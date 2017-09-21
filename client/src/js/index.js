@@ -19,7 +19,7 @@ App.api('/news/fantasy').get().success((data) => {
 
 App.api('/adds').get().success((data) => {
   var parent = document.querySelector('#adds ul')
-  var items = data.items.slice(0, 5)
+  var items = data.items.slice(0, 15)
   
   items.forEach(function(i) {
     console.log(i)
@@ -46,13 +46,23 @@ App.api('/schedule').get().success((data) => {
       parent: parent,
       className: 'matchup',
       childs: [{
+	tag: 'a',
+	attributes: {
+	  href: m.away_href,
+	  target: '_blank'
+	},
 	className: 'text',
 	text: m.away_team
       }, {
-	className: 'text',	
+	tag: 'a',
+	className: 'text',
+	attributes: {
+	  href: m.home_href,
+	  target: '_blank'
+	},
 	text: `at ${m.home_team}`
       }]
-    })    
+    })
   })
 }).error((message) => {
   console.log(message.error)
@@ -87,7 +97,7 @@ App.api('/standings').get().success((data) => {
 
 App.api('/drops').get().success((data) => {
   var parent = document.querySelector('#drops ul')
-  var items = data.items.slice(0, 5)
+  var items = data.items.slice(0, 15)
   
   items.forEach(function(i) {
     i.detail.forEach(function(d) {

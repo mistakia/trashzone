@@ -3,9 +3,9 @@
 
 header
     position relative
-    width 970px
+    max-width 970px
     text-align center
-    margin 0 auto
+    margin 0 auto 10px
     border-bottom 3px solid $border
     height 109px
 
@@ -26,4 +26,7 @@ header
             content " - "
             margin 0 5px
             text-align center
-        
+
+@media (max-width: 800px)
+    #title
+        max-width 300px
