@@ -79,7 +79,14 @@ App.api('/standings').get().success((data) => {
     Elem.create({
       parent: leaders_parent,
       tag: 'li',
-      text: `${i.team} (${i.points_for})`
+      childs: [{
+	tag: 'a',
+	attributes: {
+	  href: i.team_href,
+	  target: '_blank'
+	},
+	text: `${i.team} (${i.points_for})`
+      }]
     })
   })
 
@@ -88,7 +95,14 @@ App.api('/standings').get().success((data) => {
     Elem.create({
       parent: standings_parent,
       tag: 'li',
-      text: `${i.team} (${i.record})`
+      childs: [{
+	tag: 'a',
+	attributes: {
+	  href: i.team_href,
+	  target: '_blank'
+	},
+	text: `${i.team} (${i.record})`
+      }]
     })
   })
 }).error((err) => {
