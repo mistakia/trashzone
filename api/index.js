@@ -67,6 +67,30 @@ router.get('/adds', function(req, res) {
   })
 })
 
+router.get('/news/rotoworld', function(req, res) {
+  request({
+    url: 'http://www.rotoworld.com/playernews/nfl/football-player-news'
+  }, function(err, response, html) {
+    if (err)
+      return res.status(500).send({
+	error: err
+      })
+
+    const $ = cheerio.load(html)
+    let items = []
+
+    $('.RW_playernews .pb').each(function(index, element) {
+      let link = $(this).find('.source a').attr('href')
+      items.push({
+	report: $(this).find('.report').text().trim(),
+	source: link ? link.trim() : ''
+      })
+    })
+
+    res.status(200).send({ items: items })
+  })
+})
+
 router.get('/news/fantasy', function(req, res) {
   request({
     url: 'https://www.4for4.com/'

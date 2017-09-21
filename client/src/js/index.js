@@ -14,7 +14,27 @@ App.api('/news/fantasy').get().success((data) => {
     })
   })
 }).error((message) => {
-  console.log(message.error)
+  console.error(message.error)
+})
+
+App.api('/news/rotoworld').get().success((data) => {
+  var parent = document.querySelector('#player-news ul')
+  data.items.forEach(function(i) {
+    Elem.create({
+      parent: parent,
+      tag: 'li',
+      childs: [{
+	tag: i.source ? 'a' : 'span',
+	text: i.report,
+	attributes: {
+	  href: i.source,
+	  target: '_blank'
+	}
+      }]
+    })
+  })
+}).error((message) => {
+  console.error(message.error)
 })
 
 App.api('/adds').get().success((data) => {
