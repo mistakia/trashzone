@@ -25,10 +25,10 @@ app.get('/coenwulf', (req, res) => {
   res.sendFile(path.resolve('features/coenwulf/dist/index.html'))
 })
 app.use('/', express.static(path.join(__dirname, 'client/dist')))
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve('client/dist/index.html'))
-})
-
+/* app.get('/', (req, res) => {
+ *   res.sendFile(path.resolve('client/dist/index.html'))
+ * })
+ * */
 const PORT = process.env.PORT || 3000
 http.listen(PORT, () => {
   logger.info(`listening on *:${PORT}`)  
