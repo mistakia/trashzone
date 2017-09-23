@@ -24,7 +24,7 @@ app.use('/api', api)
 app.get('/coenwulf', (req, res) => {
   res.sendFile(path.resolve('features/coenwulf/dist/index.html'))
 })
-app.use('/', express.static(path.join(__dirname, 'client/dist')))
+app.use('/', express.static(path.join(__dirname, 'static')))
 /* app.get('/', (req, res) => {
  *   res.sendFile(path.resolve('client/dist/index.html'))
  * })
