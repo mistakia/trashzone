@@ -45,6 +45,10 @@ App.api('/odds').get().success((data) => {
 	  tag: 'td',
 	  className: 'score',
 	  text: team.score
+	}, {
+	  tag: 'td',
+	  className: 'proj',
+	  text: matchup.prediction['team' + (index +1)].mean
 	}]
       })
     })
@@ -69,6 +73,10 @@ App.api('/odds').get().success((data) => {
 	      tag: 'td',
 	      className: 'score',
 	      text: 'score'
+	    }, {
+	      tag: 'td',
+	      className: 'proj',
+	      text: 'proj'
 	    }]
 	  }]
 	}, {
