@@ -41,7 +41,7 @@ App.api('/odds').get().success((data) => {
 	  style: {
 	    backgroundColor: `rgba(231,137,116,${probability})`
 	  },
-	  text: `${probability * 100}%`
+	  text: `${Math.floor(probability * 100)}%`
 	}, {
 	  tag: 'td',
 	  className: 'score',
