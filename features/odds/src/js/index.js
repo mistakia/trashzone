@@ -30,7 +30,8 @@ App.api('/odds').get().success((data) => {
 	  childs: [{
 	    tag: 'a',
 	    attributes: {
-	      href: team.href
+	      href: team.href,
+	      target: '_blank'
 	    },
 	    text: team.name
 	  }]
@@ -40,7 +41,7 @@ App.api('/odds').get().success((data) => {
 	  style: {
 	    backgroundColor: `rgba(231,137,116,${probability})`
 	  },
-	  text: probability * 100
+	  text: `${probability * 100}%`
 	}, {
 	  tag: 'td',
 	  className: 'score',
