@@ -4,10 +4,12 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "async": "^2.5.0",
     "cheerio": "^1.0.0-rc.2",
     "espnff": "krahimian/espnff",
     "express": "^4.15.4",
     "logplease": "^1.2.14",
+    "moment": "^2.18.1",
     "request": "^2.81.0"
   },
   "devDependencies": {},
