@@ -49,7 +49,7 @@ App.api('/odds').get().success((data) => {
 	}, {
 	  tag: 'td',
 	  className: 'proj',
-	  text: matchup.prediction['team' + (index +1)].mean
+	  text: team.projection
 	}]
       })
     })
