@@ -85,15 +85,33 @@ router.get('/', function(req, res) {
 	  teams.push(item)
 	})
 
-	const url = 'https://api.fantasymath.com/matchup/?' + [
-	  'team1=' + teams[0].values.join(','),
-	  'team2=' + teams[1].values.join(','),
+	let params = [
 	  'scoring=non_ppr',
 	  'qb=pass4',
 	  'dst=mfl',
 	  'pts1=' + teams[0].pts,
 	  'pts2=' + teams[1].pts
-	].join('&')
+	]
+
+	if (teams[0].values.length)
+	  params.push('team1=' + teams[0].values.join(','))
+
+	if (teams[1].values.length)
+	  params.push('team2=' + teams[1].values.join(','))
+	
+	const url = 'https://api.fantasymath.com/matchup/?' + params.join('&')
+
+	if (!teams[0].values.length && teams[0].pts < teams[1].pts)
+	  return next(null, {
+	    team1: { prob: 0 },
+	    team2: { prob: 1 }
+	  })
+
+	if (!teams[1].values.length && teams[1].pts < teams[0].pts)
+	  return next(null, {
+	    team1: { prob: 0 },
+	    team2: { prob: 1 }
+	  })
 
 	request({
 	  url: url,
