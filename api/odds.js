@@ -25,6 +25,10 @@ const getPlayers = function(cb) {
 router.get('/', function(req, res) {
   async.parallel({
     players: getPlayers,
+    standings: espn.standings.get.bind(null, {
+      leagueId: 147002,
+      seasonId: 2017
+    }),
     schedule: espn.schedule.getByLeague.bind(null, {
       leagueId: 147002,
       seasonId: 2017
@@ -125,13 +129,47 @@ router.get('/', function(req, res) {
 	    error: err
 	  })
 
-	let data = []
+	let data = {
+	  odds: []
+	}
+
 	predictions.forEach(function(prediction, index) {
-	  data.push({
-	    teams: boxscores[index],
+
+	  const teams = boxscores[index]
+	  const team1_id = teams[0].id
+	  const team2_id = teams[1].id
+
+	  const analyze = function(probability, team) {
+	    const teams = result.standings
+	    for (let i=0;i<teams.length;i++) {
+	      if (teams[i].team_id === team.id) {
+
+		teams[i].projected_wins = teams[i].wins
+		teams[i].projected_losses = teams[i].losses
+		teams[i].projected_ties = teams[i].ties
+
+		if (probability > .5) {
+		  teams[i].projected_wins += 1
+		} else {
+		  teams[i].projected_losses += 1
+		}
+
+		teams[i].projected_points_for = teams[i].points_for + team.projection
+		break
+	      }
+	    }
+	  }
+
+	  analyze(prediction['team1'].prob, teams[0])
+	  analyze(prediction['team2'].prob, teams[1])
+
+	  data.odds.push({
+	    teams: teams,
 	    prediction: prediction
 	  })
 	})
+
+	data.standings = result.standings
 
 	res.status(200).send(data)
       })

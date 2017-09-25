@@ -5,11 +5,17 @@ let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
 App.api('/odds').get().success((data) => {
-  var parent = document.querySelector('main section')
+  const day_of_week = moment().day()
+  if (day_of_week !== 0 && day_of_week !== 1) {
+    odds_parent.innerHTML = '<div class="loading">Availble on Sundays and Mondays only</div>'
+    return
+  }
 
-  parent.innerHTML = null
+  var odds_parent = document.querySelector('main section.odds')
 
-  data.forEach(function(matchup) {
+  odds_parent.innerHTML = null
+
+  data.odds.forEach(function(matchup) {
     let rows = []
 
     matchup.teams.forEach(function(team, index) {
@@ -55,7 +61,7 @@ App.api('/odds').get().success((data) => {
     })
     
     Elem.create({
-      parent: parent,
+      parent: odds_parent,
       className: 'game',
       childs: [{
 	tag: 'table',
@@ -86,6 +92,69 @@ App.api('/odds').get().success((data) => {
 	}]
       }]
     })
+  })
+
+  let standings = data.standings.slice()
+  let leaders = data.standings.sort((a, b) => {
+    return b.projected_points_for - a.projected_points_for
+  }).slice(0,4)
+
+  let leaders_parent = document.querySelector('#most-points')
+  let most_points_rows = []
+  leaders.forEach(function(i) {
+    most_points_rows.push({
+      tag: 'li',
+      childs: [{
+	tag: 'a',
+	attributes: {
+	  href: i.team_href,
+	  target: '_blank'
+	},
+	html: `${i.team} <small>${i.projected_points_for}</small>`
+      }]
+    })
+  })
+
+  Elem.create({
+    parent: leaders_parent,
+    childs: [{
+      tag: 'h2',
+      text: 'Projected Point Leaders'
+    }, {
+      tag: 'ol',
+      childs: most_points_rows
+    }]
+  })
+
+  standings.sort((a, b) => {
+    return b.projected_wins - a.projected_wins || b.projected_points_for - a.projected_points_for
+  })
+
+  let standings_parent = document.querySelector('#standings')
+  let standings_rows = []
+  standings.forEach(function(i) {
+    standings_rows.push({
+      tag: 'li',
+      childs: [{
+	tag: 'a',
+	attributes: {
+	  href: i.team_href,
+	  target: '_blank'
+	},
+	html: `${i.team} <small>${i.projected_wins}-${i.projected_losses}-${i.projected_ties}</small>`
+      }]
+    })
+  })
+
+  Elem.create({
+    parent: standings_parent,
+    childs: [{
+      tag: 'h2',
+      text: 'Projected Standings'
+    }, {
+      tag: 'ol',
+      childs: standings_rows
+    }]
   })
 }).error((message) => {
   console.error(message.error)

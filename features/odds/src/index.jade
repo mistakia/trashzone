@@ -39,8 +39,12 @@ html
                     | Contribute:
                     a(href="mailto:trashzone@gmail.com") trashzone@gmail.com
         main
-            section
-                | Calculating...
+            section.odds
+                .loading
+                    | Calculating...
+            section.projections
+                #standings
+                #most-points
     script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
     script(src='vendor.js?__inline=true')
     script(src='app.js?__inline=true')
