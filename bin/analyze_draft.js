@@ -78,17 +78,15 @@ espn.schedule.getByLeague({
 		teams[team.id].current_draft_cost += draft_data[player.name].price
 	    }
 
-	    if (draft_data[player.name]) {
-	      if (!teams[team.id].draft_cost_per_week[this_week])
-		teams[team.id].draft_cost_per_week[this_week] = draft_data[player.name].price
-	      else 
-		teams[team.id].draft_cost_per_week[this_week] += draft_data[player.name].price
-	    }
-
 	    if (!player.points)
 	      return
 
 	    if (draft_data[player.name] && draft_data[player.name].team_id === team.id) {
+	      if (!teams[team.id].draft_cost_per_week[this_week])
+		teams[team.id].draft_cost_per_week[this_week] = draft_data[player.name].price
+	      else
+		teams[team.id].draft_cost_per_week[this_week] += draft_data[player.name].price
+
 	      teams[team.id].cost += draft_data[player.name].price
 	      teams[team.id].drafted_points += player.points
 	    } else {

@@ -175,9 +175,9 @@
         "price": 40
     },
     "Jacquizz Rodgers": {
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 6
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
     },
     "Austin Hooper": {
         "team_name": "BOB EVANS",
@@ -674,10 +674,15 @@
         "team_id": 9,
         "price": 4
     },
-    "Kirk Cousins": {
+    "Chris Carson": {
         "team_name": "IVY SALIVA CLAN",
         "team_id": 10,
         "price": 11
+    },
+    "Kirk Cousins": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 39
     },
     "Terrelle Pryor Sr.": {
         "team_name": "IVY SALIVA CLAN",
