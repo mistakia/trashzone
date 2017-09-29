@@ -677,17 +677,27 @@
     "Chris Carson": {
         "team_name": "IVY SALIVA CLAN",
         "team_id": 10,
-        "price": 11
+        "price": 39
     },
     "Kirk Cousins": {
         "team_name": "IVY SALIVA CLAN",
         "team_id": 10,
-        "price": 39
+        "price": 11
     },
     "Terrelle Pryor Sr.": {
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 35
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+	"exception": {
+	    "1": {
+		"team_id": 10,
+		"price": 35
+	    },
+	    "2": {
+		"team_id": 10,
+		"price": 35
+	    }
+	},
+        "price": 0
     },
     "Brandin Cooks": {
         "team_name": "IVY SALIVA CLAN",
@@ -705,9 +715,19 @@
         "price": 15
     },
     "Eric Decker": {
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 4
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 0,
+	"exception": {
+	    "1": {
+		"team_id": 10,
+		"price": 4
+	    },
+	    "2": {
+		"team_id": 10,
+		"price": 4
+	    }
+	}
     },
     "C.J. Fiedorowicz": {
         "team_name": "IVY SALIVA CLAN",
