@@ -27,6 +27,10 @@ app.get('/coenwulf', (req, res) => {
 app.get('/odds', (req, res) => {
   res.sendFile(path.resolve('features/odds/dist/index.html'))
 })
+app.get('/draft', (req, res) => {
+  res.sendFile(path.resolve('features/draft/dist/index.html'))
+})
+app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
 /* app.get('/', (req, res) => {
  *   res.sendFile(path.resolve('client/dist/index.html'))

@@ -2,3 +2,5 @@
 
 node_modules
 tmp
+
+data/draft_analysis.json

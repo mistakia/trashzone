@@ -1,0 +1,902 @@
+{
+    "Matthew Stafford": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Danny Amendola": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "DeAndre Hopkins": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 30
+    },
+    "Melvin Gordon": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 55
+    },
+    "Jay Ajayi": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 51
+    },
+    "Ezekiel Elliott": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 53
+    },
+    "Latavius Murray": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Steelers D/ST": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Evan Engram": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Sebastian Janikowski": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Tyler Lockett": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Alfred Morris": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Mohamed Sanu": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Willie Snead": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Wendell Smallwood": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "price": 1
+    },
+    "Tyrod Taylor": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Alshon Jeffery": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 26
+    },
+    "Demaryius Thomas": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 30
+    },
+    "Isaiah Crowell": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 35
+    },
+    "Bilal Powell": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 27
+    },
+    "LeGarrette Blount": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 9
+    },
+    "Travis Kelce": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 23
+    },
+    "Patriots D/ST": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Matt Prater": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Tavon Austin": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Carson Palmer": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Dion Lewis": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Jordy Nelson": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 42
+    },
+    "Ted Ginn Jr.": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "DeAndre Washington": {
+        "team_name": "CROW-LIN POWELL",
+        "team_id": 2,
+        "price": 1
+    },
+    "Carson Wentz": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 2
+    },
+    "Mike Evans": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 51
+    },
+    "Pierre Garcon": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 10
+    },
+    "Rob Kelley": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 15
+    },
+    "Jordan Howard": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 40
+    },
+    "Jacquizz Rodgers": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 6
+    },
+    "Austin Hooper": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 3
+    },
+    "Raiders D/ST": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 1
+    },
+    "Cairo Santos": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 1
+    },
+    "Zay Jones": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 2
+    },
+    "Marcus Mariota": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 5
+    },
+    "Michael Thomas": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 40
+    },
+    "C.J. Anderson": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 14
+    },
+    "Tevin Coleman": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 8
+    },
+    "Mike Wallace": {
+        "team_name": "BOB EVANS",
+        "team_id": 3,
+        "price": 2
+    },
+    "Ben Roethlisberger": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 3
+    },
+    "Randall Cobb": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 3
+    },
+    "T.Y. Hilton": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 23
+    },
+    "Dalvin Cook": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 41
+    },
+    "Christian McCaffrey": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 27
+    },
+    "Derrick Henry": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 3
+    },
+    "Delanie Walker": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 5
+    },
+    "Chiefs D/ST": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 2
+    },
+    "Justin Tucker": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 3
+    },
+    "James White": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 40
+    },
+    "Danny Woodhead": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 6
+    },
+    "Derek Carr": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 3
+    },
+    "Jarvis Landry": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 12
+    },
+    "Paul Perkins": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 18
+    },
+    "Golden Tate": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "price": 11
+    },
+    "Tom Brady": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 31
+    },
+    "Michael Crabtree": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 17
+    },
+    "Jamison Crowder": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 12
+    },
+    "Darren Sproles": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 2
+    },
+    "Frank Gore": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 13
+    },
+    "Le'Veon Bell": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 81
+    },
+    "Eric Ebron": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 1
+    },
+    "Ravens D/ST": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 2
+    },
+    "Adam Vinatieri": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 6
+    },
+    "Larry Fitzgerald": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 8
+    },
+    "Cam Newton": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 13
+    },
+    "Hunter Henry": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 2
+    },
+    "Donte Moncrief": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 4
+    },
+    "Emmanuel Sanders": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 5
+    },
+    "Jameis Winston": {
+        "team_name": "LONG S. NAPPER",
+        "team_id": 5,
+        "price": 1
+    },
+    "Philip Rivers": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Julio Jones": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 70
+    },
+    "Torrey Smith": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "LeSean McCoy": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 54
+    },
+    "Todd Gurley": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 42
+    },
+    "Chris Thompson": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 3
+    },
+    "Jordan Reed": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 21
+    },
+    "Eagles D/ST": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Caleb Sturgis": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Corey Davis": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Andrew Luck": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Josh Doctson": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Charcandrick West": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Kenny Britt": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Sterling Shepard": {
+        "team_name": "TODDTODDTODD TODDTODD",
+        "team_id": 6,
+        "price": 1
+    },
+    "Drew Brees": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 11
+    },
+    "Tyreek Hill": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 27
+    },
+    "Tyrell Williams": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 7
+    },
+    "David Johnson": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 81
+    },
+    "Kareem Hunt": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 35
+    },
+    "Doug Martin": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 12
+    },
+    "Zach Ertz": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
+    },
+    "Texans D/ST": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 2
+    },
+    "Martavis Bryant": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 15
+    },
+    "Matt Bryant": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 2
+    },
+    "John Brown": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
+    },
+    "Dak Prescott": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
+    },
+    "Jonathan Williams": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
+    },
+    "Marvin Jones Jr.": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 1
+    },
+    "DeSean Jackson": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "price": 2
+    },
+    "Russell Wilson": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 11
+    },
+    "Sammy Watkins": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 10
+    },
+    "Allen Robinson": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 20
+    },
+    "DeMarco Murray": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 52
+    },
+    "Marshawn Lynch": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 31
+    },
+    "Ameer Abdullah": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 20
+    },
+    "Rob Gronkowski": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 28
+    },
+    "Broncos D/ST": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 3
+    },
+    "Stephen Gostkowski": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 3
+    },
+    "Theo Riddick": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 1
+    },
+    "Adrian Peterson": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 7
+    },
+    "Davante Adams": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 7
+    },
+    "Jeremy Maclin": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 1
+    },
+    "Martellus Bennett": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 2
+    },
+    "DeVante Parker": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "price": 4
+    },
+    "Matt Ryan": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 10
+    },
+    "Amari Cooper": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 29
+    },
+    "Kelvin Benjamin": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 24
+    },
+    "Lamar Miller": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 36
+    },
+    "Terrance West": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 6
+    },
+    "Eddie Lacy": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 7
+    },
+    "Greg Olsen": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 13
+    },
+    "Seahawks D/ST": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 3
+    },
+    "Wil Lutz": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 1
+    },
+    "Brandon Marshall": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 15
+    },
+    "Dez Bryant": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 37
+    },
+    "Jonathan Stewart": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 4
+    },
+    "Jamaal Charles": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 4
+    },
+    "Matt Forte": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 4
+    },
+    "Kyle Rudolph": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "price": 4
+    },
+    "Kirk Cousins": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 11
+    },
+    "Terrelle Pryor Sr.": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 35
+    },
+    "Brandin Cooks": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 40
+    },
+    "Devonta Freeman": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 52
+    },
+    "Mark Ingram": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 15
+    },
+    "Eric Decker": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 4
+    },
+    "C.J. Fiedorowicz": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Vikings D/ST": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Mason Crosby": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Jalen Richard": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Cooper Kupp": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Rex Burkhead": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Leonard Fournette": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 35
+    },
+    "Rishard Matthews": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Jeremy Hill": {
+        "team_name": "IVY SALIVA CLAN",
+        "team_id": 10,
+        "price": 1
+    },
+    "Aaron Rodgers": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 35
+    },
+    "Doug Baldwin": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 28
+    },
+    "A.J. Green": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 54
+    },
+    "Carlos Hyde": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 24
+    },
+    "Thomas Rawls": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Joe Mixon": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 33
+    },
+    "Tyler Eifert": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 12
+    },
+    "Panthers D/ST": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Dan Bailey": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Chris Hogan": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 5
+    },
+    "Jordan Matthews": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 2
+    },
+    "Shane Vereen": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Alvin Kamara": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Benjamin Watson": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Samaje Perine": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "price": 1
+    },
+    "Andy Dalton": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "Odell Beckham Jr.": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 60
+    },
+    "Antonio Brown": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 71
+    },
+    "Ty Montgomery": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 20
+    },
+    "Darren McFadden": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 4
+    },
+    "Keenan Allen": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 14
+    },
+    "Jimmy Graham": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 5
+    },
+    "Giants D/ST": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "Dustin Hopkins": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "C.J. Prosise": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "Stefon Diggs": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 11
+    },
+    "Mike Gillislee": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 8
+    },
+    "Kevin White": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "Adam Thielen": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    },
+    "Kenny Golladay": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "price": 1
+    }
+}
