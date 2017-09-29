@@ -12,7 +12,7 @@ App.data('/draft_analysis.json').get().success((data) => {
   let drafted_points = []
 
   let weeks = {}
-  Object.keys(data[1].draft_cost_per_week).forEach(function(week) {
+  Object.keys(data[1].points_per_week).forEach(function(week) {
     weeks[week] = {
       cost_max: 0,
       cost_min: 1000,
