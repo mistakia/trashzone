@@ -223,36 +223,42 @@ App.data('/player_draft_analysis.json').get().success((data) => {
   buildTable({
     data: top_points['qb'].slice(0, 15),
     title: 'Top 15 QB (Points)',
+    position: 'QB',
     parent: parentTables
   })
 
   buildTable({
     data: top_points['rb'].slice(0, 40),
     title: 'Top 40 RB (Points)',
+    position: 'RB',    
     parent: parentTables
   })
 
   buildTable({
     data: top_points['wr'].slice(0, 40),
     title: 'Top 40 WR (Points)',
+    position: 'WR',    
     parent: parentTables
   })
 
   buildTable({
     data: top_points['te'].slice(0, 15),
     title: 'Top 15 TE (Points)',
+    position: 'TE',    
     parent: parentTables
   })
 
   buildTable({
     data: top_points['k'].slice(0, 10),
     title: 'Top 10 K (Points)',
+    position: 'K',    
     parent: parentTables
   })
 
   buildTable({
     data: top_points['dst'].slice(0, 10),
     title: 'Top 10 DST (Points)',
+    position: 'DST',    
     parent: parentTables
   })
 

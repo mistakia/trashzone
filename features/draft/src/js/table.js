@@ -24,6 +24,10 @@ const buildTable = function(opts) {
       }, {
 	tag: 'td',
 	className: 'stat',	
+	text: `${opts.position}${player.rank}`	
+      }, {		
+	tag: 'td',
+	className: 'stat',	
 	text: player.points
       }, {
 	tag: 'td',
@@ -61,6 +65,9 @@ const buildTable = function(opts) {
 	}, {
 	  tag: 'td',
 	  text: 'Team'
+	}, {
+	  tag: 'td',
+	  text: 'Overall Rank'
 	}, {
 	  tag: 'td',
 	  text: 'Points'

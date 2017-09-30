@@ -25,7 +25,6 @@ espn.schedule.getByLeague({
 
   let week_count = 0
   async.mapSeries(weeks, function(week, next) {
-    console.log(week)
     week_count++
 
     let home_ids = week.map(function(m) {
@@ -113,7 +112,6 @@ espn.schedule.getByLeague({
       })
     })
     
-    console.log(teams)
     jsonfile.writeFileSync(path.resolve(__dirname, '../data/draft_analysis.json'), teams, {spaces: 4})
   })
 })
@@ -203,6 +201,8 @@ async.parallel({
     dst: Object.assign({}, result.dst)
   }
 
+  console.log(leaders.qb)
+
   let drafted = {
     qb: [],
     rb: [],
@@ -226,6 +226,13 @@ async.parallel({
     })
   })
 
+  const getRank = function(players, target_key) {
+    let index = Object.keys(players).findIndex(function(key, index) {
+      return key === target_key
+    })
+    return index += 1
+  }
+
   Object.keys(drafted).forEach(function(position) {
 
     drafted[position] = drafted[position].map(function(player) {
@@ -238,6 +245,7 @@ async.parallel({
       }
 	
       player.points = leaders[position][player.name]
+      player.rank = getRank(leaders[position], player.name)
       player.points_per_dollar = player.points / player.price
       return player
     })
