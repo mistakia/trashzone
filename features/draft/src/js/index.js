@@ -137,7 +137,7 @@ App.data('/draft_analysis.json').get().success((data) => {
       tds.push({
 	tag: 'td',
 	className: 'stat',	
-	text: team.weeks[week].points,
+	text: team.weeks[week].points.toFixed(2),
 	style: {
 	  backgroundColor: `rgba(46,163,221,${team.weeks[week].points_percentage})`
 	}	
@@ -194,3 +194,105 @@ App.data('/draft_analysis.json').get().success((data) => {
 }).error((message) => {
   console.error(message.error)
 })
+
+App.data('/player_draft_analysis.json').get().success((data) => {
+
+  let top_value = {}
+  let top_points = {}
+
+  Object.keys(data).forEach(function(position) {
+    if (position === 'status')
+      return
+
+    top_value[position] = data[position].slice()
+    top_value[position].sort((a, b) => {
+      return b.points_per_dollar - a.points_per_dollar
+    })
+
+    top_points[position] = data[position].slice()
+    top_points[position].sort((a, b) => {
+      return b.points - a.points
+    })
+
+  })
+
+  console.log(top_value)
+  console.log(data)
+
+  const parentTables = document.querySelector('#tables')
+  buildTable({
+    data: top_points['qb'].slice(0, 15),
+    title: 'Top 15 QB (Points)',
+    parent: parentTables
+  })
+
+  buildTable({
+    data: top_points['rb'].slice(0, 40),
+    title: 'Top 40 RB (Points)',
+    parent: parentTables
+  })
+
+  buildTable({
+    data: top_points['wr'].slice(0, 40),
+    title: 'Top 40 WR (Points)',
+    parent: parentTables
+  })
+
+  buildTable({
+    data: top_points['te'].slice(0, 15),
+    title: 'Top 15 TE (Points)',
+    parent: parentTables
+  })
+
+  buildTable({
+    data: top_points['k'].slice(0, 10),
+    title: 'Top 10 K (Points)',
+    parent: parentTables
+  })
+
+  buildTable({
+    data: top_points['dst'].slice(0, 10),
+    title: 'Top 10 DST (Points)',
+    parent: parentTables
+  })
+
+  buildList({
+    data: top_value['qb'].slice(0, 20),
+    title: 'Top 20 QB Value',
+    parent: document.querySelector('.list.qb')
+  })
+
+  buildList({
+    data: top_value['rb'].slice(0, 20),
+    title: 'Top 20 RB Value',
+    parent: document.querySelector('.list.rb')
+  })
+
+  buildList({
+    data: top_value['wr'].slice(0, 20),
+    title: 'Top 20 QB Value',
+    parent: document.querySelector('.list.wr')
+  })
+
+  buildList({
+    data: top_value['te'].slice(0, 10),
+    title: 'Top 10 TE Value',
+    parent: document.querySelector('.list.te')
+  })
+
+  buildList({
+    data: top_value['k'].slice(0, 10),
+    title: 'Top 10 K Value',
+    parent: document.querySelector('.list.k')
+  })
+
+  buildList({
+    data: top_value['dst'].slice(0, 10),
+    title: 'Top 10 DST Value',
+    parent: document.querySelector('.list.dst')
+  })  
+  
+}).error((message) => {
+  console.error(message.error)
+})
+  

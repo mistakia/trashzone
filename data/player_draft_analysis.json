@@ -1,0 +1,2744 @@
+{
+    "qb": [
+        {
+            "name": "Matthew Stafford",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 63.5,
+            "points_per_dollar": 63.5
+        },
+        {
+            "name": "Tyrod Taylor",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 52.7,
+            "points_per_dollar": 52.7
+        },
+        {
+            "name": "Carson Palmer",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 55.8,
+            "points_per_dollar": 55.8
+        },
+        {
+            "name": "Carson Wentz",
+            "team_id": 3,
+            "price": 2,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 65.1,
+            "points_per_dollar": 32.55
+        },
+        {
+            "name": "Marcus Mariota",
+            "team_id": 3,
+            "price": 5,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 58.5,
+            "points_per_dollar": 11.7
+        },
+        {
+            "name": "Ben Roethlisberger",
+            "team_id": 4,
+            "price": 3,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 52.7,
+            "points_per_dollar": 17.566666666666666
+        },
+        {
+            "name": "Derek Carr",
+            "team_id": 4,
+            "price": 3,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 51.2,
+            "points_per_dollar": 17.066666666666666
+        },
+        {
+            "name": "Tom Brady",
+            "team_id": 5,
+            "price": 31,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 88.1,
+            "points_per_dollar": 2.8419354838709676
+        },
+        {
+            "name": "Cam Newton",
+            "team_id": 5,
+            "price": 13,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 38.9,
+            "points_per_dollar": 2.9923076923076923
+        },
+        {
+            "name": "Jameis Winston",
+            "team_id": 5,
+            "price": 1,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 33.3,
+            "points_per_dollar": 33.3
+        },
+        {
+            "name": "Philip Rivers",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 46,
+            "points_per_dollar": 46
+        },
+        {
+            "name": "Andrew Luck",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "Drew Brees",
+            "team_id": 7,
+            "price": 11,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 67.4,
+            "points_per_dollar": 6.127272727272728
+        },
+        {
+            "name": "Dak Prescott",
+            "team_id": 7,
+            "price": 1,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 62.9,
+            "points_per_dollar": 62.9
+        },
+        {
+            "name": "Russell Wilson",
+            "team_id": 8,
+            "price": 11,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 64.5,
+            "points_per_dollar": 5.863636363636363
+        },
+        {
+            "name": "Matt Ryan",
+            "team_id": 9,
+            "price": 10,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 55.2,
+            "points_per_dollar": 5.5200000000000005
+        },
+        {
+            "name": "Kirk Cousins",
+            "team_id": 10,
+            "price": 11,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 57.1,
+            "points_per_dollar": 5.190909090909091
+        },
+        {
+            "name": "Aaron Rodgers",
+            "team_id": 11,
+            "price": 35,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 69.6,
+            "points_per_dollar": 1.9885714285714284
+        },
+        {
+            "name": "Andy Dalton",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 28.8,
+            "points_per_dollar": 28.8
+        }
+    ],
+    "rb": [
+        {
+            "name": "Melvin Gordon",
+            "team_id": 1,
+            "price": 55,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 41.6,
+            "points_per_dollar": 0.7563636363636363
+        },
+        {
+            "name": "Jay Ajayi",
+            "team_id": 1,
+            "price": 51,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 15.1,
+            "points_per_dollar": 0.296078431372549
+        },
+        {
+            "name": "Ezekiel Elliott",
+            "team_id": 1,
+            "price": 53,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 31.6,
+            "points_per_dollar": 0.5962264150943396
+        },
+        {
+            "name": "Latavius Murray",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 1.7,
+            "points_per_dollar": 1.7
+        },
+        {
+            "name": "Alfred Morris",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 0.1,
+            "points_per_dollar": 0.1
+        },
+        {
+            "name": "Wendell Smallwood",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 9,
+            "points_per_dollar": 9
+        },
+        {
+            "name": "Isaiah Crowell",
+            "team_id": 2,
+            "price": 35,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 17.7,
+            "points_per_dollar": 0.5057142857142857
+        },
+        {
+            "name": "Bilal Powell",
+            "team_id": 2,
+            "price": 27,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 14.9,
+            "points_per_dollar": 0.5518518518518518
+        },
+        {
+            "name": "LeGarrette Blount",
+            "team_id": 2,
+            "price": 9,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 23.4,
+            "points_per_dollar": 2.5999999999999996
+        },
+        {
+            "name": "Dion Lewis",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 5.1,
+            "points_per_dollar": 5.1
+        },
+        {
+            "name": "DeAndre Washington",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 8.1,
+            "points_per_dollar": 8.1
+        },
+        {
+            "name": "Rob Kelley",
+            "team_id": 3,
+            "price": 15,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 10.8,
+            "points_per_dollar": 0.7200000000000001
+        },
+        {
+            "name": "Jordan Howard",
+            "team_id": 3,
+            "price": 40,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 39.9,
+            "points_per_dollar": 0.9974999999999999
+        },
+        {
+            "name": "Jacquizz Rodgers",
+            "team_id": 3,
+            "price": 6,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 14.2,
+            "points_per_dollar": 2.3666666666666667
+        },
+        {
+            "name": "C.J. Anderson",
+            "team_id": 3,
+            "price": 14,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 40.5,
+            "points_per_dollar": 2.892857142857143
+        },
+        {
+            "name": "Tevin Coleman",
+            "team_id": 3,
+            "price": 8,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 25.2,
+            "points_per_dollar": 3.15
+        },
+        {
+            "name": "Dalvin Cook",
+            "team_id": 4,
+            "price": 41,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 43,
+            "points_per_dollar": 1.048780487804878
+        },
+        {
+            "name": "Christian McCaffrey",
+            "team_id": 4,
+            "price": 27,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 22.6,
+            "points_per_dollar": 0.8370370370370371
+        },
+        {
+            "name": "Derrick Henry",
+            "team_id": 4,
+            "price": 3,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 24.1,
+            "points_per_dollar": 8.033333333333333
+        },
+        {
+            "name": "James White",
+            "team_id": 4,
+            "price": 40,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 19.2,
+            "points_per_dollar": 0.48
+        },
+        {
+            "name": "Danny Woodhead",
+            "team_id": 4,
+            "price": 6,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 3.7,
+            "points_per_dollar": 0.6166666666666667
+        },
+        {
+            "name": "Paul Perkins",
+            "team_id": 4,
+            "price": 18,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 7.7,
+            "points_per_dollar": 0.4277777777777778
+        },
+        {
+            "name": "Darren Sproles",
+            "team_id": 5,
+            "price": 2,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 11.4,
+            "points_per_dollar": 5.7
+        },
+        {
+            "name": "Frank Gore",
+            "team_id": 5,
+            "price": 13,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 27.5,
+            "points_per_dollar": 2.1153846153846154
+        },
+        {
+            "name": "Le'Veon Bell",
+            "team_id": 5,
+            "price": 81,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 29.6,
+            "points_per_dollar": 0.3654320987654321
+        },
+        {
+            "name": "LeSean McCoy",
+            "team_id": 6,
+            "price": 54,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 27.1,
+            "points_per_dollar": 0.5018518518518519
+        },
+        {
+            "name": "Todd Gurley",
+            "team_id": 6,
+            "price": 42,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 72.1,
+            "points_per_dollar": 1.7166666666666666
+        },
+        {
+            "name": "Chris Thompson",
+            "team_id": 6,
+            "price": 3,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 59,
+            "points_per_dollar": 19.666666666666668
+        },
+        {
+            "name": "Charcandrick West",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 9.8,
+            "points_per_dollar": 9.8
+        },
+        {
+            "name": "David Johnson",
+            "team_id": 7,
+            "price": 81,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 7,
+            "points_per_dollar": 0.08641975308641975
+        },
+        {
+            "name": "Kareem Hunt",
+            "team_id": 7,
+            "price": 35,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 87.8,
+            "points_per_dollar": 2.5085714285714285
+        },
+        {
+            "name": "Doug Martin",
+            "team_id": 7,
+            "price": 12,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "Jonathan Williams",
+            "team_id": 7,
+            "price": 1,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "DeMarco Murray",
+            "team_id": 8,
+            "price": 52,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 26.8,
+            "points_per_dollar": 0.5153846153846154
+        },
+        {
+            "name": "Marshawn Lynch",
+            "team_id": 8,
+            "price": 31,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 22.7,
+            "points_per_dollar": 0.732258064516129
+        },
+        {
+            "name": "Ameer Abdullah",
+            "team_id": 8,
+            "price": 20,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 21.3,
+            "points_per_dollar": 1.065
+        },
+        {
+            "name": "Theo Riddick",
+            "team_id": 8,
+            "price": 1,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 16.1,
+            "points_per_dollar": 16.1
+        },
+        {
+            "name": "Adrian Peterson",
+            "team_id": 8,
+            "price": 7,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 8.1,
+            "points_per_dollar": 1.157142857142857
+        },
+        {
+            "name": "Lamar Miller",
+            "team_id": 9,
+            "price": 36,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 24.6,
+            "points_per_dollar": 0.6833333333333333
+        },
+        {
+            "name": "Terrance West",
+            "team_id": 9,
+            "price": 6,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 25.1,
+            "points_per_dollar": 4.183333333333334
+        },
+        {
+            "name": "Eddie Lacy",
+            "team_id": 9,
+            "price": 7,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 0.3,
+            "points_per_dollar": 0.04285714285714286
+        },
+        {
+            "name": "Jonathan Stewart",
+            "team_id": 9,
+            "price": 4,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 24.3,
+            "points_per_dollar": 6.075
+        },
+        {
+            "name": "Jamaal Charles",
+            "team_id": 9,
+            "price": 4,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 18.9,
+            "points_per_dollar": 4.725
+        },
+        {
+            "name": "Matt Forte",
+            "team_id": 9,
+            "price": 4,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 15.2,
+            "points_per_dollar": 3.8
+        },
+        {
+            "name": "Devonta Freeman",
+            "team_id": 10,
+            "price": 52,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 51.7,
+            "points_per_dollar": 0.9942307692307693
+        },
+        {
+            "name": "Mark Ingram",
+            "team_id": 10,
+            "price": 15,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 23.3,
+            "points_per_dollar": 1.5533333333333335
+        },
+        {
+            "name": "Jalen Richard",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 20.5,
+            "points_per_dollar": 20.5
+        },
+        {
+            "name": "Rex Burkhead",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 12.7,
+            "points_per_dollar": 12.7
+        },
+        {
+            "name": "Leonard Fournette",
+            "team_id": 10,
+            "price": 35,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 44.5,
+            "points_per_dollar": 1.2714285714285714
+        },
+        {
+            "name": "Jeremy Hill",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 7.2,
+            "points_per_dollar": 7.2
+        },
+        {
+            "name": "Carlos Hyde",
+            "team_id": 11,
+            "price": 24,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 43.4,
+            "points_per_dollar": 1.8083333333333333
+        },
+        {
+            "name": "Thomas Rawls",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 0.4,
+            "points_per_dollar": 0.4
+        },
+        {
+            "name": "Joe Mixon",
+            "team_id": 11,
+            "price": 33,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 16.6,
+            "points_per_dollar": 0.503030303030303
+        },
+        {
+            "name": "Shane Vereen",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 12.9,
+            "points_per_dollar": 12.9
+        },
+        {
+            "name": "Alvin Kamara",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 19.4,
+            "points_per_dollar": 19.4
+        },
+        {
+            "name": "Samaje Perine",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 10.2,
+            "points_per_dollar": 10.2
+        },
+        {
+            "name": "Ty Montgomery",
+            "team_id": 12,
+            "price": 20,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 43.3,
+            "points_per_dollar": 2.165
+        },
+        {
+            "name": "Darren McFadden",
+            "team_id": 12,
+            "price": 4,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "C.J. Prosise",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 10.7,
+            "points_per_dollar": 10.7
+        },
+        {
+            "name": "Mike Gillislee",
+            "team_id": 12,
+            "price": 8,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 38.5,
+            "points_per_dollar": 4.8125
+        }
+    ],
+    "wr": [
+        {
+            "name": "Danny Amendola",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 14.8,
+            "points_per_dollar": 14.8
+        },
+        {
+            "name": "DeAndre Hopkins",
+            "team_id": 1,
+            "price": 30,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 26.4,
+            "points_per_dollar": 0.88
+        },
+        {
+            "name": "Tyler Lockett",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 10.2,
+            "points_per_dollar": 10.2
+        },
+        {
+            "name": "Mohamed Sanu",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 22,
+            "points_per_dollar": 22
+        },
+        {
+            "name": "Willie Snead",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "Alshon Jeffery",
+            "team_id": 2,
+            "price": 26,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 26.6,
+            "points_per_dollar": 1.0230769230769232
+        },
+        {
+            "name": "Demaryius Thomas",
+            "team_id": 2,
+            "price": 30,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 23.6,
+            "points_per_dollar": 0.7866666666666667
+        },
+        {
+            "name": "Tavon Austin",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "Jordy Nelson",
+            "team_id": 2,
+            "price": 42,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 31.1,
+            "points_per_dollar": 0.7404761904761905
+        },
+        {
+            "name": "Ted Ginn Jr.",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 20.1,
+            "points_per_dollar": 20.1
+        },
+        {
+            "name": "Mike Evans",
+            "team_id": 3,
+            "price": 51,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 22,
+            "points_per_dollar": 0.43137254901960786
+        },
+        {
+            "name": "Pierre Garcon",
+            "team_id": 3,
+            "price": 10,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 24.9,
+            "points_per_dollar": 2.4899999999999998
+        },
+        {
+            "name": "Zay Jones",
+            "team_id": 3,
+            "price": 2,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 3.9,
+            "points_per_dollar": 1.95
+        },
+        {
+            "name": "Michael Thomas",
+            "team_id": 3,
+            "price": 40,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 28.1,
+            "points_per_dollar": 0.7025
+        },
+        {
+            "name": "Mike Wallace",
+            "team_id": 3,
+            "price": 2,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 2.5,
+            "points_per_dollar": 1.25
+        },
+        {
+            "name": "Randall Cobb",
+            "team_id": 4,
+            "price": 3,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 15.5,
+            "points_per_dollar": 5.166666666666667
+        },
+        {
+            "name": "T.Y. Hilton",
+            "team_id": 4,
+            "price": 23,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 29.9,
+            "points_per_dollar": 1.3
+        },
+        {
+            "name": "Jarvis Landry",
+            "team_id": 4,
+            "price": 12,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 11.9,
+            "points_per_dollar": 0.9916666666666667
+        },
+        {
+            "name": "Golden Tate",
+            "team_id": 4,
+            "price": 11,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 25.7,
+            "points_per_dollar": 2.3363636363636364
+        },
+        {
+            "name": "Michael Crabtree",
+            "team_id": 5,
+            "price": 17,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 35,
+            "points_per_dollar": 2.0588235294117645
+        },
+        {
+            "name": "Jamison Crowder",
+            "team_id": 5,
+            "price": 12,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 7.3,
+            "points_per_dollar": 0.6083333333333333
+        },
+        {
+            "name": "Larry Fitzgerald",
+            "team_id": 5,
+            "price": 8,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 30.4,
+            "points_per_dollar": 3.8
+        },
+        {
+            "name": "Donte Moncrief",
+            "team_id": 5,
+            "price": 4,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 11.2,
+            "points_per_dollar": 2.8
+        },
+        {
+            "name": "Emmanuel Sanders",
+            "team_id": 5,
+            "price": 5,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 28.3,
+            "points_per_dollar": 5.66
+        },
+        {
+            "name": "Julio Jones",
+            "team_id": 6,
+            "price": 70,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 26.5,
+            "points_per_dollar": 0.37857142857142856
+        },
+        {
+            "name": "Torrey Smith",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 12.5,
+            "points_per_dollar": 12.5
+        },
+        {
+            "name": "Corey Davis",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 7.3,
+            "points_per_dollar": 7.3
+        },
+        {
+            "name": "Josh Doctson",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 11.2,
+            "points_per_dollar": 11.2
+        },
+        {
+            "name": "Kenny Britt",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 12.9,
+            "points_per_dollar": 12.9
+        },
+        {
+            "name": "Sterling Shepard",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 27.3,
+            "points_per_dollar": 27.3
+        },
+        {
+            "name": "Tyreek Hill",
+            "team_id": 7,
+            "price": 27,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 39.7,
+            "points_per_dollar": 1.4703703703703705
+        },
+        {
+            "name": "Tyrell Williams",
+            "team_id": 7,
+            "price": 7,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 12.3,
+            "points_per_dollar": 1.7571428571428573
+        },
+        {
+            "name": "Martavis Bryant",
+            "team_id": 7,
+            "price": 15,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 20.2,
+            "points_per_dollar": 1.3466666666666667
+        },
+        {
+            "name": "John Brown",
+            "team_id": 7,
+            "price": 1,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 4.2,
+            "points_per_dollar": 4.2
+        },
+        {
+            "name": "Marvin Jones Jr.",
+            "team_id": 7,
+            "price": 1,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 20.8,
+            "points_per_dollar": 20.8
+        },
+        {
+            "name": "DeSean Jackson",
+            "team_id": 7,
+            "price": 2,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 18.3,
+            "points_per_dollar": 9.15
+        },
+        {
+            "name": "Sammy Watkins",
+            "team_id": 8,
+            "price": 10,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 31.4,
+            "points_per_dollar": 3.1399999999999997
+        },
+        {
+            "name": "Allen Robinson",
+            "team_id": 8,
+            "price": 20,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 1.7,
+            "points_per_dollar": 0.08499999999999999
+        },
+        {
+            "name": "Davante Adams",
+            "team_id": 8,
+            "price": 7,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 26.6,
+            "points_per_dollar": 3.8000000000000003
+        },
+        {
+            "name": "Jeremy Maclin",
+            "team_id": 8,
+            "price": 1,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 21.5,
+            "points_per_dollar": 21.5
+        },
+        {
+            "name": "DeVante Parker",
+            "team_id": 8,
+            "price": 4,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 22.1,
+            "points_per_dollar": 5.525
+        },
+        {
+            "name": "Amari Cooper",
+            "team_id": 9,
+            "price": 29,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 16.1,
+            "points_per_dollar": 0.5551724137931034
+        },
+        {
+            "name": "Kelvin Benjamin",
+            "team_id": 9,
+            "price": 24,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 11,
+            "points_per_dollar": 0.4583333333333333
+        },
+        {
+            "name": "Brandon Marshall",
+            "team_id": 9,
+            "price": 15,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 9.3,
+            "points_per_dollar": 0.62
+        },
+        {
+            "name": "Dez Bryant",
+            "team_id": 9,
+            "price": 37,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 23.4,
+            "points_per_dollar": 0.6324324324324324
+        },
+        {
+            "name": "Terrelle Pryor Sr.",
+            "team_id": 10,
+            "price": 35,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 11.6,
+            "points_per_dollar": 0.3314285714285714
+        },
+        {
+            "name": "Brandin Cooks",
+            "team_id": 10,
+            "price": 40,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 40.2,
+            "points_per_dollar": 1.0050000000000001
+        },
+        {
+            "name": "Eric Decker",
+            "team_id": 10,
+            "price": 4,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 9.1,
+            "points_per_dollar": 2.275
+        },
+        {
+            "name": "Cooper Kupp",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 18.6,
+            "points_per_dollar": 18.6
+        },
+        {
+            "name": "Rishard Matthews",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 26.1,
+            "points_per_dollar": 26.1
+        },
+        {
+            "name": "Doug Baldwin",
+            "team_id": 11,
+            "price": 28,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 26.9,
+            "points_per_dollar": 0.9607142857142856
+        },
+        {
+            "name": "A.J. Green",
+            "team_id": 11,
+            "price": 54,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 31.2,
+            "points_per_dollar": 0.5777777777777777
+        },
+        {
+            "name": "Chris Hogan",
+            "team_id": 11,
+            "price": 5,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 35.1,
+            "points_per_dollar": 7.0200000000000005
+        },
+        {
+            "name": "Jordan Matthews",
+            "team_id": 11,
+            "price": 2,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 15.2,
+            "points_per_dollar": 7.6
+        },
+        {
+            "name": "Odell Beckham Jr.",
+            "team_id": 12,
+            "price": 60,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 23.5,
+            "points_per_dollar": 0.39166666666666666
+        },
+        {
+            "name": "Antonio Brown",
+            "team_id": 12,
+            "price": 71,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 41.4,
+            "points_per_dollar": 0.5830985915492958
+        },
+        {
+            "name": "Keenan Allen",
+            "team_id": 12,
+            "price": 14,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 25.6,
+            "points_per_dollar": 1.8285714285714287
+        },
+        {
+            "name": "Stefon Diggs",
+            "team_id": 12,
+            "price": 11,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 53.1,
+            "points_per_dollar": 4.827272727272727
+        },
+        {
+            "name": "Kevin White",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 0.6,
+            "points_per_dollar": 0.6
+        },
+        {
+            "name": "Adam Thielen",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 27.9,
+            "points_per_dollar": 27.9
+        },
+        {
+            "name": "Kenny Golladay",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 22.2,
+            "points_per_dollar": 22.2
+        }
+    ],
+    "te": [
+        {
+            "name": "Evan Engram",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 19.8,
+            "points_per_dollar": 19.8
+        },
+        {
+            "name": "Travis Kelce",
+            "team_id": 2,
+            "price": 23,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 20.8,
+            "points_per_dollar": 0.9043478260869565
+        },
+        {
+            "name": "Austin Hooper",
+            "team_id": 3,
+            "price": 3,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 20.4,
+            "points_per_dollar": 6.8
+        },
+        {
+            "name": "Delanie Walker",
+            "team_id": 4,
+            "price": 5,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 22.9,
+            "points_per_dollar": 4.58
+        },
+        {
+            "name": "Eric Ebron",
+            "team_id": 5,
+            "price": 1,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 12,
+            "points_per_dollar": 12
+        },
+        {
+            "name": "Hunter Henry",
+            "team_id": 5,
+            "price": 2,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 8,
+            "points_per_dollar": 4
+        },
+        {
+            "name": "Jordan Reed",
+            "team_id": 6,
+            "price": 21,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 8.4,
+            "points_per_dollar": 0.4
+        },
+        {
+            "name": "Zach Ertz",
+            "team_id": 7,
+            "price": 1,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 28.5,
+            "points_per_dollar": 28.5
+        },
+        {
+            "name": "Rob Gronkowski",
+            "team_id": 8,
+            "price": 28,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 35.8,
+            "points_per_dollar": 1.2785714285714285
+        },
+        {
+            "name": "Martellus Bennett",
+            "team_id": 8,
+            "price": 2,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 10.2,
+            "points_per_dollar": 5.1
+        },
+        {
+            "name": "Greg Olsen",
+            "team_id": 9,
+            "price": 13,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 2.8,
+            "points_per_dollar": 0.21538461538461537
+        },
+        {
+            "name": "Kyle Rudolph",
+            "team_id": 9,
+            "price": 4,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 13.5,
+            "points_per_dollar": 3.375
+        },
+        {
+            "name": "C.J. Fiedorowicz",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 4.6,
+            "points_per_dollar": 4.6
+        },
+        {
+            "name": "Tyler Eifert",
+            "team_id": 11,
+            "price": 12,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 4.6,
+            "points_per_dollar": 0.3833333333333333
+        },
+        {
+            "name": "Benjamin Watson",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 16.3,
+            "points_per_dollar": 16.3
+        },
+        {
+            "name": "Jimmy Graham",
+            "team_id": 12,
+            "price": 5,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 8.1,
+            "points_per_dollar": 1.6199999999999999
+        }
+    ],
+    "k": [
+        {
+            "name": "Sebastian Janikowski",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 0,
+            "points_per_dollar": 0
+        },
+        {
+            "name": "Matt Prater",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 34,
+            "points_per_dollar": 34
+        },
+        {
+            "name": "Cairo Santos",
+            "team_id": 3,
+            "price": 1,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 21,
+            "points_per_dollar": 21
+        },
+        {
+            "name": "Justin Tucker",
+            "team_id": 4,
+            "price": 3,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 15,
+            "points_per_dollar": 5
+        },
+        {
+            "name": "Adam Vinatieri",
+            "team_id": 5,
+            "price": 6,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 14,
+            "points_per_dollar": 2.3333333333333335
+        },
+        {
+            "name": "Caleb Sturgis",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 12,
+            "points_per_dollar": 12
+        },
+        {
+            "name": "Matt Bryant",
+            "team_id": 7,
+            "price": 2,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 40,
+            "points_per_dollar": 20
+        },
+        {
+            "name": "Stephen Gostkowski",
+            "team_id": 8,
+            "price": 3,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 24,
+            "points_per_dollar": 8
+        },
+        {
+            "name": "Wil Lutz",
+            "team_id": 9,
+            "price": 1,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 34,
+            "points_per_dollar": 34
+        },
+        {
+            "name": "Mason Crosby",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 20,
+            "points_per_dollar": 20
+        },
+        {
+            "name": "Dan Bailey",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 26,
+            "points_per_dollar": 26
+        },
+        {
+            "name": "Dustin Hopkins",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 24,
+            "points_per_dollar": 24
+        }
+    ],
+    "dst": [
+        {
+            "name": "Steelers D/ST",
+            "team_id": 1,
+            "price": 1,
+            "team": {
+                "abbrev": "WG",
+                "name": "Womb Goof",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=1&seasonId=2017",
+                "owners": [
+                    "Stephen London"
+                ]
+            },
+            "points": 30,
+            "points_per_dollar": 30
+        },
+        {
+            "name": "Patriots D/ST",
+            "team_id": 2,
+            "price": 1,
+            "team": {
+                "abbrev": "WMD",
+                "name": "Crow-lin Powell",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=2&seasonId=2017",
+                "owners": [
+                    "david miller"
+                ]
+            },
+            "points": 4,
+            "points_per_dollar": 4
+        },
+        {
+            "name": "Raiders D/ST",
+            "team_id": 3,
+            "price": 1,
+            "team": {
+                "abbrev": "BEV",
+                "name": "Bob Evans",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=3&seasonId=2017",
+                "owners": [
+                    "james stanton"
+                ]
+            },
+            "points": 14,
+            "points_per_dollar": 14
+        },
+        {
+            "name": "Chiefs D/ST",
+            "team_id": 4,
+            "price": 2,
+            "team": {
+                "abbrev": "HAWK",
+                "name": "Caffreine Free",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=4&seasonId=2017",
+                "owners": [
+                    "Corey Hawk"
+                ]
+            },
+            "points": 24,
+            "points_per_dollar": 12
+        },
+        {
+            "name": "Ravens D/ST",
+            "team_id": 5,
+            "price": 2,
+            "team": {
+                "abbrev": "SNAP",
+                "name": "Long S. Napper",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=5&seasonId=2017",
+                "owners": [
+                    "Brian F"
+                ]
+            },
+            "points": 35,
+            "points_per_dollar": 17.5
+        },
+        {
+            "name": "Eagles D/ST",
+            "team_id": 6,
+            "price": 1,
+            "team": {
+                "abbrev": "Tx5",
+                "name": "TODDTODDTODD TODDTODD",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=6&seasonId=2017",
+                "owners": [
+                    "Ben Chasen"
+                ]
+            },
+            "points": 28,
+            "points_per_dollar": 28
+        },
+        {
+            "name": "Texans D/ST",
+            "team_id": 7,
+            "price": 2,
+            "team": {
+                "abbrev": "RASH",
+                "name": "Trashman Industries",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=7&seasonId=2017",
+                "owners": [
+                    "kia rashman"
+                ]
+            },
+            "points": 14,
+            "points_per_dollar": 7
+        },
+        {
+            "name": "Broncos D/ST",
+            "team_id": 8,
+            "price": 3,
+            "team": {
+                "abbrev": "GMM",
+                "name": "Brooklyn Dodgers",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=8&seasonId=2017",
+                "owners": [
+                    "Greg McGinniss"
+                ]
+            },
+            "points": 21,
+            "points_per_dollar": 7
+        },
+        {
+            "name": "Seahawks D/ST",
+            "team_id": 9,
+            "price": 3,
+            "team": {
+                "abbrev": "zzzz",
+                "name": "Bearly  Awake",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=9&seasonId=2017",
+                "owners": [
+                    "Brendan Haggerty"
+                ]
+            },
+            "points": 11,
+            "points_per_dollar": 3.6666666666666665
+        },
+        {
+            "name": "Vikings D/ST",
+            "team_id": 10,
+            "price": 1,
+            "team": {
+                "abbrev": "ISC",
+                "name": "Ivy Saliva Clan",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=10&seasonId=2017",
+                "owners": [
+                    "Jonathan April",
+                    " Max Levy"
+                ]
+            },
+            "points": 11,
+            "points_per_dollar": 11
+        },
+        {
+            "name": "Panthers D/ST",
+            "team_id": 11,
+            "price": 1,
+            "team": {
+                "abbrev": "DISS",
+                "name": "Sarah London's Disapproval",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=11&seasonId=2017",
+                "owners": [
+                    "David Kurz",
+                    " Corey Speisman"
+                ]
+            },
+            "points": 22,
+            "points_per_dollar": 22
+        },
+        {
+            "name": "Giants D/ST",
+            "team_id": 12,
+            "price": 1,
+            "team": {
+                "abbrev": "BRWN",
+                "name": "Gillislegally Brown",
+                "href": "http://games.espn.com/ffl/clubhouse?leagueId=147002&teamId=12&seasonId=2017",
+                "owners": [
+                    "Daniel Cohen"
+                ]
+            },
+            "points": 9,
+            "points_per_dollar": 9
+        }
+    ]
+}
