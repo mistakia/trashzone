@@ -103,7 +103,7 @@ const init = function() {
       console.log(chart_data)      
 
       new Chartist.Line(`#matchup${index}`, {
-	labels: [-100, 0, 100],
+	labels: [-50, 0, 50],
 	series: [chart_data]
       }, {
 	high: 100,
