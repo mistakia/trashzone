@@ -98,16 +98,16 @@ const init = function() {
 
       let chart_data = matchup[0].history
       chart_data = chart_data.map(function(prob) {
-	return (prob * 100) - 50
+	return prob * 100
       })
       console.log(chart_data)      
 
       new Chartist.Line(`#matchup${index}`, {
-	labels: [-50, 0, 50],
+	labels: [0, 100],
 	series: [chart_data]
       }, {
-	high: 50,
-	low: -50,
+	high: 0,
+	low: 100,
 	showArea: true,
 	showLine: false,
 	showPoint: false,
