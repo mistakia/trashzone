@@ -63,7 +63,7 @@ const init = function() {
 	  childs: [{
 
 	    childs: [{
-  	      className: 'ct-chart ct-golden-section',
+  	      className: 'chart',
 	      attributes: { id: `matchup${index}team${team.id}` }
 	    }]
 
