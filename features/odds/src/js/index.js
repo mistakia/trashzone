@@ -14,9 +14,9 @@ const init = function() {
     odds_parent.innerHTML = null
 
     data.odds.forEach(function(matchup, index) {
-      let rows = []
 
       matchup.forEach(function(team, index) {
+	let rows = []
 	let probability = team.probability
 	rows.push({
 	  tag: 'tr',
@@ -56,68 +56,87 @@ const init = function() {
 	    text: team.projection
 	  }]
 	})
-      })
 
-      Elem.create({
-	parent: odds_parent,
-	className: 'game',
-	childs: [{
-	  tag: 'table',
+	Elem.create({
+	  parent: odds_parent,
+	  className: 'game',
 	  childs: [{
-	    tag: 'thead',
+
 	    childs: [{
-	      tag: 'tr',
-	      childs: [{
-		tag: 'td'
-	      }, {
-		tag: 'td'
-	      }, {
-		tag: 'td',
-		text: 'win prob.'
-	      }, {
-		tag: 'td',
-		className: 'score',
-		text: 'score'
-	      }, {
-		tag: 'td',
-		className: 'proj',
-		text: 'proj'
-	      }]
+  	      className: 'ct-chart ct-golden-section',
+	      attributes: { id: `matchup${index}team${team.id}` }
 	    }]
+
 	  }, {
-	    tag: 'tbody',
-	    childs: rows
+	    tag: 'table',
+	    childs: [{
+	      tag: 'thead',
+	      childs: [{
+		tag: 'tr',
+		childs: [{
+		  tag: 'td'
+		}, {
+		  tag: 'td'
+		}, {
+		  tag: 'td',
+		  text: 'win prob.'
+		}, {
+		  tag: 'td',
+		  className: 'score',
+		  text: 'score'
+		}, {
+		  tag: 'td',
+		  className: 'proj',
+		  text: 'proj'
+		}]
+	      }]
+	    }, {
+	      tag: 'tbody',
+	      childs: rows
+	    }]
 	  }]
-	}, {
-	  className: 'ct-chart ct-golden-section',
-	  attributes: {
-	    id: `matchup${index}`
-	  }
-	}]
+	})	
       })
 
-      let chart_data = matchup[0].history
-      chart_data = chart_data.map(function(prob) {
-	return prob * 100
-      })
-      console.log(chart_data)      
+      matchup.forEach(function(team, index) {
+	let chart_data = matchup[index].history
+	chart_data = chart_data.map(function(prob) {
+	  return prob * 100
+	})
+	console.log(matchup[index].history)      
+	MG.data_graphic({
+	  title: "Confidence Band",
+	  description: "This is an example of a graphic with a confidence band and extended x-axis ticks enabled.",
+	  data: matchup[index].history,
+	  //format: 'percentage',
+	  width: '100%',
+	  height: 200,
+	  right: 40,
+	  area: false,
+	  target: `#matchup${index}team${team.id}`,
+	  show_secondary_x_label: false,
+	  //show_confidence_band: ['l', 'u'],
+	  x_extended_ticks: true
+	});
 
-      new Chartist.Line(`#matchup${index}`, {
-	labels: [0, 100],
-	series: [chart_data]
-      }, {
-	high: 100,
-	low: 0,
-	showArea: true,
-	showLine: false,
-	showPoint: false,
-	fullWidth: true,
-	axisX: {
-	  showLabel: false,
-	  showGrid: false
-	}
+	/* new Chartist.Line(, {
+	   labels: [0, 100],
+	   series: [chart_data]
+	   }, {
+	   high: 100,
+	   low: 0,
+	   showArea: true,
+	   showLine: false,
+	   showPoint: false,
+	   fullWidth: true,
+	   axisX: {
+	   showLabel: false,
+	   showGrid: false
+	   }
+	   })*/
       })
     })
+
 
     let standings = data.standings.slice()
     let leaders = data.standings.sort((a, b) => {

@@ -166,7 +166,10 @@ async.parallel({
 	      teams[i].projected_ties = teams[i].ties
 	      team.probability = probability
 	      team.history = getHistory(teams[i].team_id)
-	      team.history.push(probability)
+	      team.history.push({
+		value: probability,
+		date: moment().format()
+	      })
 	      
 	      if (probability > .5) {
 		teams[i].projected_wins += 1
