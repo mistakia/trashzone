@@ -100,23 +100,26 @@ const init = function() {
 
       matchup.forEach(function(team, index) {
 	let chart_data = matchup[index].history
-	chart_data = chart_data.map(function(prob) {
-	  return prob * 100
+	chart_data = chart_data.map(function(item) {
+	  item.date = new Date(item.date)
+	  return item
 	})
 	console.log(matchup[index].history)      
 	MG.data_graphic({
-	  title: "Confidence Band",
-	  description: "This is an example of a graphic with a confidence band and extended x-axis ticks enabled.",
-	  data: matchup[index].history,
+	  //title: "Confidence Band",
+	  //description: "This is an example of a graphic with a confidence band and extended x-axis ticks enabled.",
+	  data: chart_data,
 	  //format: 'percentage',
-	  width: '100%',
+	  full_width: true,
 	  height: 200,
 	  right: 40,
-	  area: false,
-	  target: `#matchup${index}team${team.id}`,
-	  show_secondary_x_label: false,
+	  x_accessor: 'date',
+	  y_accessor: 'value',	  
+	  area: true,
+	  target: `#matchup${index}team${team.id}`
+	  //show_secondary_x_label: false,
 	  //show_confidence_band: ['l', 'u'],
-	  x_extended_ticks: true
+	  //x_extended_ticks: true
 	});
 
 	/* new Chartist.Line(, {
