@@ -101,7 +101,6 @@ const init = function() {
       matchup.forEach(function(team, index) {
 	let chart_data = matchup[index].history
 	chart_data = chart_data.map(function(item) {
-	  item.value = item.value * 100
 	  item.date = new Date(item.date)
 	  return item
 	})
@@ -112,6 +111,7 @@ const init = function() {
 	  data: chart_data,
 	  //format: 'percentage',
 	  full_width: true,
+	  format: 'percentage',	  
 	  height: 200,
 	  right: 40,
 	  x_accessor: 'date',
