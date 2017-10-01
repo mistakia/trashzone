@@ -106,8 +106,8 @@ const init = function() {
 	labels: [0, 100],
 	series: [chart_data]
       }, {
-	high: 0,
-	low: 100,
+	high: 100,
+	low: 0,
 	showArea: true,
 	showLine: false,
 	showPoint: false,
