@@ -488,7 +488,7 @@ const init = function() {
 	    href: i.team_href,
 	    target: '_blank'
 	  },
-	  html: `${i.team} <small>${i.projected_points_for}</small>`
+	  html: `${i.team} <small>${i.projected_points_for.toFixed(1)}</small>`
 	}]
       })
     })
