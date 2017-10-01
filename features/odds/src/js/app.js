@@ -25,6 +25,15 @@
 	  return Request.del(path, params)
 	}
       }
-    }
+    },
+    data: function(path) {
+      path = '/data' + path
+      return {
+	get: function(params) {
+	  params = params || {}
+	  return Request.get(path, params)
+	}
+      }
+    }    
   }
 })

@@ -3,10 +3,7 @@ const cheerio = require('cheerio')
 const request = require('request')
 const espn = require('espnff')
 
-const odds = require('./odds')
-
 const router = express.Router()
-router.use('/odds', odds)
 
 router.get('/schedule', function(req, res) {
   espn.schedule.getByLeague({

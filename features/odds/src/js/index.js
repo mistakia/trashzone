@@ -9,15 +9,15 @@ const odds_parent = document.querySelector('main section.odds')
 const day_of_week = moment().day()
 
 const init = function() {
-  App.api('/odds').get().success((data) => {
+  App.data('/odds_analysis.json').get().success((data) => {
 
     odds_parent.innerHTML = null
 
-    data.odds.forEach(function(matchup) {
+    data.odds.forEach(function(matchup, index) {
       let rows = []
 
-      matchup.teams.forEach(function(team, index) {
-	let probability = matchup.prediction['team' + (index +1)].prob
+      matchup.forEach(function(team, index) {
+	let probability = team.probability
 	rows.push({
 	  tag: 'tr',
 	  childs: [{
@@ -88,7 +88,34 @@ const init = function() {
 	    tag: 'tbody',
 	    childs: rows
 	  }]
+	}, {
+	  className: 'ct-chart ct-golden-section',
+	  attributes: {
+	    id: `matchup${index}`
+	  }
 	}]
+      })
+
+      let chart_data = matchup[0].history
+      chart_data = chart_data.map(function(prob) {
+	return (prob * 100) - 50
+      })
+      console.log(chart_data)      
+
+      new Chartist.Line(`#matchup${index}`, {
+	labels: [-100, 0, 100],
+	series: [chart_data]
+      }, {
+	high: 100,
+	low: -100,
+	showArea: true,
+	showLine: false,
+	showPoint: false,
+	fullWidth: true,
+	axisX: {
+	  showLabel: false,
+	  showGrid: false
+	}
       })
     })
 
