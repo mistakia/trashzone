@@ -32,10 +32,10 @@ app.get('/draft', (req, res) => {
 })
 app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
-/* app.get('/', (req, res) => {
- *   res.sendFile(path.resolve('client/dist/index.html'))
- * })
- * */
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('client/dist/index.html'))
+})
+
 const PORT = process.env.PORT || 3000
 http.listen(PORT, () => {
   logger.info(`listening on *:${PORT}`)  
