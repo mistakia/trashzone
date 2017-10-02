@@ -132,8 +132,8 @@ async.parallel({
 
       if (!teams[1].values.length && teams[1].pts < teams[0].pts)
 	return next(null, {
-	  team1: { prob: 0 },
-	  team2: { prob: 1 }
+	  team1: { prob: 1 },
+	  team2: { prob: 0 }
 	})
 
       request({
@@ -182,6 +182,8 @@ async.parallel({
 	    }
 	  }
 	}
+
+	console.log(prediction)
 
 	analyze(prediction['team1'].prob, teams[0])
 	analyze(prediction['team2'].prob, teams[1])
