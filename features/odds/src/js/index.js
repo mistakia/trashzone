@@ -6,8 +6,6 @@ document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
 const odds_parent = document.querySelector('main section.odds')
 
-const day_of_week = moment().day()
-
 const init = function() {
   App.data('/odds_analysis.json').get().success((data) => {
 
@@ -209,7 +207,10 @@ const init = function() {
   })
 }
 
-if (day_of_week !== 0 && day_of_week !== 1) {
+const valid_days = [0,1,4,5,6]
+const day_of_week = moment().day()
+
+if (valid_days.indexOf(day_of_week) === -1) {
   odds_parent.innerHTML = '<div class="loading">Availble on Sundays and Mondays only</div>'
 } else {
   init()
