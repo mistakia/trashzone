@@ -1,10 +1,11 @@
 <!DOCTYPE html><html><head><title>The Trash Zone</title><meta name="description" content="All the trash thats fit to stash"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.css"><style>html{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica Nueue,Arial,sans-serif}a{text-decoration:none;color:#000;}a:hover{text-decoration:underline;cursor:pointer}a:visited{color:#000}
 header{position:relative;max-width:970px;text-align:center;margin:0 auto 10px;border-bottom:3px solid #000;height:109px}#tagline{font-family:'Old Standard TT',serif}#title{max-width:400px}#contact a{padding-left:5px}.right-header{position:absolute;right:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700}.left-header{position:absolute;left:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700;}.left-header div{display:inline-block;}.left-header div + div:before{content:" - ";margin:0 5px;text-align:center}@media (max-width:800px){#title{max-width:300px}#contact{display:none}}
 #matchups{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;text-align:center;padding:10px 0;}#matchups h1{padding-bottom:20px}#matchups .matchup{margin-bottom:10px;}#matchups .matchup a{display:block}#matchups span{font-size:.5rem;line-height:.6rem}
-.mg-line1-color{stroke:#f05b4f}.mg-area1-color{fill:#f05b4f}
-.loading{text-align:center;padding:25px}.projections{font-weight:700;border-top:1px solid #000;margin-top:25px;padding-top:25px;}.projections > div{width:50%;display:inline-block;vertical-align:top}.projections small{font-family:"DecimaMonoPro",monospace;padding-left:5px;color:#b2b2b2;font-size:.8em}@media (max-width:800px){.projections > div{display:block;width:100%}}
+
+.odds{display:-webkit-box;display:-moz-box;display:-webkit-flex;display:-ms-flexbox;display:box;display:flex;-webkit-box-orient:horizontal;-moz-box-orient:horizontal;-o-box-orient:horizontal;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-box-lines:multiple;-moz-box-lines:multiple;-o-box-lines:multiple;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-moz-box-pack:justify;-o-box-pack:justify;-ms-flex-pack:justify;-webkit-justify-content:space-between;justify-content:space-between}.game{-webkit-box-flex:1;-moz-box-flex:1;-o-box-flex:1;box-flex:1;-webkit-flex:0 1 auto;-ms-flex:0 1 auto;flex:0 1 auto;width:47%;padding:1%;margin-bottom:1.5%;border:2px solid #ccc}@media (max-width:800px){.game{width:99%;padding:0}}
+.loading{text-align:center;padding:25px}.projections{font-weight:700;border-top:4px solid #000;margin-top:25px;padding-top:25px;}.projections > div{width:50%;display:inline-block;vertical-align:top}.projections small{font-family:"DecimaMonoPro",monospace;padding-left:5px;color:#b2b2b2;font-size:.8em}@media (max-width:800px){.projections > div{display:block;width:100%}}
 main{max-width:970px;margin:0 auto}section img{height:auto;width:100%;filter:grayscale(80%)}.ab-section{float:left;width:59%;margin-bottom:10px}.a-section{float:left;width:30%;margin-right:3%}.b-section{width:67%;float:left}.side-section{float:right;width:39%;padding-left:1.5%;border-left:1px solid #d0d0d0}.side-news{font-size:.75rem;line-height:.875rem;font-weight:700}#drops,#adds{display:inline-block;}#drops ul,#adds ul{list-style:none;padding-left:6%}@media (max-width:800px){.ab-section,.a-section,.b-section,.side-section{width:100%}}
-.chart{height:200px}.game{width:47%;padding:1.5%;margin-bottom:5%;display:inline-block;border-bottom:4px solid #000}table{border-collapse:collapse;border-spacing:0;width:100%;}table thead{text-transform:uppercase;font-size:.5em;vertical-align:bottom;text-align:center}table tr:first-child{border-bottom:1px solid #cdcdcd}table td{vertical-align:middle}table .score,table .proj{border-left:1px solid #222}table .prob,table .score,table .proj{font-family:"DecimaMonoPro",monospace;width:50px;text-align:center}table .proj{width:60px}table tbody .score{background:#e0e0e0}table .team{min-width:85px}table .logo{-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:center;border-radius:50%;width:28px;height:28px}@media (max-width:800px){.game{width:100%;padding:0;padding-bottom:15px}}
+.chart{height:200px;width:100%}table{border-collapse:collapse;border-spacing:0;width:100%;}table thead{text-transform:uppercase;font-size:.5em;vertical-align:bottom;text-align:center}table tr:first-child{border-bottom:1px solid #cdcdcd}table td{vertical-align:middle}table .score,table .proj{border-left:1px solid #222}table .prob,table .score,table .proj{font-family:"DecimaMonoPro",monospace;width:50px;text-align:center}table .proj{width:60px}table tbody .score{background:#e0e0e0}table .team{min-width:85px}table .logo{-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:center;border-radius:50%;width:28px;height:28px}
 #trape-level{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;padding:10px 0;text-align:center;text-transform:uppercase;margin-bottom:10px;}#trape-level h2{font-size:1.3em;margin-bottom:10px}#trape-level .tips{text-transform:initial;margin:15px 0;font-weight:700;font-size:.75rem;line-height:.875rem;}#trape-level .tips a{padding-left:5px}#trape-level .level{padding:10px;border-style:ridge}#trape-level .title{color:#fff;text-shadow:1px 1px 2px #000}#trape-level .sub-title{font-size:.5em}#trape-level .yellow{background-color:#ff0}
 h1,h2,h3,h4,h5{text-transform:uppercase;margin:0}h1{font-family:'Philosopher',sans-serif}h2{font-family:'Russo One',sans-serif}h3{font-family:'Archivo Narrow',sans-serif}h4{font-family:'Raleway',sans-serif}h5{font-family:'IM Fell English',serif}p,.text{font-family:'Old Standard TT',sans-serif}</style><link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One" rel="stylesheet"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"><link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196"><link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128"><meta name="application-name" content="&amp;nbsp;"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="mstile-144x144.png"><meta name="msapplication-square70x70logo" content="mstile-70x70.png"><meta name="msapplication-square150x150logo" content="mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="mstile-310x150.png"><meta name="msapplication-square310x310logo" content="mstile-310x310.png"></head><body><header><img id="title" src="/logo.png"><div id="tagline">"All the trash that's fit to stash"</div><div class="left-header"><div id="date"></div><div id="current-week"></div></div><div class="right-header"><div id="contact">Contribute:<a href="mailto:trashzone@gmail.com">trashzone@gmail.com</a></div></div></header><main><section class="odds"><div class="loading">Calculating...</div></section><section class="projections"><div id="standings"></div><div id="most-points"></div></section></main></body><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.10.2/d3.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.11.0/metricsgraphics.min.js"></script><script>
 /* global ActiveXObject, XMLHttpRequest */
@@ -328,6 +329,20 @@ return k({},n(this))}function Bc(){return n(this).overflow}function Cc(){return{
   }
 })
 
+function acr(s){
+  var words, acronym, nextWord
+
+  words = s.split(' ')
+  acronym= ''
+  index = 0
+  while (index<words.length) {
+    nextWord = words[index]
+    acronym = acronym + nextWord.charAt(0)
+    index = index + 1
+  }
+  return acronym
+}
+
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
 let week_one = moment('2017-08-29')
@@ -343,8 +358,8 @@ const init = function() {
 
     data.odds.forEach(function(matchup, index) {
 
+      let rows = []
       matchup.forEach(function(team, index) {
-	let rows = []
 	let probability = team.probability
 	rows.push({
 	  tag: 'tr',
@@ -382,93 +397,81 @@ const init = function() {
 	    tag: 'td',
 	    className: 'proj',
 	    text: team.projection
+	  }, {
+	    tag: 'td',
+	    className: 'proj',
+	    text: team.minutes_remaining
 	  }]
 	})
-
-	Elem.create({
-	  parent: odds_parent,
-	  className: 'game',
-	  childs: [{
-
-	    childs: [{
-  	      className: 'chart',
-	      attributes: { id: `matchup${index}team${team.id}` }
-	    }]
-
-	  }, {
-	    tag: 'table',
-	    childs: [{
-	      tag: 'thead',
-	      childs: [{
-		tag: 'tr',
-		childs: [{
-		  tag: 'td'
-		}, {
-		  tag: 'td'
-		}, {
-		  tag: 'td',
-		  text: 'win prob.'
-		}, {
-		  tag: 'td',
-		  className: 'score',
-		  text: 'score'
-		}, {
-		  tag: 'td',
-		  className: 'proj',
-		  text: 'proj'
-		}]
-	      }]
-	    }, {
-	      tag: 'tbody',
-	      childs: rows
-	    }]
-	  }]
-	})	
       })
 
-      matchup.forEach(function(team, index) {
-	let chart_data = matchup[index].history
-	chart_data = chart_data.map(function(item) {
-	  item.date = new Date(item.date)
-	  return item
-	})
-	console.log(matchup[index].history)      
-	MG.data_graphic({
-	  //title: "Confidence Band",
-	  //description: "This is an example of a graphic with a confidence band and extended x-axis ticks enabled.",
-	  data: chart_data,
-	  //format: 'percentage',
-	  full_width: true,
-	  format: 'percentage',	  
-	  height: 200,
-	  right: 40,
-	  x_accessor: 'date',
-	  y_accessor: 'value',	  
-	  area: true,
-	  target: `#matchup${index}team${team.id}`
-	  //show_secondary_x_label: false,
-	  //show_confidence_band: ['l', 'u'],
-	  //x_extended_ticks: true
-	});
-
-	/* new Chartist.Line(, {
-	   labels: [0, 100],
-	   series: [chart_data]
-	   }, {
-	   high: 100,
-	   low: 0,
-	   showArea: true,
-	   showLine: false,
-	   showPoint: false,
-	   fullWidth: true,
-	   axisX: {
-	   showLabel: false,
-	   showGrid: false
-	   }
-	   })*/
+      Elem.create({
+	parent: odds_parent,
+	className: 'game',
+	childs: [{
+	  className: 'chart',
+	  attributes: { id: `matchup${index}` }
+	}, {
+	  tag: 'table',
+	  childs: [{
+	    tag: 'thead',
+	    childs: [{
+	      tag: 'tr',
+	      childs: [{
+		tag: 'td'
+	      }, {
+		tag: 'td'
+	      }, {
+		tag: 'td',
+		text: 'win prob.'
+	      }, {
+		tag: 'td',
+		className: 'score',
+		text: 'score'
+	      }, {
+		tag: 'td',
+		className: 'proj',
+		text: 'proj'
+	      }, {
+		tag: 'td',
+		className: 'proj',
+		text: 'Mins. Remaining'
+	      }]
+	    }]
+	  }, {
+	    tag: 'tbody',
+	    childs: rows
+	  }]
+	}]
       })
     })
 
+    data.odds.forEach(function(matchup, index) {
+      let team1_data = matchup[0].history.probability.map(function(item) {
+	item.date = new Date(item.date)
+	return item
+      })
+
+      let team2_data = matchup[1].history.probability.map(function(item) {
+	item.date = new Date(item.date)
+	return item
+      })
+
+      MG.data_graphic({
+	data: [team1_data, team2_data],
+	full_width: true,
+	format: 'percentage',
+	height: 200,
+	right: 40,
+	x_accessor: 'date',
+	y_accessor: 'value',
+	area: true,
+	x_extended_ticks: true,
+	legend: [acr(matchup[0].name), acr(matchup[1].name)],
+	colors: ['#3CB852', '#f05b4f'],
+	target: `#matchup${index}`
+      })
+    })
 
     let standings = data.standings.slice()
     let leaders = data.standings.sort((a, b) => {

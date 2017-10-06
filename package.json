@@ -13,7 +13,9 @@
     "moment": "^2.18.1",
     "request": "^2.81.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "groupme": "^0.5.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

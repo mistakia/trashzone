@@ -1,3 +1,17 @@
+function acr(s){
+  var words, acronym, nextWord
+
+  words = s.split(' ')
+  acronym= ''
+  index = 0
+  while (index<words.length) {
+    nextWord = words[index]
+    acronym = acronym + nextWord.charAt(0)
+    index = index + 1
+  }
+  return acronym
+}
+
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
 let week_one = moment('2017-08-29')
@@ -13,8 +27,8 @@ const init = function() {
 
     data.odds.forEach(function(matchup, index) {
 
+      let rows = []
       matchup.forEach(function(team, index) {
-	let rows = []
 	let probability = team.probability
 	rows.push({
 	  tag: 'tr',
@@ -52,93 +66,81 @@ const init = function() {
 	    tag: 'td',
 	    className: 'proj',
 	    text: team.projection
+	  }, {
+	    tag: 'td',
+	    className: 'proj',
+	    text: team.minutes_remaining
 	  }]
 	})
-
-	Elem.create({
-	  parent: odds_parent,
-	  className: 'game',
-	  childs: [{
-
-	    childs: [{
-  	      className: 'chart',
-	      attributes: { id: `matchup${index}team${team.id}` }
-	    }]
-
-	  }, {
-	    tag: 'table',
-	    childs: [{
-	      tag: 'thead',
-	      childs: [{
-		tag: 'tr',
-		childs: [{
-		  tag: 'td'
-		}, {
-		  tag: 'td'
-		}, {
-		  tag: 'td',
-		  text: 'win prob.'
-		}, {
-		  tag: 'td',
-		  className: 'score',
-		  text: 'score'
-		}, {
-		  tag: 'td',
-		  className: 'proj',
-		  text: 'proj'
-		}]
-	      }]
-	    }, {
-	      tag: 'tbody',
-	      childs: rows
-	    }]
-	  }]
-	})	
       })
 
-      matchup.forEach(function(team, index) {
-	let chart_data = matchup[index].history
-	chart_data = chart_data.map(function(item) {
-	  item.date = new Date(item.date)
-	  return item
-	})
-	console.log(matchup[index].history)      
-	MG.data_graphic({
-	  //title: "Confidence Band",
-	  //description: "This is an example of a graphic with a confidence band and extended x-axis ticks enabled.",
-	  data: chart_data,
-	  //format: 'percentage',
-	  full_width: true,
-	  format: 'percentage',	  
-	  height: 200,
-	  right: 40,
-	  x_accessor: 'date',
-	  y_accessor: 'value',	  
-	  area: true,
-	  target: `#matchup${index}team${team.id}`
-	  //show_secondary_x_label: false,
-	  //show_confidence_band: ['l', 'u'],
-	  //x_extended_ticks: true
-	});
-
-	/* new Chartist.Line(, {
-	   labels: [0, 100],
-	   series: [chart_data]
-	   }, {
-	   high: 100,
-	   low: 0,
-	   showArea: true,
-	   showLine: false,
-	   showPoint: false,
-	   fullWidth: true,
-	   axisX: {
-	   showLabel: false,
-	   showGrid: false
-	   }
-	   })*/
+      Elem.create({
+	parent: odds_parent,
+	className: 'game',
+	childs: [{
+	  className: 'chart',
+	  attributes: { id: `matchup${index}` }
+	}, {
+	  tag: 'table',
+	  childs: [{
+	    tag: 'thead',
+	    childs: [{
+	      tag: 'tr',
+	      childs: [{
+		tag: 'td'
+	      }, {
+		tag: 'td'
+	      }, {
+		tag: 'td',
+		text: 'win prob.'
+	      }, {
+		tag: 'td',
+		className: 'score',
+		text: 'score'
+	      }, {
+		tag: 'td',
+		className: 'proj',
+		text: 'proj'
+	      }, {
+		tag: 'td',
+		className: 'proj',
+		text: 'Mins. Remaining'
+	      }]
+	    }]
+	  }, {
+	    tag: 'tbody',
+	    childs: rows
+	  }]
+	}]
       })
     })
 
+    data.odds.forEach(function(matchup, index) {
+      let team1_data = matchup[0].history.probability.map(function(item) {
+	item.date = new Date(item.date)
+	return item
+      })
+
+      let team2_data = matchup[1].history.probability.map(function(item) {
+	item.date = new Date(item.date)
+	return item
+      })
+
+      MG.data_graphic({
+	data: [team1_data, team2_data],
+	full_width: true,
+	format: 'percentage',
+	height: 200,
+	right: 40,
+	x_accessor: 'date',
+	y_accessor: 'value',
+	area: true,
+	x_extended_ticks: true,
+	legend: [acr(matchup[0].name), acr(matchup[1].name)],
+	colors: ['#3CB852', '#f05b4f'],
+	target: `#matchup${index}`
+      })
+    })
 
     let standings = data.standings.slice()
     let leaders = data.standings.sort((a, b) => {

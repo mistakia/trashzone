@@ -22,7 +22,11 @@ try {
 
 const getHistory = function(team_id) {
   if (!odds_data.odds || !odds_data.odds.length)
-    return []
+    return {
+      probability: [],
+      score: [],
+      projected: []
+    }
 
   let matchups = odds_data.odds
 
@@ -86,8 +90,12 @@ async.parallel({
 	}
 
 	team.players.forEach(function(player) {
-	  if (!isNaN(player.points))
+	  if (!isNaN(player.points)) {
+	    //TODO: get previous prediction
+	    //TODO: calculate projection based on time remaining for player
+	    //TODO: add to spread
 	    return
+	  }
 
 	  let name = format_player.get(player.name)
 
@@ -150,6 +158,8 @@ async.parallel({
 	odds: []
       }
 
+      console.log(predictions)
+
       predictions.forEach(function(prediction, index) {
 
 	let teams = boxscores[index]
@@ -166,9 +176,22 @@ async.parallel({
 	      teams[i].projected_ties = teams[i].ties
 	      team.probability = probability
 	      team.history = getHistory(teams[i].team_id)
-	      team.history.push({
+
+	      const now = moment().format()
+
+	      team.history.probability.push({
 		value: probability,
-		date: moment().format()
+		date: now
+	      })
+
+	      team.history.projected.push({
+		value: team.projection,
+		date: now
+	      })
+
+	      team.history.score.push({
+		value: team.score,
+		date: now
 	      })
 	      
 	      if (probability > .5) {
@@ -183,7 +206,6 @@ async.parallel({
 	  }
 	}
 
-	console.log(prediction)
 
 	analyze(prediction['team1'].prob, teams[0])
 	analyze(prediction['team2'].prob, teams[1])

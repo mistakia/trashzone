@@ -1,0 +1,20 @@
+@import 'nib'
+@import 'variables.styl'
+
+.odds
+    display flex
+    flex-direction row
+    flex-wrap wrap
+    justify-content space-between
+
+.game
+    flex 0 1 auto
+    width 47%
+    padding 1%
+    margin-bottom 1.5%
+    border 2px solid #ccc
+
+@media (max-width: 800px)
+    .game
+        width 99%
+        padding 0
