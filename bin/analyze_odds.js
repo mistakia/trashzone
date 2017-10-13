@@ -8,7 +8,7 @@ const request = require('request')
 
 const format_player = require('../lib/player')
 
-const week_one = moment('2017-08-29')
+const week_one = moment('2017-08-30')
 const current_week = moment().diff(week_one, 'weeks')
 
 let odds_data
@@ -158,7 +158,7 @@ async.parallel({
 	odds: []
       }
 
-      console.log(predictions)
+      //console.log(predictions)
 
       predictions.forEach(function(prediction, index) {
 
