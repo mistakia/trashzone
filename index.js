@@ -30,6 +30,9 @@ app.get('/odds', (req, res) => {
 app.get('/draft', (req, res) => {
   res.sendFile(path.resolve('features/draft/dist/index.html'))
 })
+app.get('/trade', (req, res) => {
+  res.sendFile(path.resolve('features/trade/dist/index.html'))
+})
 app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.get('/', (req, res) => {
