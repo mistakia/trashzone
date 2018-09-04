@@ -4,16 +4,15 @@ const jsonfile = require('jsonfile')
 const moment = require('moment')
 const async = require('async')
 
-const week_one = moment('2017-08-29')
+const week_one = moment('2018-08-28')
 const current_week = moment().diff(week_one, 'weeks')
+
+const config = require('../config')
 
 const draft_data_file = path.resolve(__dirname, '../data/draft.json')
 const draft_data = jsonfile.readFileSync(draft_data_file)
 
-espn.schedule.getByLeague({
-  leagueId: 147002,
-  seasonId: 2017
-}, function(err, schedule) {
+espn.schedule.getByLeague(config.espn, function(err, schedule) {
   if (err)
     console.log(err)
 
@@ -33,10 +32,9 @@ espn.schedule.getByLeague({
 
     async.mapLimit(home_ids, 2, function(home_id, next) {
       espn.boxscore.get({
- 	    leagueId: 147002,
  	    teamId: home_id,
  	    scoringPeriodId: week_count,
- 	    seasonId: 2017
+        ...config.espn
       }, next)
     }, function(err, boxscores) {
       next(err, boxscores)
@@ -118,75 +116,60 @@ espn.schedule.getByLeague({
 
 // get top scorers for all positions
 async.parallel({
-  teams: espn.teams.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017
-  }),
+  teams: espn.teams.get.bind(null, config.espn),
   qb1: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 0
+    slotCategoryId: 0,
+    ...config.espn
   }),
   qb2: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 0,
-    startIndex: 50
+    startIndex: 50,
+    ...config.espn
   }),
   wr1: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 4
+    slotCategoryId: 4,
+    ...config.espn
   }),
   wr2: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 4,
-    startIndex: 50
+    startIndex: 50,
+    ...config.espn
   }),
   wr3: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 4,
     startIndex: 100,
+    ...config.espn
   }),
   rb1: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 2
+    slotCategoryId: 2,
+    ...config.espn
   }),
   rb2: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 2,
-    startIndex: 50
+    startIndex: 50,
+    ...config.espn
   }),
   rb3: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 2,
-    startIndex: 100
+    startIndex: 100,
+    ...config.espn
   }),
   te1: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 6
+    slotCategoryId: 6,
+    ...config.espn
   }),
   te2: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
     slotCategoryId: 6,
-    startIndex: 50
+    startIndex: 50,
+    ...config.espn
   }),
   k: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 17
+    slotCategoryId: 17,
+    ...config.espn
   }),
   dst: espn.leaders.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2017,
-    slotCategoryId: 16
+    slotCategoryId: 16,
+    ...config.espn
   })
 }, function(err, result) {
   if (err)
@@ -214,6 +197,8 @@ async.parallel({
 
   Object.keys(draft_data).forEach(function(name) {
     let item = draft_data[name]
+
+    console.log(item)
 
     if (item.not_drafted)
       return
