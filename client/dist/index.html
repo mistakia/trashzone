@@ -312,7 +312,7 @@ return k({},n(this))}function Bc(){return n(this).overflow}function Cc(){return{
 
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
-let week_one = moment('2017-08-29')
+let week_one = moment('2018-08-28')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
@@ -352,7 +352,7 @@ App.api('/news/rotoworld').get().success((data) => {
 App.api('/adds').get().success((data) => {
   var parent = document.querySelector('#adds ul')
   var items = data.items.slice(0, 15)
-  
+
   items.forEach(function(i) {
     console.log(i)
     i.detail.forEach(function(d) {
@@ -444,13 +444,13 @@ App.api('/standings').get().success((data) => {
 App.api('/drops').get().success((data) => {
   var parent = document.querySelector('#drops ul')
   var items = data.items.slice(0, 15)
-  
+
   items.forEach(function(i) {
     i.detail.forEach(function(d) {
       Elem.create({
 	parent: parent,
 	tag: 'li',
-	text: `${d.team} - ${d.player}`	
+	text: `${d.team} - ${d.player}`
       })
     })
   })
