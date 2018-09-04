@@ -1,1092 +1,1082 @@
 {
-    "Matthew Stafford": {
-	"position": "qb",	
+    "Alex Collins": {
         "team_name": "WOMB GOOF",
         "team_id": 1,
-        "price": 1
-    },
-    "Danny Amendola": {
-	"position": "wr",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "DeAndre Hopkins": {
-	"position": "wr",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 30
-    },
-    "Melvin Gordon": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 55
-    },
-    "Jay Ajayi": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 51
-    },
-    "Ezekiel Elliott": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 53
-    },
-    "Latavius Murray": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Steelers D/ST": {
-	"position": "dst",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Evan Engram": {
-	"position": "te",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Sebastian Janikowski": {
-	"position": "k",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Tyler Lockett": {
-	"position": "wr",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Alfred Morris": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Mohamed Sanu": {
-	"position": "wr",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Willie Snead": {
-	"position": "wr",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Wendell Smallwood": {
-	"position": "rb",	
-        "team_name": "WOMB GOOF",
-        "team_id": 1,
-        "price": 1
-    },
-    "Tyrod Taylor": {
-	"position": "qb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Alshon Jeffery": {
-	"position": "wr",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 26
-    },
-    "Demaryius Thomas": {
-	"position": "wr",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 30
-    },
-    "Isaiah Crowell": {
-	"position": "rb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 35
-    },
-    "Bilal Powell": {
-	"position": "rb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
+        "position": "rb",
         "price": 27
     },
-    "LeGarrette Blount": {
-	"position": "rb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
+    "Jamaal Williams": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "rb",
         "price": 9
     },
-    "Travis Kelce": {
-	"position": "te",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 23
-    },
-    "Patriots D/ST": {
-	"position": "dst",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Matt Prater": {
-	"position": "k",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Tavon Austin": {
-	"position": "wr",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Carson Palmer": {
-	"position": "qb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Dion Lewis": {
-	"position": "rb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Jordy Nelson": {
-	"position": "wr",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 42
-    },
-    "Ted Ginn Jr.": {
-	"position": "wr",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "DeAndre Washington": {
-	"position": "rb",	
-        "team_name": "CROW-LIN POWELL",
-        "team_id": 2,
-        "price": 1
-    },
-    "Carson Wentz": {
-	"position": "qb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 2
-    },
-    "Mike Evans": {
-	"position": "wr",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 51
-    },
-    "Pierre Garcon": {
-	"position": "wr",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 10
-    },
-    "Rob Kelley": {
-	"position": "rb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 15
-    },
-    "Jordan Howard": {
-	"position": "rb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 40
-    },
-    "Jacquizz Rodgers": {
-	"position": "rb",
-        "team_name": "BOB EVANS",	
-        "team_id": 3,
-        "price": 6,
-	"7": 1
-    },
-    "Austin Hooper": {
-	"position": "te",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 3
-    },
-    "Raiders D/ST": {
-	"position": "dst",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 1
-    },
-    "Cairo Santos": {
-	"position": "k",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 1
-    },
-    "Zay Jones": {
-	"position": "wr",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 2
-    },
-    "Marcus Mariota": {
-	"position": "qb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 5
-    },
-    "Michael Thomas": {
-	"position": "wr",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 40
-    },
-    "C.J. Anderson": {
-	"position": "rb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 14
-    },
-    "Tevin Coleman": {
-	"position": "rb",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 8
-    },
-    "Mike Wallace": {
-	"position": "wr",	
-        "team_name": "BOB EVANS",
-        "team_id": 3,
-        "price": 2
-    },
-    "Ben Roethlisberger": {
-	"position": "qb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 3
-    },
-    "Randall Cobb": {
-	"position": "wr",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 3
-    },
-    "T.Y. Hilton": {
-	"position": "wr",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 23
-    },
-    "Dalvin Cook": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 41
+    "Leonard Fournette": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "rb",
+        "price": 52
     },
     "Christian McCaffrey": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 27
-    },
-    "Derrick Henry": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 3
-    },
-    "Delanie Walker": {
-	"position": "te",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 5
-    },
-    "Chiefs D/ST": {
-	"position": "dst",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 2
-    },
-    "Justin Tucker": {
-	"position": "k",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 3
-    },
-    "James White": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 40
-    },
-    "Danny Woodhead": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 6
-    },
-    "Derek Carr": {
-	"position": "qb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 3
-    },
-    "Jarvis Landry": {
-	"position": "wr",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 12
-    },
-    "Paul Perkins": {
-	"position": "rb",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 18
-    },
-    "Golden Tate": {
-	"position": "wr",	
-        "team_name": "CAFFREINE FREE",
-        "team_id": 4,
-        "price": 11
-    },
-    "Tom Brady": {
-	"position": "qb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 31
-    },
-    "Michael Crabtree": {
-	"position": "wr",		
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 17
-    },
-    "Jamison Crowder": {
-	"position": "wr",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 12
-    },
-    "Darren Sproles": {
-	"position": "rb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 2
-    },
-    "Frank Gore": {
-	"position": "rb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 13
-    },
-    "Le'Veon Bell": {
-	"position": "rb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 81
-    },
-    "Eric Ebron": {
-	"position": "te",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 1
-    },
-    "Ravens D/ST": {
-	"position": "dst",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 2
-    },
-    "Adam Vinatieri": {
-	"position": "k",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 6
-    },
-    "Larry Fitzgerald": {
-	"position": "wr",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 8
-    },
-    "Cam Newton": {
-	"position": "qb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 13
-    },
-    "Hunter Henry": {
-	"position": "te",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 2
-    },
-    "Donte Moncrief": {
-	"position": "wr",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 4
-    },
-    "Emmanuel Sanders": {
-	"position": "wr",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 5
-    },
-    "Jameis Winston": {
-	"position": "qb",	
-        "team_name": "LONG S. NAPPER",
-        "team_id": 5,
-        "price": 1
-    },
-    "Philip Rivers": {
-	"position": "qb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "Julio Jones": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 70
-    },
-    "Torrey Smith": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "LeSean McCoy": {
-	"position": "rb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 54
-    },
-    "Todd Gurley": {
-	"position": "rb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "rb",
         "price": 42
     },
-    "Chris Thompson": {
-	"position": "rb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
+    "Larry Fitzgerald": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "wr",
+        "price": 15
+    },
+    "T.Y. Hilton": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "wr",
+        "price": 22
+    },
+    "Andrew Luck": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "qb",
         "price": 3
     },
-    "Jordan Reed": {
-	"position": "te",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 21
+    "Rams D/ST": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "dst",
+        "price": 4
     },
-    "Eagles D/ST": {
-	"position": "dst",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
+    "Evan Engram": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "te",
+        "price": 8
+    },
+    "Marquise Goodwin": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "wr",
+        "price": 8
+    },
+    "Kerryon Johnson": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "rb",
+        "price": 6
+    },
+    "Dede Westbrook": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "wr",
         "price": 1
     },
-    "Caleb Sturgis": {
-	"position": "k",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
+    "George Kittle": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "te",
+        "price": 1
+    },
+    "John Brown": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "wr",
+        "price": 1
+    },
+    "Robbie Gould": {
+        "team_name": "WOMB GOOF",
+        "team_id": 1,
+        "position": "k",
+        "price": 1
+    },
+    "David Johnson": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "rb",
+        "price": 73
+    },
+    "LeSean McCoy": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "rb",
+        "price": 28
+    },
+    "Chris Hogan": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
+        "price": 18
+    },
+    "Alfred Morris": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "rb",
+        "price": 8
+    },
+    "Ben Roethlisberger": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "qb",
         "price": 1
     },
     "Corey Davis": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
+        "price": 8
     },
-    "Andrew Luck": {
-	"position": "qb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
+    "Michael Crabtree": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
+        "price": 8
     },
-    "Josh Doctson": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "Charcandrick West": {
-	"position": "rb",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "Kenny Britt": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "Sterling Shepard": {
-	"position": "wr",	
-        "team_name": "TODDTODDTODD TODDTODD",
-        "team_id": 6,
-        "price": 1
-    },
-    "Drew Brees": {
-	"position": "qb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
+    "Emmanuel Sanders": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
         "price": 11
     },
-    "Tyreek Hill": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 27
-    },
-    "Tyrell Williams": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 7
-    },
-    "David Johnson": {
-	"position": "rb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 81
-    },
-    "Kareem Hunt": {
-	"position": "rb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 35
-    },
-    "Doug Martin": {
-	"position": "rb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 12
-    },
-    "Zach Ertz": {
-	"position": "te",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 1
-    },
-    "Texans D/ST": {
-	"position": "dst",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 2
-    },
-    "Martavis Bryant": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 15
-    },
-    "Matt Bryant": {
-	"position": "k",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 2
-    },
-    "John Brown": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 1
-    },
-    "Dak Prescott": {
-	"position": "qb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 1
-    },
-    "Jonathan Williams": {
-	"position": "rb",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 1
-    },
-    "Marvin Jones Jr.": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 1
-    },
-    "DeSean Jackson": {
-	"position": "wr",	
-        "team_name": "TRASHMAN INDUSTRIES",
-        "team_id": 7,
-        "price": 2
-    },
-    "Russell Wilson": {
-	"position": "qb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 11
-    },
-    "Sammy Watkins": {
-	"position": "wr",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
+    "Devin Funchess": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
         "price": 10
-    },
-    "Allen Robinson": {
-	"position": "wr",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 20
-    },
-    "DeMarco Murray": {
-	"position": "rb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 52
-    },
-    "Marshawn Lynch": {
-	"position": "rb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 31
-    },
-    "Ameer Abdullah": {
-	"position": "rb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 20
-    },
-    "Rob Gronkowski": {
-	"position": "te",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 28
-    },
-    "Broncos D/ST": {
-	"position": "dst",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 3
-    },
-    "Stephen Gostkowski": {
-	"position": "k",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 3
-    },
-    "Theo Riddick": {
-	"position": "rb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 1
-    },
-    "Adrian Peterson": {
-	"position": "rb",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 7
-    },
-    "Davante Adams": {
-	"position": "wr",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 7
-    },
-    "Jeremy Maclin": {
-	"position": "wr",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 1
-    },
-    "Martellus Bennett": {
-	"position": "te",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 2
-    },
-    "DeVante Parker": {
-	"position": "wr",	
-        "team_name": "BROOKLYN DODGERS",
-        "team_id": 8,
-        "price": 4
-    },
-    "Matt Ryan": {
-	"position": "qb",
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 10
-    },
-    "Amari Cooper": {
-	"position": "wr",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 29
-    },
-    "Kelvin Benjamin": {
-	"position": "wr",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 24
-    },
-    "Lamar Miller": {
-	"position": "rb",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 36
-    },
-    "Terrance West": {
-	"position": "rb",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 6
-    },
-    "Eddie Lacy": {
-	"position": "rb",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 7
-    },
-    "Greg Olsen": {
-	"position": "te",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 13
-    },
-    "Seahawks D/ST": {
-	"position": "dst",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 3
-    },
-    "Wil Lutz": {
-	"position": "k",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 1
-    },
-    "Brandon Marshall": {
-	"position": "wr",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 15
-    },
-    "Dez Bryant": {
-	"position": "wr",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 37
-    },
-    "Jonathan Stewart": {
-	"position": "rb",
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 4
-    },
-    "Jamaal Charles": {
-	"position": "rb",
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 4
-    },
-    "Matt Forte": {
-	"position": "rb",
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
-        "price": 4
     },
     "Kyle Rudolph": {
-	"position": "te",	
-        "team_name": "BEARLY  AWAKE",
-        "team_id": 9,
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "te",
+        "price": 6
+    },
+    "Rashaad Penny": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "rb",
+        "price": 5
+    },
+    "Will Fuller V": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
+        "price": 9
+    },
+    "Julian Edelman": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "wr",
         "price": 4
     },
-    "Chris Carson": {
-	"not_drafted": true,
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 39
+    "Stephen Gostkowski": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "k",
+        "price": 2
     },
-    "Kirk Cousins": {
-	"position": "qb",
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 11
+    "Ravens D/ST": {
+        "team_name": "DAVID'S MAGIC JOHNSON",
+        "team_id": 2,
+        "position": "dst",
+        "price": 9
     },
-    "Terrelle Pryor Sr.": {
-	"position": "wr",
-        "team_name": "IVY SALIVA CLAN",	
-        "team_id": 10,
-	"price": 35,
-	"1": 0
+    "JuJu Smith-Schuster": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 23
     },
-    "Brandin Cooks": {
-	"position": "wr",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 40
+    "Tyreek Hill": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 36
+    },
+    "Davante Adams": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 37
     },
     "Devonta Freeman": {
-	"position": "rb",
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 52
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "rb",
+        "price": 35
     },
-    "Mark Ingram": {
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+    "Zach Ertz": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "te",
+        "price": 17
+    },
+    "Mark Ingram II": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "rb",
+        "price": 10
+    },
+    "Lamar Miller": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "rb",
+        "price": 27
+    },
+    "Matt Breida": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "rb",
+        "price": 7
+    },
+    "Ka'imi Fairbairn": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "k",
+        "price": 1
+    },
+    "Patriots D/ST": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "dst",
+        "price": 1
+    },
+    "Patrick Mahomes": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "qb",
+        "price": 2
+    },
+    "Mike Williams": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 1
+    },
+    "DeVante Parker": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 1
+    },
+    "Mike Gesicki": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "te",
+        "price": 1
+    },
+    "Christian Kirk": {
+        "team_name": "MAHOME ALONE 2",
+        "team_id": 3,
+        "position": "wr",
+        "price": 1
+    },
+    "Pierre Garcon": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 8
+    },
+    "Aaron Rodgers": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "qb",
+        "price": 20
+    },
+    "Amari Cooper": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 28
+    },
+    "Mike Evans": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 31
+    },
+    "Derrick Henry": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "rb",
+        "price": 18
+    },
+    "Michael Thomas": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 38
+    },
+    "Cooper Kupp": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 5
+    },
+    "Carlos Hyde": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "rb",
+        "price": 10
+    },
+    "Golden Tate": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "wr",
+        "price": 16
+    },
+    "Peyton Barber": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "rb",
+        "price": 9
+    },
+    "Matthew Stafford": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "qb",
+        "price": 3
+    },
+    "Delanie Walker": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "te",
+        "price": 10
+    },
+    "Broncos D/ST": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "dst",
+        "price": 1
+    },
+    "Justin Tucker": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "k",
+        "price": 2
+    },
+    "Latavius Murray": {
+        "team_name": "CAFFREINE FREE",
+        "team_id": 4,
+        "position": "rb",
+        "price": 1
+    },
+    "Todd Gurley II": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
+        "price": 79
+    },
+    "Kareem Hunt": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
+        "price": 54
+    },
+    "Deshaun Watson": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "qb",
+        "price": 10
+    },
+    "Robby Anderson": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "wr",
+        "price": 4
+    },
+    "Demaryius Thomas": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "wr",
         "price": 15
     },
-    "Eric Decker": {
-	"position": "wr",
-        "team_name": "IVY SALIVA CLAN",	
-        "team_id": 10,
-        "price": 4,
-	"1": 0
+    "Alshon Jeffery": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "wr",
+        "price": 11
     },
-    "C.J. Fiedorowicz": {
-	"position": "te",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+    "Jake Elliott": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "k",
         "price": 1
     },
     "Vikings D/ST": {
-	"position": "dst",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "dst",
+        "price": 2
+    },
+    "Jimmy Graham": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "te",
+        "price": 12
+    },
+    "John Kelly": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
+        "price": 3
+    },
+    "Keelan Cole": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "wr",
+        "price": 4
+    },
+    "Theo Riddick": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
+        "price": 2
+    },
+    "Samaje Perine": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
         "price": 1
     },
-    "Mason Crosby": {
-	"position": "k",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+    "Spencer Ware": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
         "price": 1
     },
-    "Jalen Richard": {
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+    "C.J. Anderson": {
+        "team_name": "COMO TE LLAMAS",
+        "team_id": 5,
+        "position": "rb",
         "price": 1
     },
-    "Cooper Kupp": {
-	"position": "wr",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
+    "Josh Gordon": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "wr",
+        "price": 20
+    },
+    "Adrian Peterson": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "rb",
+        "price": 6
+    },
+    "Carson Wentz": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "qb",
+        "price": 9
+    },
+    "Stefon Diggs": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "wr",
+        "price": 32
+    },
+    "Joe Mixon": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "rb",
+        "price": 34
+    },
+    "Tom Brady": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "qb",
+        "price": 14
+    },
+    "Duke Johnson Jr.": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "rb",
+        "price": 6
+    },
+    "Travis Kelce": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "te",
+        "price": 22
+    },
+    "Marshawn Lynch": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "rb",
+        "price": 14
+    },
+    "Adam Thielen": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "wr",
+        "price": 20
+    },
+    "Jaguars D/ST": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "dst",
+        "price": 4
+    },
+    "John Ross": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "wr",
+        "price": 2
+    },
+    "Brandon McManus": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "k",
         "price": 1
     },
     "Rex Burkhead": {
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 1
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "rb",
+        "price": 13
     },
-    "Leonard Fournette": {
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 35
+    "Cameron Meredith": {
+        "team_name": "LONELY SPACE MIXONS",
+        "team_id": 6,
+        "position": "wr",
+        "price": 3
     },
-    "Rishard Matthews": {
-	"position": "wr",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 1
+    "Saquon Barkley": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "rb",
+        "price": 61
     },
-    "Jeremy Hill": {
-	"position": "rb",	
-        "team_name": "IVY SALIVA CLAN",
-        "team_id": 10,
-        "price": 1
-    },
-    "Aaron Rodgers": {
-	"position": "qb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 35
+    "Odell Beckham Jr.": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "wr",
+        "price": 60
     },
     "Doug Baldwin": {
-	"position": "wr",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 28
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "wr",
+        "price": 18
     },
-    "A.J. Green": {
-	"position": "wr",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 54
+    "Marvin Jones Jr.": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "wr",
+        "price": 10
     },
-    "Carlos Hyde": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 24
+    "Kenyan Drake": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "rb",
+        "price": 32
     },
-    "Thomas Rawls": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 1
+    "Drew Brees": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "qb",
+        "price": 6
     },
-    "Joe Mixon": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 33
-    },
-    "Tyler Eifert": {
-	"position": "te",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 12
-    },
-    "Panthers D/ST": {
-	"position": "dst",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 1
-    },
-    "Dan Bailey": {
-	"position": "k",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 1
-    },
-    "Chris Hogan": {
-	"position": "wr",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
-        "price": 5
-    },
-    "Jordan Matthews": {
-	"position": "wr",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
+    "David Njoku": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "te",
         "price": 2
     },
-    "Shane Vereen": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
+    "Matt Bryant": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "k",
         "price": 1
     },
-    "Alvin Kamara": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
+    "Mohamed Sanu": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "wr",
+        "price": 2
+    },
+    "Bears D/ST": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "dst",
+        "price": 1
+    },
+    "DJ Moore": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "wr",
+        "price": 2
+    },
+    "Ty Montgomery": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "rb",
+        "price": 1
+    },
+    "Doug Martin": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "rb",
+        "price": 2
+    },
+    "Charles Clay": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "te",
+        "price": 1
+    },
+    "Philip Rivers": {
+        "team_name": "TRASHMAN INDUSTRIES",
+        "team_id": 7,
+        "position": "qb",
+        "price": 1
+    },
+    "Le'Veon Bell": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "rb",
+        "price": 82
+    },
+    "Rob Gronkowski": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "te",
+        "price": 37
+    },
+    "Allen Robinson": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "wr",
+        "price": 15
+    },
+    "Jay Ajayi": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "rb",
+        "price": 20
+    },
+    "Cam Newton": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "qb",
+        "price": 9
+    },
+    "Kirk Cousins": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "qb",
+        "price": 2
+    },
+    "Eagles D/ST": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "dst",
+        "price": 3
+    },
+    "Jamison Crowder": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "wr",
+        "price": 6
+    },
+    "Mason Crosby": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "k",
+        "price": 1
+    },
+    "Sterling Shepard": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "wr",
+        "price": 4
+    },
+    "Jordy Nelson": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "wr",
+        "price": 2
+    },
+    "Kenny Stills": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "wr",
+        "price": 3
+    },
+    "Tarik Cohen": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "rb",
+        "price": 8
+    },
+    "Jack Doyle": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "te",
+        "price": 6
+    },
+    "Ronald Jones": {
+        "team_name": "BROOKLYN DODGERS",
+        "team_id": 8,
+        "position": "rb",
+        "price": 2
+    },
+    "Ezekiel Elliott": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "rb",
+        "price": 75
+    },
+    "Brandin Cooks": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
+        "price": 21
+    },
+    "Jarvis Landry": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
+        "price": 17
+    },
+    "Marlon Mack": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "rb",
+        "price": 11
+    },
+    "Dalvin Cook": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "rb",
+        "price": 54
+    },
+    "Calvin Ridley": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
         "price": 1
     },
     "Benjamin Watson": {
-	"position": "te",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "te",
         "price": 1
     },
-    "Samaje Perine": {
-	"position": "rb",	
-        "team_name": "SARAH LONDON'S DISAPPROVAL",
-        "team_id": 11,
+    "Matt Ryan": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "qb",
+        "price": 2
+    },
+    "Texans D/ST": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "dst",
+        "price": 2
+    },
+    "Tyler Lockett": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
         "price": 1
     },
-    "Andy Dalton": {
-	"position": "qb",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 1
+    "Wil Lutz": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "k",
+        "price": 2
     },
-    "Odell Beckham Jr.": {
-	"position": "wr",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 60
-    },
-    "Antonio Brown": {
-	"position": "wr",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 71
-    },
-    "Ty Montgomery": {
-	"position": "rb",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 20
-    },
-    "Darren McFadden": {
-	"position": "rb",		
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
+    "Bilal Powell": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "rb",
         "price": 4
     },
-    "Keenan Allen": {
-	"position": "wr",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 14
+    "Allen Hurns": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
+        "price": 3
     },
-    "Jimmy Graham": {
-	"position": "te",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 5
+    "Danny Amendola": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "wr",
+        "price": 2
     },
-    "Giants D/ST": {
-	"position": "dst",	
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
+    "Tyler Eifert": {
+        "team_name": "BEARLY  AWAKE",
+        "team_id": 9,
+        "position": "te",
+        "price": 3
+    },
+    "Antonio Brown": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "wr",
+        "price": 72
+    },
+    "Julio Jones": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "wr",
+        "price": 65
+    },
+    "Royce Freeman": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
+        "price": 20
+    },
+    "Tevin Coleman": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
+        "price": 17
+    },
+    "Greg Zuerlein": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "k",
         "price": 1
     },
-    "Dustin Hopkins": {
-	"position": "k",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 1
+    "Donte Moncrief": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "wr",
+        "price": 2
     },
-    "C.J. Prosise": {
-	"position": "rb",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
-        "price": 1
-    },
-    "Stefon Diggs": {
-	"position": "wr",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
+    "Isaiah Crowell": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
         "price": 11
     },
-    "Mike Gillislee": {
-	"position": "rb",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
+    "Trey Burton": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "te",
+        "price": 4
+    },
+    "Aaron Jones": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
+        "price": 2
+    },
+    "Jimmy Garoppolo": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "qb",
+        "price": 1
+    },
+    "Nick Chubb": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
+        "price": 1
+    },
+    "Rishard Matthews": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "wr",
+        "price": 1
+    },
+    "Redskins D/ST": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "dst",
+        "price": 1
+    },
+    "Chris Ivory": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "rb",
+        "price": 1
+    },
+    "Marcus Mariota": {
+        "team_name": "THE CROWENWULF",
+        "team_id": 10,
+        "position": "qb",
+        "price": 1
+    },
+    "A.J. Green": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 48
+    },
+    "Keenan Allen": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 40
+    },
+    "Chris Thompson": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "rb",
+        "price": 19
+    },
+    "Chris Carson": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "rb",
+        "price": 4
+    },
+    "Jordan Howard": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "rb",
+        "price": 34
+    },
+    "Sammy Watkins": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 6
+    },
+    "Greg Olsen": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "te",
+        "price": 13
+    },
+    "Kelvin Benjamin": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 4
+    },
+    "Dion Lewis": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "rb",
+        "price": 10
+    },
+    "Russell Wilson": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "qb",
         "price": 8
     },
-    "Kevin White": {
-	"position": "wr",
-        "team_name": "GILLISLEGALLY BROWN",
-        "team_id": 12,
+    "Sony Michel": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "rb",
+        "price": 10
+    },
+    "Saints D/ST": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "dst",
         "price": 1
     },
-    "Adam Thielen": {
-	"position": "wr",
+    "Chris Godwin": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 1
+    },
+    "Michael Gallup": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "wr",
+        "price": 1
+    },
+    "Graham Gano": {
+        "team_name": "SARAH LONDON'S DISAPPROVAL",
+        "team_id": 11,
+        "position": "k",
+        "price": 1
+    },
+    "Alvin Kamara": {
         "team_name": "GILLISLEGALLY BROWN",
         "team_id": 12,
+        "position": "rb",
+        "price": 66
+    },
+    "DeAndre Hopkins": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 57
+    },
+    "Melvin Gordon": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "rb",
+        "price": 44
+    },
+    "Josh Doctson": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 6
+    },
+    "Robert Woods": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 4
+    },
+    "James White": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "rb",
+        "price": 4
+    },
+    "Jordan Reed": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "te",
+        "price": 4
+    },
+    "Chargers D/ST": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "dst",
         "price": 1
+    },
+    "Giovani Bernard": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "rb",
+        "price": 2
+    },
+    "Alex Smith": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "qb",
+        "price": 1
+    },
+    "Nelson Agholor": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 3
+    },
+    "Randall Cobb": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 3
     },
     "Kenny Golladay": {
-	"position": "wr",
         "team_name": "GILLISLEGALLY BROWN",
         "team_id": 12,
+        "position": "wr",
+        "price": 2
+    },
+    "Paul Richardson": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "wr",
+        "price": 2
+    },
+    "Chris Boswell": {
+        "team_name": "GILLISLEGALLY BROWN",
+        "team_id": 12,
+        "position": "k",
         "price": 1
     }
 }
