@@ -27,91 +27,91 @@ espn.schedule.getByLeague({
   async.mapSeries(weeks, function(week, next) {
     week_count++
 
-    let home_ids = week.map(function(m) {
-      return m.home_id
-    })
+      let home_ids = week.map(function(m) {
+        return m.home_id
+      })
 
     async.mapLimit(home_ids, 2, function(home_id, next) {
       espn.boxscore.get({
- 	leagueId: 147002,
- 	teamId: home_id,
- 	scoringPeriodId: week_count,
- 	seasonId: 2017
+ 	    leagueId: 147002,
+ 	    teamId: home_id,
+ 	    scoringPeriodId: week_count,
+ 	    seasonId: 2017
       }, next)
     }, function(err, boxscores) {
       next(err, boxscores)
     })
-    
+
   }, function(err, results) {
     if (err)
       console.log(err)
-    
+
     let teams = {}
     for(let i=1;i<13;i++) {
       teams[i] = {
- 	cost: 0,
- 	drafted_points: 0,
- 	current_draft_cost: 0,
- 	undrafted_points: 0,
- 	points_per_week: {},
- 	draft_cost_per_week: {}
+ 	    cost: 0,
+ 	    drafted_points: 0,
+ 	    current_draft_cost: 0,
+ 	    undrafted_points: 0,
+ 	    points_per_week: {},
+ 	    draft_cost_per_week: {}
       }
     }
-    
+
     results.forEach(function(week, index) {
       const this_week = index + 1
       week.forEach(function(matchup) {
- 	matchup.forEach(function(team) {
- 	  teams[team.id].team = {
- 	    id: team.id,
- 	    name: team.name,
- 	    href: team.href,
- 	    image: team.image
- 	  }
-
-	  let this_week_score = 0
-	  
- 	  team.players.forEach(function(player) {
-	    
- 	    if ((this_week) == current_week) {
- 	      if (draft_data[player.name])
- 		teams[team.id].current_draft_cost += draft_data[player.name].price
- 	    }
-
-	    let add = function(price) {
- 	      if (!teams[team.id].draft_cost_per_week[this_week])
- 		teams[team.id].draft_cost_per_week[this_week] = price
- 	      else
- 		teams[team.id].draft_cost_per_week[this_week] += price
-	      
- 	      if (player.points) {
- 		teams[team.id].cost += price
- 		teams[team.id].drafted_points += player.points
-		this_week_score += player.points
+ 	    matchup.forEach(function(team) {
+ 	      teams[team.id].team = {
+ 	        id: team.id,
+ 	        name: team.name,
+ 	        href: team.href,
+ 	        image: team.image
  	      }
-	    }
-	    
- 	    if (draft_data[player.name]) {
- 	      if (draft_data[player.name].team_id === team.id) {
-		add(draft_data[player.name].price)
-	      } else if (player.points) {
-		teams[team.id].undrafted_points += player.points
-	      }
 
-	      if (draft_data[player.name][team.id]) {
-		add(draft_data[player.name][team.id])
- 	      }
- 	    } else if (player.points) {
-	      teams[team.id].undrafted_points += player.points
-	    }
- 	  })
+	      let this_week_score = 0
 
- 	  teams[team.id].points_per_week[this_week] = this_week_score
-	  
- 	})
+ 	      team.players.forEach(function(player) {
+
+ 	        if ((this_week) == current_week) {
+ 	          if (draft_data[player.name])
+ 		        teams[team.id].current_draft_cost += draft_data[player.name].price
+ 	        }
+
+	        let add = function(price) {
+ 	          if (!teams[team.id].draft_cost_per_week[this_week])
+ 		        teams[team.id].draft_cost_per_week[this_week] = price
+ 	          else
+ 		        teams[team.id].draft_cost_per_week[this_week] += price
+
+ 	          if (player.points) {
+ 		        teams[team.id].cost += price
+ 		        teams[team.id].drafted_points += player.points
+		        this_week_score += player.points
+ 	          }
+	        }
+
+ 	        if (draft_data[player.name]) {
+ 	          if (draft_data[player.name].team_id === team.id) {
+		        add(draft_data[player.name].price)
+	          } else if (player.points) {
+		        teams[team.id].undrafted_points += player.points
+	          }
+
+	          if (draft_data[player.name][team.id]) {
+		        add(draft_data[player.name][team.id])
+ 	          }
+ 	        } else if (player.points) {
+	          teams[team.id].undrafted_points += player.points
+	        }
+ 	      })
+
+ 	      teams[team.id].points_per_week[this_week] = this_week_score
+
+ 	    })
       })
     })
-    
+
     jsonfile.writeFileSync(path.resolve(__dirname, '../data/draft_analysis.json'), teams, {spaces: 4})
   })
 })
@@ -132,7 +132,7 @@ async.parallel({
     seasonId: 2017,
     slotCategoryId: 0,
     startIndex: 50
-  }),  
+  }),
   wr1: espn.leaders.get.bind(null, {
     leagueId: 147002,
     seasonId: 2017,
@@ -149,7 +149,7 @@ async.parallel({
     seasonId: 2017,
     slotCategoryId: 4,
     startIndex: 100,
-  }),  
+  }),
   rb1: espn.leaders.get.bind(null, {
     leagueId: 147002,
     seasonId: 2017,
@@ -166,7 +166,7 @@ async.parallel({
     seasonId: 2017,
     slotCategoryId: 2,
     startIndex: 100
-  }),  
+  }),
   te1: espn.leaders.get.bind(null, {
     leagueId: 147002,
     seasonId: 2017,
@@ -177,7 +177,7 @@ async.parallel({
     seasonId: 2017,
     slotCategoryId: 6,
     startIndex: 50
-  }),  
+  }),
   k: espn.leaders.get.bind(null, {
     leagueId: 147002,
     seasonId: 2017,
@@ -236,22 +236,22 @@ async.parallel({
   Object.keys(drafted).forEach(function(position) {
 
     drafted[position] = drafted[position].map(function(player) {
-      
+
       if (!leaders[position][player.name]) {
-	console.log(`Could not find ${player.name}`)
-	player.points = 0
-	player.points_per_dollar = 0
-	return player
+	    console.log(`Could not find ${player.name}`)
+	    player.points = 0
+	    player.points_per_dollar = 0
+	    return player
       }
-	
+
       player.points = leaders[position][player.name]
       player.rank = getRank(leaders[position], player.name)
       player.points_per_dollar = player.points / player.price
       return player
     })
-    
+
   })
 
-  jsonfile.writeFileSync(path.resolve(__dirname, '../data/player_draft_analysis.json'), drafted, {spaces: 4})  
+  jsonfile.writeFileSync(path.resolve(__dirname, '../data/player_draft_analysis.json'), drafted, {spaces: 4})
 
 })
