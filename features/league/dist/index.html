@@ -1,0 +1,783 @@
+<!DOCTYPE html><html><head><title>Auction Draft Analysis - The Trash Zone</title><meta name="description" content="All the trash thats fit to stash"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><style>html{background:#f0f0f0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica Nueue,Arial,sans-serif}a{text-decoration:none;color:#000;}a:hover{text-decoration:underline;cursor:pointer}a:visited{color:#000}.label{width:300px;margin-bottom:7px;display:inline-block}
+header{position:relative;max-width:970px;text-align:center;margin:0 auto 10px;border-bottom:3px solid #000;height:109px}#tagline{font-family:'Old Standard TT',serif}#title{max-width:400px}#contact a{padding-left:5px}.right-header{position:absolute;right:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700}.left-header{position:absolute;left:0;bottom:0;font-size:.75rem;line-height:.875rem;font-weight:700;}.left-header div{display:inline-block;}.left-header div + div:before{content:" - ";margin:0 5px;text-align:center}@media (max-width:800px){#title{max-width:300px}#contact{display:none}}
+.list{display:inline-block;margin-right:30px;margin-bottom:30px;vertical-align:top}
+#matchups{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;text-align:center;padding:10px 0;}#matchups h1{padding-bottom:20px}#matchups .matchup{margin-bottom:10px;}#matchups .matchup a{display:block}#matchups span{font-size:.5rem;line-height:.6rem}
+.loading{text-align:center;padding:25px}.projections{font-weight:700;border-top:1px solid #000;margin-top:25px;padding-top:25px;}.projections > div{width:50%;display:inline-block;vertical-align:top}.projections small{font-family:"DecimaMonoPro",monospace;padding-left:5px;color:#b2b2b2;font-size:.8em}@media (max-width:800px){.projections > div{display:block;width:100%}}
+main{max-width:970px;margin:0 auto}section img{height:auto;width:100%;filter:grayscale(80%)}.ab-section{float:left;width:59%;margin-bottom:10px}.a-section{float:left;width:30%;margin-right:3%}.b-section{width:67%;float:left}.side-section{float:right;width:39%;padding-left:1.5%;border-left:1px solid #d0d0d0}.side-news{font-size:.75rem;line-height:.875rem;font-weight:700}#drops,#adds{display:inline-block;}#drops ul,#adds ul{list-style:none;padding-left:6%}@media (max-width:800px){.ab-section,.a-section,.b-section,.side-section{width:100%}}
+.game{width:47%;padding:1.5%;display:inline-block}table{border-collapse:collapse;border-spacing:0;width:100%;margin-bottom:35px;}table thead{text-transform:uppercase;font-size:.5em;vertical-align:bottom;text-align:center;}table thead td{background:#e0e0e0;font-weight:700}table tr{border-bottom:1px solid #cdcdcd}table td{padding:3px 7px 2px 5px;vertical-align:middle;height:34px}table .score,table .proj{border-left:1px solid #222}table .stat{font-family:"DecimaMonoPro",monospace;text-align:center}table .proj{width:60px}table tbody .score{background:#e0e0e0}table .team{min-width:85px}table .logo{-webkit-background-size:cover;-moz-background-size:cover;background-size:cover;background-position:center;border-radius:50%;width:28px;height:28px}@media (max-width:800px){.game{width:100%;padding:0;padding-bottom:15px}}
+#trape-level{border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;padding:10px 0;text-align:center;text-transform:uppercase;margin-bottom:10px;}#trape-level h2{font-size:1.3em;margin-bottom:10px}#trape-level .tips{text-transform:initial;margin:15px 0;font-weight:700;font-size:.75rem;line-height:.875rem;}#trape-level .tips a{padding-left:5px}#trape-level .level{padding:10px;border-style:ridge}#trape-level .title{color:#fff;text-shadow:1px 1px 2px #000}#trape-level .sub-title{font-size:.5em}#trape-level .yellow{background-color:#ff0}
+h1,h2,h3,h4,h5{text-transform:uppercase;margin:0}h1{font-family:'Philosopher',sans-serif}h2{font-family:'Russo One',sans-serif}h3{font-family:'Archivo Narrow',sans-serif}h4{font-family:'Raleway',sans-serif}h5{font-family:'IM Fell English',serif}p,.text{font-family:'Old Standard TT',sans-serif}small{font-family:"DecimaMonoPro",monospace;padding-left:5px;color:#b2b2b2;font-size:.8em}</style><link href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One" rel="stylesheet"><link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png"><link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png"><link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png"><link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png"><link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png"><link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png"><link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png"><link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png"><link rel="icon" type="image/png" href="favicon-196x196.png" sizes="196x196"><link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16"><link rel="icon" type="image/png" href="favicon-128.png" sizes="128x128"><meta name="application-name" content="&amp;nbsp;"><meta name="msapplication-TileColor" content="#FFFFFF"><meta name="msapplication-TileImage" content="mstile-144x144.png"><meta name="msapplication-square70x70logo" content="mstile-70x70.png"><meta name="msapplication-square150x150logo" content="mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="mstile-310x150.png"><meta name="msapplication-square310x310logo" content="mstile-310x310.png"></head><body><header><img id="title" src="/logo.png"><div id="tagline">"All the trash that's fit to stash"<div class="left-header"><div id="date"></div><div id="current-week"></div></div><div class="right-header"></div></div></header><main><section><table class="overall"><thead><tr><td colspan="100%">Overall Stats</td></tr><tr><td>Team</td><td>Seasons</td><td>Chmps</td><td>Win PCT</td><td>Wins</td><td>Losses</td><td>Games</td><td>Points AVG</td><td>Points Total</td></tr></thead><tbody></tbody></table><table class="seasons"><thead><tr><td colspan="100%">Season Stats</td></tr><tr><td>Team</td><td>Games</td><td>Win PCT</td><td>Wins</td><td>Losses</td><td>Points AVG</td><td>Points Total</td></tr></thead><tbody></tbody></table><table class="playoffs"><thead><tr><td colspan="100%">Playoff Stats</td></tr><tr><td>Team</td><td>Appearances</td><td>App PCT</td><td>Games</td><td>Win PCT</td><td>Wins</td><td>Losses</td><td>Points AVG</td><td>Points Total</td></tr></thead><tbody></tbody></table><table class="championships"><thead><tr><td colspan="100%">Championship Stats</td></tr><tr><td>Team</td><td>Appearances</td><td>App PCT</td><td>Win PCT</td><td>Wins</td><td>Losses</td><td>Points AVG</td><td>Points Total</td></tr></thead><tbody></tbody></table><h3>Overall Records</h3><div class="record overall"></div><br><h3>Season Records</h3><div class="record season"></div><br><h3>Playoff Records</h3><div class="record playoff"></div><br><h3>Championship Records</h3><div class="record championship"></div><br><br><h2>Records By Opponent</h2><br><div class="opponents"></div></section></main></body><script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script><script>
+/* global ActiveXObject, XMLHttpRequest */
+
+(function (root, factory) {
+
+  root.Request = factory(root);
+
+})(this, function (root) {
+
+  'use strict';
+
+  function buildParams(prefix, obj, add) {
+    var name, i, l, rbracket;
+    rbracket = /\[\]$/;
+    if (obj instanceof Array) {
+      for (i = 0, l = obj.length; i < l; i++) {
+	if (rbracket.test(prefix)) {
+	  add(prefix, obj[i]);
+	} else {
+	  buildParams(prefix + ( typeof obj[i] === 'object' ? ('[' + i + ']') : '' ), obj[i], add);
+	}
+      }
+    } else if (typeof obj == 'object') {
+      // Serialize object item.
+      for (name in obj) {
+	buildParams(prefix + '[' + name + ']', obj[ name ], add);
+      }
+    } else {
+      // Serialize scalar item.
+      add(prefix, obj);
+    }
+  }
+
+  var objectToQueryString = function (a) {
+    var prefix, s, add, name, r20, output;
+    s = [];
+    r20 = /%20/g;
+    add = function (key, value) {
+      // If value is a function, invoke it and return its value
+      value = ( typeof value == 'function' ) ? value() : ( value == null ? '' : value );
+      s[ s.length ] = encodeURIComponent(key) + '=' + encodeURIComponent(value);
+    };
+    if (a instanceof Array) {
+      for (name in a) {
+	add(name, a[name]);
+      }
+    } else {
+      for (prefix in a) {
+	buildParams(prefix, a[ prefix ], add);
+      }
+    }
+    output = s.join('&').replace(r20, '+');
+    return output;
+  };
+
+  var parse = function (req) {
+    var result;
+    try {
+      result = JSON.parse(req.responseText);
+      result.status = req.status;
+    } catch (e) {
+      result = { text: req.responseText, status: req.status, url: req._url };
+    }
+    return [result, req];
+  };
+
+  var getXHR = function() {
+    if (root.XMLHttpRequest
+	&& (!root.location || 'file:' !== root.location.protocol
+	    || !root.ActiveXObject)) {
+      return new XMLHttpRequest();
+    } else {
+      try { return new ActiveXObject('Microsoft.XMLHTTP'); } catch(e) {}
+      try { return new ActiveXObject('Msxml2.XMLHTTP.6.0'); } catch(e) {}
+      try { return new ActiveXObject('Msxml2.XMLHTTP.3.0'); } catch(e) {}
+      try { return new ActiveXObject('Msxml2.XMLHTTP'); } catch(e) {}
+    }
+    return false;
+  };
+
+  var xhr = function (type, url, data) {
+    var methods = {
+      success: function () {},
+      error: function () {}
+    };
+    var request = getXHR();
+    request._url = url;
+
+    if (!request) throw new Error('unable to detect XHR');
+
+    request.open(type, url, true);
+    request.setRequestHeader('Content-type', 'application/json');
+    request.onreadystatechange = function () {
+      if (request.readyState === 4) {
+	if (request.status === 200) {
+	  methods.success.apply(methods, parse(request));
+	} else {
+	  methods.error.apply(methods, parse(request));
+	}
+      }
+    };
+
+    request.send(JSON.stringify(data));
+    return {
+      success: function (callback) {
+	methods.success = callback;
+	return this;
+      },
+      error: function (callback) {
+	methods.error = callback;
+	return this;
+      }
+    };
+  };
+
+  return {
+    head: function(url) {
+      return xhr('HEAD', url);
+    },
+    get: function(url, data) {
+      if (data) url += '?' + objectToQueryString(data);
+      return xhr('GET', url);
+    },
+    put: function(url, data) {
+      return xhr('PUT', url, data);
+    },
+    post: function(url, data) {
+      return xhr('POST', url, data);
+    },
+    del: function(url, data) {
+      if (data) url += '?' + objectToQueryString(data);
+      return xhr('DELETE', url);
+    }
+  };
+
+});
+
+/* global window, document, Element */
+(function(root, factory) {
+
+  root.Elem = factory(root);
+
+})(this, function() {
+
+  'use strict';
+
+  return {
+    create: function(opts) {
+      opts = opts || {};
+      var el, a, i, d;
+
+      el = document.createElement(opts.tag || 'div');
+
+      if (opts.className) {
+	el.className = opts.className;
+      }
+
+      if (opts.id) {
+	el.id = opts.id;
+      }
+      
+      if (opts.attributes) {
+	for (a in opts.attributes) {
+	  el.setAttribute(a, opts.attributes[a]);
+	}
+      }
+
+      if (opts.style) {
+	for (a in opts.style) {
+	  el.style[a] = opts.style[a]
+	}
+      }
+      
+      if (opts.html !== undefined) {
+	el.innerHTML = opts.html;
+      }
+      
+      if (opts.text) {
+	el.appendChild(document.createTextNode(opts.text));
+      }
+
+      // IE 8 doesn"t have HTMLElement
+      if (window.HTMLElement === undefined) {
+	window.HTMLElement = Element;
+      }
+      
+      if (opts.childs && opts.childs.length) {
+	for (i = 0; i < opts.childs.length; i++) {
+	  el.appendChild(opts.childs[i] instanceof window.HTMLElement ? opts.childs[i] : this.create(opts.childs[i]));
+	}
+      }
+
+      if (opts.parent) {
+	opts.parent.appendChild(el);
+      }
+
+      if (opts.onclick) {
+	el.onclick = opts.onclick;
+      }
+
+      if (opts.dataset) {
+	for (d in opts.dataset) {
+	  el.dataset[d] = opts.dataset[d];
+	}
+      }
+
+      return el;
+    },
+
+    getClosest: function(elem, selector) {
+
+      var firstChar = selector.charAt(0);
+
+      for ( ; elem && elem !== document; elem = elem.parentNode ) {
+
+	if (firstChar === '.')
+	  if (elem.classList.contains(selector.substr(1)))
+	    return elem;
+
+	if (firstChar === '#')
+	  if (elem.id === selector.substr(1))
+	    return elem;
+
+	if (firstChar === '[')
+	  if (elem.hasAttribute(selector.substr(1, selector.length - 2)))
+	    return elem;
+
+	if (elem.tagName.toLowerCase() === selector) return elem;
+
+      }
+
+      return false;
+
+    },
+
+    getOffX: function(o) {
+      // http://www.xs4all.nl/~ppk/js/findpos.html
+      var curleft = 0;
+      if (o.offsetParent) {
+	while (o.offsetParent) {
+	  curleft += o.offsetLeft;
+	  o = o.offsetParent;
+	}
+      } else if (o.x) {
+	curleft += o.x;
+      }
+      return curleft;
+    },
+
+    getTheDamnTarget: function(e) {
+      return (e.target || (window.event ? window.event.srcElement : null));
+    },
+    
+    isChildOfClass : function (oChild, oClass) {
+      if (!oChild || !oClass) return false;
+
+      while (oChild.parentNode && !oChild.classList.contains(oClass)) {
+	oChild = oChild.parentNode;
+      }
+      return oChild.classList.contains(oClass);
+    },
+
+    text: function(o) {
+      return o.innerText || o.textContent;
+    },
+
+    each: function (array, callback, scope) {
+      for (var i = 0; i < array.length; i++) {
+	callback.call(scope, array[i], i);
+      }
+    }
+  };
+});
+
+</script><script>
+(function(root, factory) {
+
+  root.App = factory(root)
+
+})(this, function() {
+
+  'use strict'
+
+  return {
+    api: function(path) {
+      path = '/api' + path
+      return {
+	    get: function(params) {
+	      params = params || {}
+	      return Request.get(path, params)
+	    },
+	    put: function(params) {
+	      return Request.put(path, params)
+	    },
+	    post: function(params) {
+	      return Request.post(path, params)
+	    },
+	    del: function(params) {
+	      params = params || {}
+	      return Request.del(path, params)
+	    }
+      }
+    },
+    data: function(path) {
+      path = '/data' + path
+      return {
+	    get: function(params) {
+	      params = params || {}
+	      return Request.get(path, params)
+	    }
+      }
+    }
+  }
+})
+
+document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
+
+let week_one = moment('2018-08-28')
+let current_week = moment().diff(week_one, 'weeks')
+document.getElementById('current-week').innerHTML = `Week ${current_week}`
+
+App.data('/league.json').get().success((response) => {
+  const data = response.owners
+  const records = response.records
+
+  console.log(data)
+
+  for (const type in records) {
+    const parent = document.querySelector(`.record.${type}`)
+
+    let items = []
+
+    const label = {
+      'wins': 'Total Wins',
+      'losses': 'Total Losses',
+      'points': 'Most Points (Single)',
+      'points_total':'Total Points',
+      'highest_score': 'Highest Single Game Point Total',
+      'lowest_score': 'Lowest Single Game Point Total',
+      'most_wins': 'Single Season Most Wins',
+      'most_losses': 'Single Season Most Losses'
+    }
+
+    for (const stat in records[type]) {
+      const record = records[type][stat]
+      if (!record.value) {
+        continue
+      }
+
+      items.push({
+        html: `<div><span class="label">${label[stat]}</span>  ${record.owner} <strong>(${record.value.toFixed(0)})</strong> <small>${record.season}</small></div>`
+      })
+    }
+
+    Elem.create({
+      parent: parent,
+      tag: 'div',
+      childs: items
+    })
+  }
+
+  const baseStats = [
+    'win_pct',
+    'wins',
+    'losses',
+    'gp',
+    'points_avg',
+    'points_total',
+    'appearances',
+    'appearance_pct'
+  ]
+
+  const baseTypes = [
+    'overall',
+    'season',
+    'playoff',
+    'championship'
+  ]
+
+  let minStats = {}
+  let maxStats = {}
+
+  for (const type of baseTypes) {
+    minStats[type] = {}
+    maxStats[type] = {}
+    for (const stat of baseStats) {
+      minStats[type][stat] = 100000
+      maxStats[type][stat] = 0
+    }
+  }
+
+  const setMinMax = (type, stat, value) => {
+    value = parseFloat(value)
+
+    if (value > maxStats[type][stat]) {
+       maxStats[type][stat] = value
+    }
+
+    if (value <  minStats[type][stat]) {
+       minStats[type][stat] = value
+    }
+  }
+
+  for (const team in data) {
+    if (team === 'status') {
+      continue
+    }
+
+    for (const type of baseTypes) {
+      for (const stat in data[team][type]) {
+        if (baseStats.includes(stat)) {
+          setMinMax(type, stat, data[team][type][stat])
+        }
+      }
+    }
+  }
+
+  const getPercentage = (type, stat, value) => {
+    const min = minStats[type][stat]
+    const max = maxStats[type][stat]
+    return (value - min) / (max - min)
+  }
+
+  const overall_parent = document.querySelector('main table.overall tbody')
+  for (const name in data) {
+    if (name === 'status') {
+      continue
+    }
+    const stats = data[name]
+
+    const overall_tds = [{
+      tag: 'td',
+      text: name
+    }, {
+      tag: 'td',
+      text: stats.seasons_played
+    }, {
+      tag: 'td',
+      text: stats.championship.wins
+    }, {
+      tag: 'td',
+      text: stats.overall.win_pct,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'win_pct', stats.overall.win_pct)})`
+	  }
+    }, {
+      tag: 'td',
+      text: stats.overall.wins,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'wins', stats.overall.wins)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.overall.losses,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'losses', stats.overall.losses)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.overall.gp,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'gp', stats.overall.gp)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.overall.points_avg,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'points_avg', stats.overall.points_avg)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.overall.points_total,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('overall', 'points_total', stats.overall.points_total)})`
+      }
+    }]
+
+    Elem.create({
+      parent: overall_parent,
+      tag: 'tr',
+      childs: overall_tds
+    })
+
+
+    const seasons_parent = document.querySelector('main table.seasons tbody')
+    const seasons_tds = [{
+      tag: 'td',
+      text: name
+    }, {
+      tag: 'td',
+      text: stats.season.gp
+    }, {
+      tag: 'td',
+      text: stats.season.win_pct,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('season', 'win_pct', stats.season.win_pct)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.season.wins,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('season', 'wins', stats.season.wins)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.season.losses,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('season', 'losses', stats.season.losses)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.season.points_avg,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('season', 'points_avg', stats.season.points_avg)})`
+      }
+    }, {
+      tag: 'td',
+      text: stats.season.points_total,
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('season', 'points_total', stats.season.points_total)})`
+      }
+    }]
+    Elem.create({
+      parent: seasons_parent,
+      tag: 'tr',
+      childs: seasons_tds
+    })
+
+    if (stats.playoff.appearances) {
+      const playoffs_parent = document.querySelector('main table.playoffs tbody')
+      const playoffs_tds = [{
+        tag: 'td',
+        text: name
+      }, {
+        tag: 'td',
+        text: stats.playoff.appearances,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'appearances', stats.playoff.appearances)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.appearance_pct,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'appearance_pct', stats.playoff.appearance_pct)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.gp
+      }, {
+        tag: 'td',
+        text: stats.playoff.win_pct,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'win_pct', stats.playoff.win_pct)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.wins,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'wins', stats.playoff.wins)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.losses,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'losses', stats.playoff.losses)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.points_avg,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'points_avg', stats.playoff.points_avg)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.playoff.points_total,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('playoff', 'points_total', stats.playoff.points_total)})`
+        }
+      }]
+      Elem.create({
+        parent: playoffs_parent,
+        tag: 'tr',
+        childs: playoffs_tds
+      })
+    }
+
+    if (stats.championship.gp) {
+      const championships_parent = document.querySelector('main table.championships tbody')
+      const championships_tds = [{
+        tag: 'td',
+        text: name
+      }, {
+        tag: 'td',
+        text: stats.championship.appearances,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'appearances', stats.championship.appearances)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.appearance_pct,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'appearance_pct', stats.championship.appearance_pct)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.win_pct,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'win_pct', stats.championship.win_pct)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.wins,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'wins', stats.championship.wins)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.losses,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'losses', stats.championship.losses)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.points_avg,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'points_avg', stats.championship.points_avg)})`
+        }
+      }, {
+        tag: 'td',
+        text: stats.championship.points_total,
+	    style: {
+	      backgroundColor: `rgba(46,163,221,${getPercentage('championship', 'points_total', stats.championship.points_total)})`
+        }
+      }]
+      Elem.create({
+        parent: championships_parent,
+        tag: 'tr',
+        childs: championships_tds
+      })
+    }
+
+
+    const opponent_parent = document.querySelector('.opponents')
+    let opponents_childs = [{
+      tag: 'h3',
+      text: name
+    }]
+    for (const opponent in stats.opponents) {
+      const stat = stats.opponents[opponent]
+      console.log(opponent)
+      opponents_childs.push({
+        html: `<div><strong>${stat.wins}-${stat.losses}</strong> vs ${opponent}<small>${stat.points.toFixed(0)} to ${stat.points_against.toFixed(0)}</small></div>`
+      })
+    }
+    Elem.create({
+      parent: opponent_parent,
+      tag: 'div',
+      className: 'list',
+      childs: opponents_childs
+    })
+
+    console.log(stats.opponents)
+  }
+})
+
+const buildList = function(opts) {
+  const rows = []
+  opts.data.forEach(function(player) {
+    rows.push({
+      tag: 'li',
+      html: `${player.name} (${player.team.abbrev}) <small>${player.points_per_dollar.toFixed(2)}pts/$</small`
+    })    
+  })
+
+  Elem.create({
+    parent: opts.parent,
+    childs: [{
+      tag: 'h2',
+      text: opts.title
+    }, {
+      tag: 'ol',
+      childs: rows
+    }]
+  })
+}
+
+const buildTable = function(opts) {
+  let min = 1000
+  let max = 0
+
+  opts.data.forEach(function(player) {
+    if (max < player.points_per_dollar)
+      max = player.points_per_dollar
+
+    if (min > player.points_per_dollar)
+      min = player.points_per_dollar
+  })
+  
+  let data_rows = []
+  opts.data.forEach(function(player, index) {
+    let percentage = (player.points_per_dollar - min) / (max - min)
+    data_rows.push({
+      tag: 'tr',
+      childs: [{
+	tag: 'td',
+	text: `${index + 1}. ${player.name}`
+      }, {
+	tag: 'td',
+	text: player.team.abbrev
+      }, {
+	tag: 'td',
+	className: 'stat',	
+	text: `${opts.position}${player.rank}`	
+      }, {		
+	tag: 'td',
+	className: 'stat',	
+	text: player.points
+      }, {
+	tag: 'td',
+	className: 'stat',
+	text: player.price
+      }, {
+	tag: 'td',
+	className: 'stat',
+	style: {
+	  backgroundColor: `rgba(46,163,221,${percentage})`
+	},	
+	text: `${player.points_per_dollar.toFixed(2)}pts/$`
+      }]
+    })    
+  })
+  Elem.create({
+    tag: 'table',
+    parent: opts.parent,
+    childs: [{
+      tag: 'thead',
+      childs: [{
+	tag: 'tr',
+	childs: [{
+	  tag: 'td',
+	  attributes: {
+	    colspan: '100%'
+	  },
+	  text: opts.title
+	}]
+      }, {
+	tag: 'tr',
+	childs: [{
+	  tag: 'td',
+	  text: 'Player'
+	}, {
+	  tag: 'td',
+	  text: 'Team'
+	}, {
+	  tag: 'td',
+	  text: 'Overall Rank'
+	}, {
+	  tag: 'td',
+	  text: 'Points'
+	}, {
+	  tag: 'td',
+	  text: 'Cost'
+	}, {
+	  tag: 'td',
+	  text: 'Pts/$'
+	}]
+      }],
+    }, {
+      tag: 'tbody',
+      childs: data_rows
+    }]
+  })
+}
+
+</script></html>

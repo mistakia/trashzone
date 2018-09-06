@@ -6,7 +6,24 @@ const fs = require('fs')
 const glob = require('glob')
 
 let schedules = {}
-let data = {}
+let owners = {}
+
+const recordStats = ['wins', 'losses', 'points', 'points_total', 'highest_score', 'lowest_score']
+const types = ['overall', 'season', 'playoff', 'championship']
+let records = {}
+
+for (const type of types) {
+  records[type] = {}
+  for (const stat of recordStats) {
+    records[type][stat] = { value: 0 }
+    if (stat === 'lowest_score') {
+      records[type][stat].value = 1000
+    }
+  }
+}
+
+records.season.most_wins = { value: 0 }
+records.season.most_losses = { value: 0 }
 
 const loadSchedule = function(file_path, cb) {
   fs.readFile(file_path, { encoding: 'utf8'}, function(err, html) {
@@ -17,7 +34,7 @@ const loadSchedule = function(file_path, cb) {
     const year = /-([\d]*)/.exec(file_path)[1]
 
     Object.keys(result).forEach(function(owner) {
-      data[owner][year].schedule = result[owner]
+      owners[owner][year].schedule = result[owner]
     })
     cb()
   })
@@ -31,16 +48,16 @@ const loadStanding = function(file_path, cb) {
     const result = espnff.standings.parseHTML(html)
     const year = /-([\d]*)/.exec(file_path)[1]
     Object.keys(result).forEach(function(owner) {
-      if (!data[owner])
-	    data[owner] = {}
+      if (!owners[owner])
+	    owners[owner] = {}
 
-      data[owner][year] = result[owner]
+      owners[owner][year] = result[owner]
     })
     cb()
   })
 }
 
-const addStats = function(owner, game, type) {
+const addStats = function(owner, game, type, name) {
   const points = parseFloat(game.points)
   const points_against = parseFloat(game.points_against)
 
@@ -50,13 +67,35 @@ const addStats = function(owner, game, type) {
   owner[type].gp += 1
   owner[type].points_total += points
 
-  if (over100)
+  if (over100) {
     owner[type].games_over_100 += 1
+  }
 
-  if (win)
+  if (win) {
     owner[type].wins += 1
-  else
+  } else {
     owner[type].losses += 1
+  }
+
+  if (points > records[type].highest_score.value) {
+    records[type].highest_score = {
+      value: points,
+      season: game.season,
+      owner: name,
+      game: game
+    }
+  }
+
+  if (points < records[type].lowest_score.value) {
+    records[type].lowest_score = {
+      value: points,
+      season: game.season,
+      owner: name,
+      game: game
+    }
+  }
+
+  return win
 }
 
 const addOpponentStats = function(owner, game, opponent) {
@@ -83,91 +122,109 @@ const addOpponentStats = function(owner, game, opponent) {
     owner.opponents[opponent].losses += 1
 }
 
-const analyze = (data) => {
+const analyze = (owners) => {
 
-  // Records
-  let highest_scored_game = { score: 0 }
-  let highest_scored_season = { score: 0 }
-  let highest_scored_playoff = { score: 0 }
-  let highest_scored_championship = { score: 0 }
+  Object.keys(owners).forEach(function(owner_name) {
 
-  let least_scored_game = { score: 0 }
-  let least_scored_season = { score: 0 }
-  let least_scored_playoff = { score: 0 }
-  let least_scored_championship = { score: 0 }
+    const seasons = Object.keys(owners[owner_name])
 
-  Object.keys(data).forEach(function(owner_name) {
-
-    const seasons = Object.keys(data[owner_name])
-
-    let owner = data[owner_name]
+    let owner = owners[owner_name]
 
     owner.seasons_played = seasons.length
-    owner.playoff_appearances = 0
     owner.opponents = {}
 
-    owner.overall = {
-      gp: 0,
-      games_over_100: 0,
-      wins: 0,
-      losses: 0,
-      points_total: 0
+    const baseStats = ['gp', 'games_over_100', 'wins', 'losses', 'points_total', 'appearances']
+    for (const type of types) {
+      owner[type] = {}
+      for (const stat of baseStats) {
+        owner[type][stat] = 0
+      }
     }
-
-    owner.season = {
-      gp: 0,
-      games_over_100: 0,
-      wins: 0,
-      losses: 0,
-      points_total: 0
-    }
-
-    owner.playoff = {
-      gp: 0,
-      games_over_100: 0,
-      wins: 0,
-      losses: 0,
-      points_total: 0
-    }
-
-    owner.championship = {
-      gp: 0,
-      games_over_100: 0,
-      wins: 0,
-      losses: 0,
-      points_total: 0
-    }
-
 
     seasons.forEach(function(season) {
-      const weeks = Object.keys(data[owner_name][season].schedule)
+      const weeks = Object.keys(owners[owner_name][season].schedule)
 
       let playoff_appearance = false
+      let season_points = 0
+      let playoff_points = 0
+      let season_wins = 0
+      let season_losses = 0
 
       weeks.forEach(function(week) {
-        const game = data[owner_name][season].schedule[week]
+        const game = owners[owner_name][season].schedule[week]
 
+        game.week = week
+        game.season = season
 
         game.opponents.forEach(function(opponent) {
 	      addOpponentStats(owner, game, opponent)
         })
 
-        addStats(owner, game, 'overall')
+        addStats(owner, game, 'overall', owner_name)
 
         if (game.playoff) {
 	      playoff_appearance = true
-	      addStats(owner, game, 'playoff')
+	      addStats(owner, game, 'playoff', owner_name)
 
-	      if (game.championship)
-	        addStats(owner, game, 'championship')
-
+	      if (game.championship) {
+            owner.championship.appearances += 1
+	        addStats(owner, game, 'championship', owner_name)
+          } else {
+            playoff_points += parseFloat(game.points)
+          }
         } else {
-	      addStats(owner, game, 'season')
+          season_points += parseFloat(game.points)
+	      addStats(owner, game, 'season', owner_name) ? season_wins++ : season_losses++
         }
       })
 
       if (playoff_appearance)
-        owner.playoff_appearances += 1
+        owner.playoff.appearances += 1
+
+
+      if (season_points > records.season.points.value) {
+        records.season.points = {
+          value: season_points,
+          season: season,
+          owner: owner_name
+        }
+      }
+
+      if (playoff_points > records.playoff.points.value) {
+        records.playoff.points = {
+          value: playoff_points,
+          season: season,
+          owner: owner_name
+        }
+      }
+
+      if (season_wins > records.season.most_wins.value) {
+        records.season.most_wins = {
+          value: season_wins,
+          season: season,
+          owner: owner_name
+        }
+      }
+
+      if (season_losses > records.season.most_losses.value) {
+        records.season.most_losses = {
+          value: season_losses,
+          season: season,
+          owner: owner_name
+        }
+      }
+
+      for (const type of types) {
+        for (const stat of recordStats) {
+          if (owner[type][stat] && owner[type][stat] > records[type][stat].value) {
+            records[type][stat] = {
+              value: owner[type][stat],
+              owner: owner_name,
+              season: season
+            }
+          }
+        }
+      }
     })
 
     owner.overall.points_total = owner.overall.points_total.toFixed(2)
@@ -180,7 +237,9 @@ const analyze = (data) => {
     owner.playoff.win_pct = (((owner.playoff.wins / owner.playoff.gp) * 100) || 0).toFixed(2)
     owner.championship.win_pct = (((owner.championship.wins / owner.championship.gp) * 100) || 0).toFixed(2)
 
-    owner.playoff_appearance_pct = (((owner.playoff_appearances / owner.seasons_played) * 100) || 0).toFixed(2)
+    owner.playoff.appearance_pct = (((owner.playoff.appearances / owner.seasons_played) * 100) || 0).toFixed(2)
+
+    owner.championship.appearance_pct = (((owner.championship.appearances / owner.seasons_played) * 100) || 0).toFixed(2)
 
     owner.overall.points_avg = (owner.overall.points_total / owner.overall.gp).toFixed(2)
     owner.season.points_avg = (owner.season.points_total / owner.season.gp).toFixed(2)
@@ -191,7 +250,7 @@ const analyze = (data) => {
 
   })
 
-  return data
+  return owners
 }
 
 async.parallel({
@@ -216,9 +275,12 @@ async.parallel({
     if (err)
       return console.log(err)
 
-    analyze(data)
+    analyze(owners)
 
     const file_path = path.resolve(__dirname, '../data/league.json')
-    jsonfile.writeFileSync(file_path, data, { spaces: 4 })
+    jsonfile.writeFileSync(file_path, {
+      owners,
+      records
+    }, { spaces: 4 })
   })
 })
