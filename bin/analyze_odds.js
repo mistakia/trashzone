@@ -8,7 +8,7 @@ const request = require('request')
 
 const format_player = require('../lib/player')
 
-const week_one = moment('2017-08-30')
+const week_one = moment('2018-08-28')
 const current_week = moment().diff(week_one, 'weeks')
 
 let odds_data
@@ -54,11 +54,11 @@ async.parallel({
   players: getPlayers,
   standings: espn.standings.get.bind(null, {
     leagueId: 147002,
-    seasonId: 2017
+    seasonId: 2018
   }),
   schedule: espn.schedule.getByLeague.bind(null, {
     leagueId: 147002,
-    seasonId: 2017
+    seasonId: 2018
   })
 }, function(err, result) {
   if (err)
@@ -75,7 +75,7 @@ async.parallel({
       leagueId: 147002,
       teamId: home_id,
       scoringPeriodId: current_week,
-      seasonId: 2017
+      seasonId: 2018
     }, next)
   }, function(err, boxscores) {
     if (err)
@@ -120,17 +120,20 @@ async.parallel({
 	    'scoring=non_ppr',
 	    'qb=pass4',
 	    'dst=mfl',
+        'monday=True',
 	    'pts1=' + teams[0].pts,
 	    'pts2=' + teams[1].pts
       ]
 
-      if (teams[0].values.length)
-	    params.push('team1=' + teams[0].values.join(','))
+      if (teams[0].values.length) {
+	    teams[0].values.forEach(v => params.push(`team1=${v}`))
+      }
 
-      if (teams[1].values.length)
-	    params.push('team2=' + teams[1].values.join(','))
+      if (teams[1].values.length) {
+        teams[1].values.forEach(v => params.push(`team2=${v}`))
+      }
 
-      const url = 'https://api.fantasymath.com/matchup/?' + params.join('&')
+      const url = 'https://api.fantasymath.com/v2/matchup-monday/?' + params.join('&')
 
       if (!teams[0].values.length && teams[0].pts < teams[1].pts)
 	    return next(null, {
@@ -206,9 +209,8 @@ async.parallel({
 	      }
 	    }
 
-
-	    analyze(prediction['team1'].prob, teams[0])
-	    analyze(prediction['team2'].prob, teams[1])
+	    analyze(prediction.teams[0].prob, teams[0])
+	    analyze(prediction.teams[1].prob, teams[1])
 
 	    data.odds.push(teams)
       })
