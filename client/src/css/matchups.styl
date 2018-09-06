@@ -2,17 +2,41 @@
 @import 'variables.styl'
 
 #matchups
-    border-top 1px solid $section-border
-    border-bottom 1px solid $section-border
-    text-align center
-    padding 10px 0
-    margin-bottom 1em
-    h1
-        padding-bottom 20px
-    .matchup
-        margin-bottom 10px
-        a
-            display block
+  border-top 1px solid $section-border
+  border-bottom 1px solid $section-border
+  padding 10px 0
+  margin-bottom 1em
+  background-color white
+  padding 15px
+  text-align center
+  h1
+    padding-bottom 20px
+  .matchup
+    margin-bottom 10px
+    display flex
+    flex-wrap nowrap
+    font-size 12px
+    .team
+      position relative
+      flex 1
+      padding-bottom 4px
+      text-align left
+      .prob-bar
+        position absolute
+        bottom 8px
+        right 0
+        height 3px
+        background-color rgba(0,0,0,0.25)
+      &:nth-child(2)
+        text-align right
+        .prob-bar
+          right auto
+          left 0
+      &.favorite
+        .prob-bar
+          background-color rgba(0,0,0,1)
+    a
+      display block
     span
-        font-size 0.5rem
-        line-height 0.6rem
+      font-size 0.5rem
+      line-height 0.6rem

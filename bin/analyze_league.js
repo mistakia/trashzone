@@ -45,7 +45,7 @@ const loadStanding = function(file_path, cb) {
     if (err)
       return cb(err)
 
-    const result = espnff.standings.parseHTML(html)
+    const result = espnff.standings.parseHTMLByOwner(html)
     const year = /-([\d]*)/.exec(file_path)[1]
     Object.keys(result).forEach(function(owner) {
       if (!owners[owner])
