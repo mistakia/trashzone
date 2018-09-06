@@ -6,6 +6,8 @@ const async = require('async')
 const moment = require('moment')
 const request = require('request')
 
+const config = require('../config')
+
 const format_player = require('../lib/player')
 
 const week_one = moment('2018-08-28')
@@ -52,14 +54,8 @@ const getPlayers = function(cb) {
 
 async.parallel({
   players: getPlayers,
-  standings: espn.standings.get.bind(null, {
-    leagueId: 147002,
-    seasonId: 2018
-  }),
-  schedule: espn.schedule.getByLeague.bind(null, {
-    leagueId: 147002,
-    seasonId: 2018
-  })
+  standings: espn.standings.get.bind(null, config.espn),
+  schedule: espn.schedule.getByLeague.bind(null, config.espn)
 }, function(err, result) {
   if (err)
     return console.log(err)
@@ -72,10 +68,9 @@ async.parallel({
 
   async.mapLimit(home_ids, 2, function(home_id, next) {
     espn.boxscore.get({
-      leagueId: 147002,
       teamId: home_id,
       scoringPeriodId: current_week,
-      seasonId: 2018
+      ...config.espn
     }, next)
   }, function(err, boxscores) {
     if (err)
@@ -173,7 +168,6 @@ async.parallel({
 	      let teams = result.standings
 	      for (let i=0;i<teams.length;i++) {
 	        if (teams[i].team_id === team.id) {
-
 	          teams[i].projected_wins = teams[i].wins
 	          teams[i].projected_losses = teams[i].losses
 	          teams[i].projected_ties = teams[i].ties
