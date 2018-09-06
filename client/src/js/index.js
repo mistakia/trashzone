@@ -24,12 +24,12 @@ App.api('/news/rotoworld').get().success((data) => {
       parent: parent,
       tag: 'li',
       childs: [{
-	tag: i.source ? 'a' : 'span',
-	text: i.report,
-	attributes: {
-	  href: i.source,
-	  target: '_blank'
-	}
+	    tag: i.source ? 'a' : 'span',
+	    text: i.report,
+	    attributes: {
+	      href: i.source,
+	      target: '_blank'
+	    }
       }]
     })
   })
@@ -46,9 +46,9 @@ App.api('/adds').get().success((data) => {
     i.detail.forEach(function(d) {
       console.log(d)
       Elem.create({
-	parent: parent,
-	tag: 'li',
-	text: `${d.team} - ${d.player}`
+	    parent: parent,
+	    tag: 'li',
+	    text: `${d.team} - ${d.player}`
       })
     })
   })
@@ -58,10 +58,15 @@ App.api('/adds').get().success((data) => {
 
 App.data('/weekly_odds.json').get().success((data) => {
   console.log(data)
+  let odds = []
   let parent = document.querySelector('#matchups')
   data.forEach(function(matchups) {
     const child = (team) => {
       const probability = team.probability * 100
+      odds.push({
+        team: team.name,
+        odds: 1/team.probability
+      })
       const favorite = probability > 50
       const className = favorite ? 'team favorite' : 'team'
       return {
@@ -95,72 +100,105 @@ App.data('/weekly_odds.json').get().success((data) => {
       childs: [child(matchups[1]), child(matchups[0])]
     })
   })
+
+  const getMoneyline = (decimal) => {
+    const moneyline = decimal < 2.0
+      ? ((-100)/(decimal - 1)).toPrecision(5)
+      : ((decimal - 1) * 100 ).toPrecision(5)
+
+    return Math.ceil(moneyline / 10) * 10
+  }
+
+  let odds_parent = document.querySelector('#odds')
+  odds.forEach((o) => {
+    console.log(o.team)
+    o.moneyline = getMoneyline(o.odds)
+  })
+
+  odds = odds.sort((a, b) => a.moneyline - b.moneyline)
+
+  odds.forEach((o) => {
+    Elem.create({
+      parent: odds_parent,
+      tag: 'div',
+      className: 'team',
+      childs: [{
+        tag: 'div',
+        className: 'name',
+	    text: o.team
+      }, {
+        tag: 'div',
+        className: 'moneyline',
+        text: o.moneyline
+      }]
+    })
+  })
 }).error((message) => {
   console.log(message.error)
 })
 
 
-/* App.api('/schedule').get().success((data) => {
- *   let current_matchups = data.items[current_week]
- *   console.log(current_matchups)
- * }).error((message) => {
- *   console.log(message.error)
- * })
- *  */
-App.api('/standings').get().success((data) => {
-  let standings = data.items.slice()
-  let leaders = data.items.sort((a, b) => {
-    return b.points_for - a.points_for
-  }).slice(0,4)
+  /* App.api('/schedule').get().success((data) => {
+   *   let current_matchups = data.items[current_week]
+   *   console.log(current_matchups)
+   * }).error((message) => {
+   *   console.log(message.error)
+   * })
+   *  */
+  App.api('/standings').get().success((data) => {
+    let standings = data.items.slice()
+    let leaders = data.items.sort((a, b) => {
+      return b.points_for - a.points_for
+    }).slice(0,4)
 
-  let leaders_parent = document.querySelector('#most-points ol')
-  leaders.forEach(function(i) {
-    Elem.create({
-      parent: leaders_parent,
-      tag: 'li',
-      childs: [{
-	tag: 'a',
-	attributes: {
-	  href: i.team_href,
-	  target: '_blank'
-	},
-	text: `${i.team} (${i.points_for})`
-      }]
-    })
-  })
-
-  let standings_parent = document.querySelector('#standings ol')
-  standings.forEach(function(i) {
-    Elem.create({
-      parent: standings_parent,
-      tag: 'li',
-      childs: [{
-	tag: 'a',
-	attributes: {
-	  href: i.team_href,
-	  target: '_blank'
-	},
-	text: `${i.team} (${i.record})`
-      }]
-    })
-  })
-}).error((err) => {
-  console.log(err)
-})
-
-App.api('/drops').get().success((data) => {
-  var parent = document.querySelector('#drops ul')
-  var items = data.items.slice(0, 15)
-
-  items.forEach(function(i) {
-    i.detail.forEach(function(d) {
+    let leaders_parent = document.querySelector('#most-points ol')
+    leaders.forEach(function(i) {
       Elem.create({
-	parent: parent,
-	tag: 'li',
-	text: `${d.team} - ${d.player}`
+        parent: leaders_parent,
+        tag: 'li',
+        childs: [{
+	      tag: 'a',
+	      attributes: {
+	        href: i.team_href,
+	        target: '_blank'
+	      },
+	      text: `${i.team} (${i.points_for})`
+        }]
       })
     })
+
+    let standings_parent = document.querySelector('#standings ol')
+    standings.forEach(function(i) {
+      Elem.create({
+        parent: standings_parent,
+        tag: 'li',
+        childs: [{
+	      tag: 'a',
+	      attributes: {
+	        href: i.team_href,
+	        target: '_blank'
+	      },
+	      text: `${i.team} (${i.record})`
+        }]
+      })
+    })
+  }).error((err) => {
+    console.log(err)
   })
-}).error((message) => {
-  console.log(message.error)
-})
+
+  App.api('/drops').get().success((data) => {
+    var parent = document.querySelector('#drops ul')
+    var items = data.items.slice(0, 15)
+
+    items.forEach(function(i) {
+      i.detail.forEach(function(d) {
+        Elem.create({
+	      parent: parent,
+	      tag: 'li',
+	      text: `${d.team} - ${d.player}`
+        })
+      })
+    })
+  }).error((message) => {
+    console.log(message.error)
+  })
