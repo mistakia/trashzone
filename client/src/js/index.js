@@ -56,38 +56,57 @@ App.api('/adds').get().success((data) => {
   console.log(message.error)
 })
 
-App.api('/schedule').get().success((data) => {
-  let current_matchups = data.items[current_week]
-  console.log(current_matchups)
-
+App.data('/weekly_odds.json').get().success((data) => {
+  console.log(data)
   let parent = document.querySelector('#matchups')
-  current_matchups.forEach(function(m) {
+  data.forEach(function(matchups) {
+    const child = (team) => {
+      const probability = team.probability * 100
+      const favorite = probability > 50
+      const className = favorite ? 'team favorite' : 'team'
+      return {
+        tag: 'div',
+        className,
+        childs: [{
+	      tag: 'a',
+	      attributes: {
+	        href: team.href,
+	        target: '_blank'
+	      },
+	      className: 'text',
+	      text: team.name
+        }, {
+          tag: 'div',
+          className: 'prob-bar',
+          attributes: {
+            style: `width: ${probability}%`
+          }
+        }, {
+          tag: 'small',
+          className: 'prob-percentage',
+          text: `${probability.toFixed(2)}%`
+        }]
+      }
+    }
+
     Elem.create({
       parent: parent,
       className: 'matchup',
-      childs: [{
-	tag: 'a',
-	attributes: {
-	  href: m.away_href,
-	  target: '_blank'
-	},
-	className: 'text',
-	text: m.away_team
-      }, {
-	tag: 'a',
-	className: 'text',
-	attributes: {
-	  href: m.home_href,
-	  target: '_blank'
-	},
-	text: `at ${m.home_team}`
-      }]
+      childs: [child(matchups[1]), child(matchups[0])]
     })
   })
 }).error((message) => {
   console.log(message.error)
 })
 
+
+/* App.api('/schedule').get().success((data) => {
+ *   let current_matchups = data.items[current_week]
+ *   console.log(current_matchups)
+ * }).error((message) => {
+ *   console.log(message.error)
+ * })
+ *  */
 App.api('/standings').get().success((data) => {
   let standings = data.items.slice()
   let leaders = data.items.sort((a, b) => {
