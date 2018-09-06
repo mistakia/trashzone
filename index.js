@@ -1,11 +1,11 @@
 const path = require('path')
 
 const express = require('express')
-const Logger = require('logplease') 
+const Logger = require('logplease')
 
 const api = require('./api')
 
-const logger = Logger.create('server') 
+const logger = Logger.create('server')
 const app = express()
 const http = require('http').createServer(app)
 
@@ -33,6 +33,9 @@ app.get('/draft', (req, res) => {
 app.get('/trade', (req, res) => {
   res.sendFile(path.resolve('features/trade/dist/index.html'))
 })
+app.get('/league', (req, res) => {
+  res.sendFile(path.resolve('features/league/dist/index.html'))
+})
 app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.get('/', (req, res) => {
@@ -41,5 +44,5 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 3000
 http.listen(PORT, () => {
-  logger.info(`listening on *:${PORT}`)  
+  logger.info(`listening on *:${PORT}`)
 })
