@@ -164,20 +164,23 @@ async.parallel({
 	    const team1_id = teams[0].id
 	    const team2_id = teams[1].id
 
-	    const analyze = function(probability, team) {
+	    const analyze = function({ hist, prob, mean }, team) {
 	      let teams = result.standings
 	      for (let i=0;i<teams.length;i++) {
 	        if (teams[i].team_id === team.id) {
 	          teams[i].projected_wins = teams[i].wins
 	          teams[i].projected_losses = teams[i].losses
 	          teams[i].projected_ties = teams[i].ties
-	          team.probability = probability
+	          team.probability = prob
 	          team.history = getHistory(teams[i].team_id)
 
 	          const now = moment().format()
 
+              team.histogram = hist
+              team.mean = mean
+
 	          team.history.probability.push({
-		        value: probability,
+		        value: prob,
 		        date: now
 	          })
 
@@ -191,7 +194,7 @@ async.parallel({
 		        date: now
 	          })
 
-	          if (probability > .5) {
+	          if (prob > .5) {
 		        teams[i].projected_wins += 1
 	          } else {
 		        teams[i].projected_losses += 1
@@ -203,8 +206,8 @@ async.parallel({
 	      }
 	    }
 
-	    analyze(prediction.teams[0].prob, teams[0])
-	    analyze(prediction.teams[1].prob, teams[1])
+	    analyze(prediction.teams[0], teams[0])
+	    analyze(prediction.teams[1], teams[1])
 
 	    data.odds.push(teams)
       })
