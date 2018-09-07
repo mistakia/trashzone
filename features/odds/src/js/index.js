@@ -34,6 +34,7 @@ const init = function() {
 	      tag: 'tr',
 	      childs: [{
 	        tag: 'td',
+            className: 'team-logo',
 	        childs: [{
 	          className: 'logo',
 	          style: {
@@ -44,6 +45,9 @@ const init = function() {
 	        tag: 'td',
 	        className: 'team',
 	        childs: [{
+              tag: 'div',
+              className: 'label'
+            }, {
 	          tag: 'a',
 	          attributes: {
 		        href: team.href,
