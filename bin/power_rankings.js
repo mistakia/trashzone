@@ -72,7 +72,7 @@ const run = async () => {
 
     console.log(`Week ${week}`)
 
-    const leagueId = config.pff
+    const { leagueId } = config.pff
     const projections = await machine.projections.pff({ leagueId, weeks: week })
     result[week] = {}
     for (const teamId in teams) {
