@@ -214,7 +214,9 @@ const run = async () => {
     team.avg_simulated_wins = (team.total_simulated_wins / number_of_simulations).toFixed(2)
     team.avg_simulated_losses = (team.total_simulated_losses / number_of_simulations).toFixed(2)
     history[team.team_id].push({
-      odds: team.playoff_odds,
+      playoff: team.playoff_odds,
+      first_round_bye: team.first_round_bye_odds,
+      championship: team.championship_odds,
       date: now
     })
   }
