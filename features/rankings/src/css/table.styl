@@ -5,46 +5,61 @@
   height 200px
   width 100%
 
-table
-  border-collapse collapse
-  border-spacing 0
+.heading
   width 100%
   background #e0e0e0
   border-bottom 1px solid #cdcdcd
+  display flex
+  flex-direction row
 
-  thead
-    text-transform uppercase
-    font-size 0.5em
-    vertical-align bottom
-    .state
-      border-bottom 1px solid #cdcdcd
+.stat-container
+  display flex
+  flex-direction row
+  flex-wrap nowrap
+  flex 3
 
-  tr
-    .team-logo
-      padding 5px
-      background-color rgba(240,91,79,0.15)
-  td
+.stat
+  text-transform uppercase
+  font-size 0.5em
+  vertical-align bottom
+  border-left 1px solid #222
+  font-family "DecimaMonoPro",monospace
+  text-align center
+  width 65px
+  flex 1
+  font-size 16px
+
+.stat-heading
+  border-bottom 1px solid #cdcdcd
+  font-size 9px
+  min-height 22px
+  display table
+  width 100%
+  text-align center
+  span
+    display table-cell
     vertical-align middle
 
-  .stat
-    border-left 1px solid #222
-    font-family "DecimaMonoPro",monospace
-    text-align center
-    width 65px
-    border-bottom 1px solid #cdcdcd
+.stat-value
+  padding 8px 0
 
-  .team-name
-    padding 5px
-    min-width 85px
-    font-size 30px
-
-  .logo
-    background-size cover
-    background-position center
-    border-radius 50%
-    width 28px
-    height 28px
+.team-name
+  padding 5px
+  min-width 85px
+  font-size 20px
+  flex 4
+  display flex
+  align-items center
+  span
+    display table-cell
+    vertical-align middle
 
 @media (max-width: 800px)
-  table .team-name
-    font-size 12px
+  .heading
+    flex-direction column
+  .team-name
+    font-size 14px
+    padding 10px 0
+    border-bottom 1px solid #cdcdcd
+  .stat:first-child
+    border-left none
