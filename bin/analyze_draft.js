@@ -4,10 +4,8 @@ const jsonfile = require('jsonfile')
 const moment = require('moment')
 const async = require('async')
 
-const week_one = moment('2018-08-28')
-const current_week = moment().diff(week_one, 'weeks')
-
 const config = require('../config')
+const current_week = moment().diff(config.week_one, 'weeks')
 
 const draft_data_file = path.resolve(__dirname, '../data/draft.json')
 const draft_data = jsonfile.readFileSync(draft_data_file)

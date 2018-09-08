@@ -6,6 +6,7 @@ const gaussian = require('gaussian')
 const moment = require('moment')
 
 const config = require('../config')
+const current_week = moment().diff(config.week_one, 'weeks')
 
 let history
 const data_path = path.resolve(__dirname, '../data/power_rankings.json')
@@ -67,6 +68,8 @@ const run = async () => {
   let standings = JSON.parse(JSON.stringify(current_standings))
 
   for (const week in schedule) {
+    if (week < current_week) continue
+
     console.log(`Week ${week}`)
 
     const leagueId = config.pff
@@ -118,6 +121,7 @@ const run = async () => {
     // go through schedule - randomly set results
     let simulation_standings = JSON.parse(JSON.stringify(current_standings))
     for (const week in schedule) {
+      if (week < current_week) continue
       const matchups = schedule[week]
       for (const matchup of matchups) {
         const random = Math.floor(Math.random() * 10) + 1
