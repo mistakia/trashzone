@@ -7,11 +7,9 @@ const moment = require('moment')
 const request = require('request')
 
 const config = require('../config')
-
 const format_player = require('../lib/player')
 
-const week_one = moment('2018-08-28')
-const current_week = moment().diff(week_one, 'weeks')
+const current_week = moment().diff(config.week_one, 'weeks')
 
 let odds_data
 try {
