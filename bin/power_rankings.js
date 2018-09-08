@@ -117,7 +117,6 @@ const run = async () => {
 
   const number_of_simulations = 10000
   for (let i=0; i<number_of_simulations; i++) {
-    console.log(`Simulation run #${i}`)
     // go through schedule - randomly set results
     let simulation_standings = JSON.parse(JSON.stringify(current_standings))
     for (const week in schedule) {
@@ -187,7 +186,6 @@ const run = async () => {
       odds: team.playoff_odds,
       date: now
     })
-    console.log(`${team.team} - ${team.playoff_odds}`)
   }
 
   jsonfile.writeFileSync(data_path, { standings, history }, {spaces: 4})
