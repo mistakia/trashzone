@@ -4,6 +4,15 @@ let week_one = moment('2018-08-28')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
+const sortMoneyline = (a, b) => a.moneyline - b.moneyline
+const getMoneyline = (decimal) => {
+  const moneyline = decimal < 2.0
+    ? ((-100)/(decimal - 1)).toPrecision(5)
+    : ((decimal - 1) * 100 ).toPrecision(5)
+
+  return Math.ceil(moneyline / 10) * 10
+}
+
 App.api('/news/fantasy').get().success((data) => {
   var parent = document.querySelector('#nfl-news ul')
   data.items.forEach(function(i) {
@@ -14,6 +23,53 @@ App.api('/news/fantasy').get().success((data) => {
     })
   })
 }).error((message) => {
+  console.error(message.error)
+})
+
+App.api('/odds').get().success((data) => {
+  console.log(data)
+  let playoff_odds = []
+  let championship_odds = []
+
+  let playoff_odds_parent = document.querySelector('#playoff-odds')
+  let championship_odds_parent = document.querySelector('#championship-odds')
+
+  data.forEach((o) => {
+    playoff_odds.push({
+      team: o.team,
+      moneyline: getMoneyline(1/o.playoff)
+    })
+    championship_odds.push({
+      team: o.team,
+      moneyline: getMoneyline(1/o.championship)
+    })
+  })
+
+
+  playoff_odds = playoff_odds.sort(sortMoneyline)
+  championship_odds = championship_odds.sort(sortMoneyline)
+
+  const addOddsElement = (o, parent) => {
+    Elem.create({
+      parent: parent,
+      tag: 'div',
+      className: 'team',
+      childs: [{
+        tag: 'div',
+        className: 'name',
+	    text: o.team
+      }, {
+        tag: 'div',
+        className: 'moneyline',
+        text: o.moneyline
+      }]
+    })
+  }
+
+  playoff_odds.forEach((o) => addOddsElement(o, playoff_odds_parent))
+  championship_odds.forEach((o) => addOddsElement(o, championship_odds_parent))
+
+}).error(message => {
   console.error(message.error)
 })
 
@@ -101,25 +157,17 @@ App.data('/weekly_odds.json').get().success((data) => {
     })
   })
 
-  const getMoneyline = (decimal) => {
-    const moneyline = decimal < 2.0
-      ? ((-100)/(decimal - 1)).toPrecision(5)
-      : ((decimal - 1) * 100 ).toPrecision(5)
-
-    return Math.ceil(moneyline / 10) * 10
-  }
-
-  let odds_parent = document.querySelector('#odds')
+  let weekly_odds_parent = document.querySelector('#weekly-odds')
   odds.forEach((o) => {
     console.log(o.team)
     o.moneyline = getMoneyline(o.odds)
   })
 
-  odds = odds.sort((a, b) => a.moneyline - b.moneyline)
+  odds = odds.sort(sortMoneyline)
 
   odds.forEach((o) => {
     Elem.create({
-      parent: odds_parent,
+      parent: weekly_odds_parent,
       tag: 'div',
       className: 'team',
       childs: [{

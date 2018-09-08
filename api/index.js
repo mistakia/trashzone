@@ -2,10 +2,30 @@ const express = require('express')
 const cheerio = require('cheerio')
 const request = require('request')
 const espn = require('espnff')
+const jsonfile = require('jsonfile')
+const path = require('path')
 
 const config = require('../config')
 
 const router = express.Router()
+
+const odds_data_path = path.resolve(__dirname, '../data/power_rankings.json')
+
+router.get('/odds', (req, res) => {
+  try {
+    const { standings } = jsonfile.readFileSync(odds_data_path)
+
+    const odds = standings.map((team) => ({
+      team: team.team,
+      playoff: team.playoff_odds,
+      championship: team.championship_odds
+    }))
+
+    res.status(200).send(odds)
+  } catch (e) {
+    res.status(500).send({ error: e.toString() })
+  }
+})
 
 router.get('/schedule', (req, res) => {
   espn.schedule.getByLeague(config.espn, (err, items) => {
