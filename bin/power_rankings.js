@@ -60,19 +60,14 @@ const run = async () => {
     team.simulated_first_round_bye = 0
     team.total_simulated_wins = 0
     team.total_simulated_losses = 0
+    team.simulated_championship_win = 0
     team.matchups = {}
   }
 
   let standings = JSON.parse(JSON.stringify(current_standings))
-  const sortStandings = (standings) => {
-
-  }
 
   for (const week in schedule) {
     console.log(`Week ${week}`)
-    if (!schedule[week].length) {
-      break
-    }
 
     const leagueId = config.pff
     const projections = await machine.projections.pff({ leagueId, weeks: week })
@@ -83,6 +78,9 @@ const run = async () => {
     }
 
     const matchups = schedule[week]
+    if (!matchups.length) {
+      continue
+    }
     for (const matchup of matchups) {
       const home_team = standings.find(t => t.team_id === matchup.home_id)
       const away_team = standings.find(t => t.team_id === matchup.away_id)
@@ -159,6 +157,38 @@ const run = async () => {
       team.total_simulated_wins += getTotalWins(simulated_team)
       team.total_simulated_losses += getTotalLosses(simulated_team)
     })
+
+    const getPlayoffGameWinner = (home, away, week) => {
+      const distribution = gaussian(result[week][home.team_id].total, Math.pow(15, 2))
+      const away_probability = distribution.cdf(result[week][away.team_id].total)
+      const random = Math.floor(Math.random() * 10) + 1
+      if (random < (away_probability * 10)) {
+        return away
+      } else {
+        return home
+      }
+    }
+
+    // week 14
+    const seed_5 = simulation_standings.slice(4, 5)[0]
+    const seed_4 = simulation_standings.slice(3, 4)[0]
+    const game_one_winner = getPlayoffGameWinner(seed_4, seed_5, '14')
+
+    const seed_3 = simulation_standings.slice(2, 3)[0]
+    const seed_6 = simulation_standings.slice(5, 6)[0]
+    const game_two_winner = getPlayoffGameWinner(seed_3, seed_6, '14')
+
+    // week 15
+    const seed_2 = simulation_standings.slice(1, 2)[0]
+    const game_three_winner = getPlayoffGameWinner(seed_2, game_two_winner, '15')
+
+    const seed_1 = simulation_standings.slice(0, 1)[0]
+    const game_four_winner = getPlayoffGameWinner(seed_1, game_one_winner, '15')
+
+    // championship
+    const champion = getPlayoffGameWinner(game_three_winner, game_four_winner, '16')
+    const champion_team = standings.find(t => t.team_id === champion.team_id)
+    champion_team.simulated_championship_win += 1
   }
 
   try {
@@ -178,6 +208,7 @@ const run = async () => {
   const now = moment().format()
   for (const team of standings) {
     team.playoff_odds = team.simulated_playoff_appearances / number_of_simulations
+    team.championship_odds = team.simulated_championship_win / number_of_simulations
     team.first_round_bye_odds = team.simulated_first_round_bye / number_of_simulations
     team.total_points = getTotalPoints(team).toFixed(1)
     team.avg_simulated_wins = (team.total_simulated_wins / number_of_simulations).toFixed(2)
@@ -191,4 +222,8 @@ const run = async () => {
   jsonfile.writeFileSync(data_path, { standings, history }, {spaces: 4})
 }
 
-run()
+try {
+  run()
+} catch (e) {
+  console.log(e)
+}

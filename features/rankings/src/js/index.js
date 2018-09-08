@@ -46,7 +46,7 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
             <td class='stat'>${team.total_points}</td>
             <td class='stat'>${(team.playoff_odds * 100).toFixed(1)}%</td>
             <td class='stat'>${(team.first_round_bye_odds * 100).toFixed(1)}%</td>
-            <td class='stat'>??</td>
+            <td class='stat'>${(team.championship_odds * 100).toFixed(1)}%</td>
           </tr>
         </tbody>
       </table>
