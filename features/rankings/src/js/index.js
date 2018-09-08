@@ -26,30 +26,37 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
   standings.forEach((team, index) => {
 
     const html = `
-      <table>
-        <thead>
-          <tr>
-            <td></td>
-            <td class='stat'>wins</td>
-            <td class='stat'>losses</td>
-            <td class='stat'>Projected Points</td>
-            <td class='stat'>make playoffs</td>
-            <td class='stat'>1st-round bye</td>
-            <td class='stat'>win championship</td>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class='team-name'><small>${index+1}.</small> ${team.team}<small>${team.record}</small></td>
-            <td class='stat'>${team.avg_simulated_wins}</td>
-            <td class='stat'>${team.avg_simulated_losses}</td>
-            <td class='stat'>${team.total_points}</td>
-            <td class='stat'>${(team.playoff_odds * 100).toFixed(1)}%</td>
-            <td class='stat'>${(team.first_round_bye_odds * 100).toFixed(1)}%</td>
-            <td class='stat'>${(team.championship_odds * 100).toFixed(1)}%</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class='heading'>
+        <div class='team-name'>
+          <small>${index+1}.</small> ${team.team}<small>${team.record}</small>
+        </div>
+        <div class='stat-container'>
+          <div class='stat'>
+            <div class='stat-heading'><span>wins</span></div>
+            <div class='stat-value'>${team.avg_simulated_wins}</div>
+          </div>
+          <div class='stat'>
+            <div class='stat-heading'><span>losses</span></div>
+            <div class='stat-value'>${team.avg_simulated_losses}</div>
+          </div>
+          <div class='stat'>
+            <div class='stat-heading'><span>projected points</span></div>
+            <div class='stat-value'>${team.total_points}</div>
+          </div>
+          <div class='stat'>
+            <div class='stat-heading'><span>make playoffs</span></div>
+            <div class='stat-value'>${(team.playoff_odds * 100).toFixed(1)}%</div>
+          </div>
+          <div class='stat'>
+            <div class='stat-heading'><span>1st-round bye</span></div>
+            <div class='stat-value'>${(team.first_round_bye_odds * 100).toFixed(1)}%</div>
+          </div>
+          <div class='stat'>
+            <div class='stat-heading'><span>win championship</span></div>
+            <div class='stat-value'>${(team.championship_odds * 100).toFixed(1)}%</div>
+          </div>
+        </div>
+      </div>
       <div class='chart'></div>
     `
 
