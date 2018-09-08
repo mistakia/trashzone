@@ -398,7 +398,7 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
 
     let odds_data = odds_history.map((item) => {
 	  item.date = new Date(item.date)
-      item.value = item.odds
+      item.value = item.playoff
 	  return item
     })
 
