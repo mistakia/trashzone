@@ -1,0 +1,50 @@
+@import 'nib'
+@import 'variables.styl'
+
+.chart
+  height 200px
+  width 100%
+
+table
+  border-collapse collapse
+  border-spacing 0
+  width 100%
+  background #e0e0e0
+  border-bottom 1px solid #cdcdcd
+
+  thead
+    text-transform uppercase
+    font-size 0.5em
+    vertical-align bottom
+    .state
+      border-bottom 1px solid #cdcdcd
+
+  tr
+    .team-logo
+      padding 5px
+      background-color rgba(240,91,79,0.15)
+  td
+    vertical-align middle
+
+  .stat
+    border-left 1px solid #222
+    font-family "DecimaMonoPro",monospace
+    text-align center
+    width 65px
+    border-bottom 1px solid #cdcdcd
+
+  .team-name
+    padding 5px
+    min-width 85px
+    font-size 30px
+
+  .logo
+    background-size cover
+    background-position center
+    border-radius 50%
+    width 28px
+    height 28px
+
+@media (max-width: 800px)
+  table .team-name
+    font-size 12px

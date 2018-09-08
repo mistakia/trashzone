@@ -33,6 +33,9 @@ app.get('/draft', (req, res) => {
 app.get('/trade', (req, res) => {
   res.sendFile(path.resolve('features/trade/dist/index.html'))
 })
+app.get('/rankings', (req, res) => {
+  res.sendFile(path.resolve('features/rankings/dist/index.html'))
+})
 app.get('/league', (req, res) => {
   res.sendFile(path.resolve('features/league/dist/index.html'))
 })
