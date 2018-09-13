@@ -21,7 +21,7 @@ document.getElementById('current-week').innerHTML = `Week ${current_week}`
 const odds_parent = document.querySelector('main section.odds')
 
 const init = function() {
-  App.data('/odds_analysis.json').get().success((data) => {
+  App.data(`/odds_analysis_${current_week}.json`).get().success((data) => {
 
     odds_parent.innerHTML = null
 
@@ -34,7 +34,7 @@ const init = function() {
 	      tag: 'tr',
 	      childs: [{
 	        tag: 'td',
-            className: 'team-logo',
+            className: 'team',
 	        childs: [{
 	          className: 'logo',
 	          style: {
@@ -87,9 +87,15 @@ const init = function() {
 	    className: 'game',
 	    attributes: { id: `matchup${index}` },
 	    childs: [{
-	      className: 'chart'
+          tag: 'h4',
+          text: 'Score Probability Distribution'
         }, {
           className: 'ct-chart'
+        }, {
+          tag: 'h4',
+          text: 'Probability Over time'
+        }, {
+	      className: 'chart'
 	    }, {
 	      tag: 'table',
 	      childs: [{
@@ -183,7 +189,7 @@ const init = function() {
 	    data: [team1_data, team2_data],
 	    full_width: true,
 	    format: 'percentage',
-	    height: 200,
+	    height: 150,
 	    right: 40,
 	    x_accessor: 'date',
 	    y_accessor: 'value',
@@ -262,11 +268,14 @@ const init = function() {
   })
 }
 
-const valid_days = [0,1,4,5,6]
-const day_of_week = moment().day()
+const start = moment().day('Thursday').hour(12)
+console.log(start)
+const end = moment().day('Tuesday').add(1, 'week')
+console.log(end)
+const now = moment()
 
-if (valid_days.indexOf(day_of_week) === -1) {
-  odds_parent.innerHTML = '<div class="loading">Availble on Sundays and Mondays only</div>'
-} else {
+if (now.isBetween(start, end)) {
   init()
+} else {
+  odds_parent.innerHTML = `<div class="loading">Availble on ${start.format('dddd, MMMM Do YYYY')} at noon.</div>`
 }

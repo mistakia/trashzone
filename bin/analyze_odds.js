@@ -212,7 +212,8 @@ async.parallel({
 
       data.standings = result.standings
 
-      jsonfile.writeFileSync(path.resolve(__dirname, '../data/odds_analysis.json'), data, {spaces: 4})
+      const data_path = path.resolve(__dirname, `../data/odds_analysis_${current_week}.json`)
+      jsonfile.writeFileSync(data_path, data, {spaces: 4})
     })
   })
 })

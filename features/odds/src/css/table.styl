@@ -2,13 +2,15 @@
 @import 'variables.styl'
 
 .chart
-  height 200px
+  height 150px
   width 100%
 
 table
   border-collapse collapse
   border-spacing 0
+  margin 0 auto
   width 100%
+  border-top 1px solid #ccc
 
   thead
     text-transform uppercase
@@ -19,9 +21,9 @@ table
   tr
     &:first-child
       border-bottom 1px solid #cdcdcd
-      .team-logo
+      .team
         background-color rgba(60,184,82,0.15)
-    .team-logo
+    .team
       padding 5px
       background-color rgba(240,91,79,0.15)
   td
@@ -46,7 +48,6 @@ table
 
   .team
     padding 5px
-    min-width 85px
 
   .logo
     background-size cover

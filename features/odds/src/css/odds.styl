@@ -2,19 +2,30 @@
 @import 'variables.styl'
 
 .odds
-    display flex
-    flex-direction row
-    flex-wrap wrap
-    justify-content space-between
+  display flex
+  flex-direction row
+  flex-wrap wrap
+  justify-content space-between
 
 .game
-    flex 0 1 auto
-    width 47%
-    padding 1%
-    margin-bottom 1.5%
-    border 2px solid #ccc
+  flex 0 1 auto
+  width 100%
+  margin-bottom 35px
+  background white
+  border 1px solid #ccc
+  .chart
+  .ct-chart
+    background white
+  h4
+    text-align center
+    font-size 10px
+    color rgba(0,0,0,0.8)
+    padding 4px 0
+    background #fafafa
+    &:not(:first-child)
+      border-top 1px solid #CCC
 
 @media (max-width: 800px)
-    .game
-        width 99%
-        padding 0
+  .game
+    width 99%
+    padding 0
