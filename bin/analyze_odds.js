@@ -10,11 +10,11 @@ const config = require('../config')
 const format_player = require('../lib/player')
 
 const current_week = moment().diff(config.week_one, 'weeks')
+const data_path = path.resolve(__dirname, `../data/odds_analysis_${current_week}.json`)
 
 let odds_data
 try {
-  const odds_data_file = path.resolve(__dirname, '../data/odds_analysis.json')
-  odds_data = jsonfile.readFileSync(odds_data_file)
+  odds_data = jsonfile.readFileSync(data_path)
 } catch(err) {
   console.log(err)
   odds_data = []
@@ -212,7 +212,6 @@ async.parallel({
 
       data.standings = result.standings
 
-      const data_path = path.resolve(__dirname, `../data/odds_analysis_${current_week}.json`)
       jsonfile.writeFileSync(data_path, data, {spaces: 4})
     })
   })
