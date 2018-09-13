@@ -18,6 +18,14 @@ function acr(s){
   return acronym
 }
 
+const markers = [{
+  date: new Date(moment('2018-09-11')),
+  label: 'Start of Week 2'
+}, {
+  date: new Date(moment('2018-09-12 6:00')),
+  label: 'Waivers clear'
+}]
+
 App.data('/power_rankings.json').get().success(({ standings, history }) => {
   parent.innerHTML = null
 
@@ -77,8 +85,6 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
 	  return item
     })
 
-    const random = Math.floor(Math.random() * odds_data.length) + 1
-
     MG.data_graphic({
 	  data: [odds_data],
 	  full_width: true,
@@ -90,7 +96,7 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
 	  area: true,
 	  x_extended_ticks: true,
 	  colors: ['#f05b4f'],
-      markers: [{date: odds_data[random - 1].date, 'label': `${acr(team.team)} picked up Trash`}],
+      markers: markers,
 	  target: `#team${team.team_id} .chart`
     })
   })
