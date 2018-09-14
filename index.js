@@ -22,27 +22,24 @@ app.use((req, res, next) => {
 })
 app.use('/api', api)
 app.get('/coenwulf', (req, res) => {
-  res.sendFile(path.resolve('features/coenwulf/dist/index.html'))
+  res.sendFile(path.resolve('src/coenwulf/dist/index.html'))
 })
 app.get('/odds', (req, res) => {
-  res.sendFile(path.resolve('features/odds/dist/index.html'))
+  res.sendFile(path.resolve('src/odds/dist/index.html'))
 })
 app.get('/draft', (req, res) => {
-  res.sendFile(path.resolve('features/draft/dist/index.html'))
-})
-app.get('/trade', (req, res) => {
-  res.sendFile(path.resolve('features/trade/dist/index.html'))
+  res.sendFile(path.resolve('src/draft/dist/index.html'))
 })
 app.get('/rankings', (req, res) => {
-  res.sendFile(path.resolve('features/rankings/dist/index.html'))
+  res.sendFile(path.resolve('src/rankings/dist/index.html'))
 })
 app.get('/league', (req, res) => {
-  res.sendFile(path.resolve('features/league/dist/index.html'))
+  res.sendFile(path.resolve('src/league/dist/index.html'))
 })
 app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('client/dist/index.html'))
+  res.sendFile(path.resolve('src/home/dist/index.html'))
 })
 
 const PORT = process.env.PORT || 3000
