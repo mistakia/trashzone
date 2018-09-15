@@ -1,268 +1,236 @@
 doctype html
 html
-    head
-        title.
-            The Trash Zone
-        meta(name='description', content='All the trash thats fit to stash')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
-        link(rel='stylesheet', href='app.css', inline='true')
-        link(href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One", rel="stylesheet")
-        link(rel="apple-touch-icon-precomposed", sizes="57x57", href="apple-touch-icon-57x57.png")
-        link(rel="apple-touch-icon-precomposed", sizes="114x114", href="apple-touch-icon-114x114.png")
-        link(rel="apple-touch-icon-precomposed", sizes="72x72", href="apple-touch-icon-72x72.png")
-        link(rel="apple-touch-icon-precomposed", sizes="144x144", href="apple-touch-icon-144x144.png")
-        link(rel="apple-touch-icon-precomposed", sizes="60x60", href="apple-touch-icon-60x60.png")
-        link(rel="apple-touch-icon-precomposed", sizes="120x120", href="apple-touch-icon-120x120.png")
-        link(rel="apple-touch-icon-precomposed", sizes="76x76", href="apple-touch-icon-76x76.png")
-        link(rel="apple-touch-icon-precomposed", sizes="152x152", href="apple-touch-icon-152x152.png")
-        link(rel="icon" type="image/png", href="favicon-196x196.png", sizes="196x196")
-        link(rel="icon" type="image/png", href="favicon-96x96.png", sizes="96x96")
-        link(rel="icon" type="image/png", href="favicon-32x32.png", sizes="32x32")
-        link(rel="icon" type="image/png", href="favicon-16x16.png", sizes="16x16")
-        link(rel="icon" type="image/png", href="favicon-128.png", sizes="128x128")
-        meta(name="application-name", content="&nbsp;")
-        meta(name="msapplication-TileColor", content="#FFFFFF")
-        meta(name="msapplication-TileImage", content="mstile-144x144.png")
-        meta(name="msapplication-square70x70logo", content="mstile-70x70.png")
-        meta(name="msapplication-square150x150logo", content="mstile-150x150.png")
-        meta(name="msapplication-wide310x150logo", content="mstile-310x150.png")
-        meta(name="msapplication-square310x310logo", content="mstile-310x310.png")        
-    body
-        header
-            img#title(src='/logo.png')
-            #tagline "All the trash that's fit to stash"
-            .left-header
-                #date
-                #current-week
-            .right-header
-                #contact
-                    | Contribute:
-                    a(href="mailto:trashzone@gmail.com") trashzone@gmail.com
-        main
-            h1.feature-headline Coenwulf
-            img.feature-image(src='/week1-cartoon.png')
-            section.feature-section
-                h2.section-header I.
+  head
+    title.
+      The Trash Zone
+    include ../../shared/html/head.jade
+  body
+    include ../../shared/html/header.jade
+    main
+      h1.feature-headline Coenwulf
+      img.feature-image(src='/week1-cartoon.png')
+      section.feature-section
+        h2.section-header I.
 
-                p
-                    | Coenwulf crawls from Dalton disaster,
-                    | from Flacco flames, to Cutler,
-                    | cut from the same cruel cloth.
-                p
-                    | Lo, ponder the woe of The Peasant King,
-                    | of worthless warriors, in weeks without wins.
-                    | Hark for the heroine, Ashley, 
-                    | glowing with beauty, humility, honor, 
-                    | embers everlasting amid ashen ruin: 
-                    | A foolish king fatally flawed in fantasy.
+        p
+          | Coenwulf crawls from Dalton disaster,
+          | from Flacco flames, to Cutler,
+          | cut from the same cruel cloth.
+        p
+          | Lo, ponder the woe of The Peasant King,
+          | of worthless warriors, in weeks without wins.
+          | Hark for the heroine, Ashley,
+          | glowing with beauty, humility, honor,
+          | embers everlasting amid ashen ruin:
+          | A foolish king fatally flawed in fantasy.
 
-                h2.section-header II.
+        h2.section-header II.
 
-                p
-                    | Famed was this Coenwulf, far flew his legend:
-                    | Son of crown-king Levprilstein of the Teflon League,
-                    | a greedy youth acquitted to quarrel,
-                    | of peasant stock, but regal blood.
-                    | A prince thirsty for the fantasy throne.
-                p
-                    | His father and father’s friends, by pity and gift,
-                    | aid him with aged wisdom, 
-                    | adorn him with champion robes,
-                    | spoils of war from Levprilstein’s glory;
-                    | bales of false promise for the pitiful Coenwulf
-                    | double as tinder for the arsonist of fate.
-                p
-                    | The calendar marks two thousand sixteen 
-                    | whence, with poverty of soul and paucity of skill,
-                    | the prince embraces his father,
-                    | murder makes martyr of king,
-                    | and new reign rules over the league.
-                p
-                    | Forth Coenwulf fared at the fated moment,
-                    | sturdy Levprilstein to the shelter of God.
-                    | Peasants bore him over to ocean’s billow,
-                    | the leader beloved who long had ruled....
-                    | In the dock rocked an ivy-wrought vessel,
-                    | ice-flecked, outbound, a funeral’s barge:
-                    | there laid they down their darling lord
-                    | on the breast of the boat, the never-forgotten,
-                    | by the mast the mighty one burned.
-                p
-                    | Hence flowed lies from the throne,
-                    | lava through the streets of Suburbia:
-                    | A peaceful passing, swept off in a slumber.
-                    | Coenwulf weeps walrus tears for his father,
-                    | as he sharpens his tusks.
-                p
-                    | In after-days come peasants willing,
-                    | Gillislee, Ebron, Antonio, Hopkins,
-                    | liegemen loyal to protect the league,
-                    | liegemen loyal to a new Peasant King.
+        p
+          | Famed was this Coenwulf, far flew his legend:
+          | Son of crown-king Levprilstein of the Teflon League,
+          | a greedy youth acquitted to quarrel,
+          | of peasant stock, but regal blood.
+          | A prince thirsty for the fantasy throne.
+        p
+          | His father and father’s friends, by pity and gift,
+          | aid him with aged wisdom,
+          | adorn him with champion robes,
+          | spoils of war from Levprilstein’s glory;
+          | bales of false promise for the pitiful Coenwulf
+          | double as tinder for the arsonist of fate.
+        p
+          | The calendar marks two thousand sixteen
+          | whence, with poverty of soul and paucity of skill,
+          | the prince embraces his father,
+          | murder makes martyr of king,
+          | and new reign rules over the league.
+        p
+          | Forth Coenwulf fared at the fated moment,
+          | sturdy Levprilstein to the shelter of God.
+          | Peasants bore him over to ocean’s billow,
+          | the leader beloved who long had ruled....
+          | In the dock rocked an ivy-wrought vessel,
+          | ice-flecked, outbound, a funeral’s barge:
+          | there laid they down their darling lord
+          | on the breast of the boat, the never-forgotten,
+          | by the mast the mighty one burned.
+        p
+          | Hence flowed lies from the throne,
+          | lava through the streets of Suburbia:
+          | A peaceful passing, swept off in a slumber.
+          | Coenwulf weeps walrus tears for his father,
+          | as he sharpens his tusks.
+        p
+          | In after-days come peasants willing,
+          | Gillislee, Ebron, Antonio, Hopkins,
+          | liegemen loyal to protect the league,
+          | liegemen loyal to a new Peasant King.
 
-                h2.section-header III.
+        h2.section-header III.
 
-                p
-                    | Now Coenwulf bode in the burg of the league,
-                    | leader unloved, though long he ruled,
-                    | infamous among peasants,
-                    | since his father had previously gone
-                    | to do epic heroic things -- unlike his heir,
-                    | who knew but treachery and trape.
-                    | Levprilstein was legendary, always has been,
-                    | with championships, conquests, et al.
-                    | Quarterbackless and alone, Coenwulf sputtered
-                    | confusion, anxiety, and weakness.
-                    | A conquest he needed, to gain the respect,
-                    | and a queen he needed to settle the spirit.
-                p
-                    | Both soon emerged from deep in the valley.
-                p
-                    | Forest fair maiden were myths amongst peasants,
-                    | Tales told of their Bohemian beauty,
-                    | sweetness unmatched by any league-fruit,
-                    | and purity quenchful of even Sinner’s thirst.
-                    | So as myth’s mirror Ashley appeared at burg’s gate.
-                p
-                    | Joy to the Teflon League!
-                    | The kingdom rejoiced!
-                    | Peasants lined her path to the castle,
-                    | where miserable Coenwulf stewed.
-                    | The simmering chief stroked his royal frog,
-                    | laboring in woe for his losses.
-                    | Once had been traced the trail of legend,
-                    | overgrown with wicked weeds of failure.
-                p
-                    | Whence Ashley entered, weed-whacking,
-                    | Coenwulf misbelieved his luck.
-                p
-                    | While peasants made myths of maidens,
-                    | the legend of The Peasant King grew tall in the wood:
-                    | A raggedy regent, a merchant of misery,
-                    | presiding over a once-proud league
-                    | of poverty and profound disappointment.
-                p
-                    | Ne’er had a forest fair maiden left the forest,
-                    | yet pure and perfect Ashley fled—
-                    | only she could save Coenwulf from ruin.
-                p
+        p
+          | Now Coenwulf bode in the burg of the league,
+          | leader unloved, though long he ruled,
+          | infamous among peasants,
+          | since his father had previously gone
+          | to do epic heroic things -- unlike his heir,
+          | who knew but treachery and trape.
+          | Levprilstein was legendary, always has been,
+          | with championships, conquests, et al.
+          | Quarterbackless and alone, Coenwulf sputtered
+          | confusion, anxiety, and weakness.
+          | A conquest he needed, to gain the respect,
+          | and a queen he needed to settle the spirit.
+        p
+          | Both soon emerged from deep in the valley.
+        p
+          | Forest fair maiden were myths amongst peasants,
+          | Tales told of their Bohemian beauty,
+          | sweetness unmatched by any league-fruit,
+          | and purity quenchful of even Sinner’s thirst.
+          | So as myth’s mirror Ashley appeared at burg’s gate.
+        p
+          | Joy to the Teflon League!
+          | The kingdom rejoiced!
+          | Peasants lined her path to the castle,
+          | where miserable Coenwulf stewed.
+          | The simmering chief stroked his royal frog,
+          | laboring in woe for his losses.
+          | Once had been traced the trail of legend,
+          | overgrown with wicked weeds of failure.
+        p
+          | Whence Ashley entered, weed-whacking,
+          | Coenwulf misbelieved his luck.
+        p
+          | While peasants made myths of maidens,
+          | the legend of The Peasant King grew tall in the wood:
+          | A raggedy regent, a merchant of misery,
+          | presiding over a once-proud league
+          | of poverty and profound disappointment.
+        p
+          | Ne’er had a forest fair maiden left the forest,
+          | yet pure and perfect Ashley fled—
+          | only she could save Coenwulf from ruin.
+        p
 
-                h2.section-header IV.
+        h2.section-header IV.
 
-                p
-                    | In wedding’s dawn, as daylight broke,
-                    | was a wail uplifted, a loud moan in the morn;
-                    | and the might of Chimera to men was known.
-                p
-                    | A conquest!
-                p
-                    | Coenwulf decided, then and there,
-                    | live up to the fame of Levprilstein he must,
-                    | defeat Chimera or else suffer eternity.
-                    | Peasants he would gather, far and wide,
-                    | to aid such efforts.
-                p
-                    | Belligerent clouds blackened the sky,
-                    | and shadow shook harmony from the league,
-                    | Peace, pleaded pure Ashley,
-                    | conquer Chimera with kindness,
-                    | Yet shriveled was The Peasant King’s spirit.
-                    | no water, even purest of forest, would save
-                    | Coenwulf, a champion dead-dry with pride.
-                p
-                    | On board they climbed,
-                    | peasants ready; waves were churning
-                    | sea with sand; the sailors bore
-                    | their mail and weapons: the peasants pushed off,
-                    | on its willing way, the well-braced craft.
-                    | Then moved o’er the waters by might of the wind
-                    | like a bird with breast of foam,
-                    | till in season due, on the third week,
-                    | sailors now could see the land,
-                    | sea-cliffs shining, steep high hills,
-                    | headlands broad: Chimera was found.
-                p
-                    | They set their shields of war,
-                    | bucklers bright; on the bench were there
-                    | over each peasant, the high battle-helmet,
-                    | the haughty spear, the corselet of rings.
-                    | ‘Twas their custom to be for battle prepared,
-                    | at home, or harrying, which it were,
-                    | even as oft-awful in fantasy fared
-                    | their pitiful peasant-king, Coenwulf.
-                p
-                    | Peasants battled, Rams attempted defense,
-                    | many died, Coenwulf battled bravely,
-                    | while leading peasants to death.
-                    | Long-tried king,
-                    | the hoary hero, at heart was sad
-                    | when he knew all peasants no more lived,
-                    | and pointless indeed were their efforts.
-                p
-                    | A solitary soldier afield, Chimera summoned
-                    | king. Familiar features found Coenwulf,
-                    | In bestial eyes, his own; in lion’s whiskers,
-                    | the fog-white beard of a forgotten father;
-                    | in dripping saliva visions reflected
-                    | of ivy-wrought vessel—Levprilstein’s ghost!
-                p
-                    | The never-forgotten,
-                    | crown-king of Teflon League, champion of
-                    | two thousand eleven and
-                    | two thousand fifteen,
-                    | uniter of peasants, doting father to
-                    | Coenwulf…until death dealt decay
-                    | unto family and kingdom.
-                p
+        p
+          | In wedding’s dawn, as daylight broke,
+          | was a wail uplifted, a loud moan in the morn;
+          | and the might of Chimera to men was known.
+        p
+          | A conquest!
+        p
+          | Coenwulf decided, then and there,
+          | live up to the fame of Levprilstein he must,
+          | defeat Chimera or else suffer eternity.
+          | Peasants he would gather, far and wide,
+          | to aid such efforts.
+        p
+          | Belligerent clouds blackened the sky,
+          | and shadow shook harmony from the league,
+          | Peace, pleaded pure Ashley,
+          | conquer Chimera with kindness,
+          | Yet shriveled was The Peasant King’s spirit.
+          | no water, even purest of forest, would save
+          | Coenwulf, a champion dead-dry with pride.
+        p
+          | On board they climbed,
+          | peasants ready; waves were churning
+          | sea with sand; the sailors bore
+          | their mail and weapons: the peasants pushed off,
+          | on its willing way, the well-braced craft.
+          | Then moved o’er the waters by might of the wind
+          | like a bird with breast of foam,
+          | till in season due, on the third week,
+          | sailors now could see the land,
+          | sea-cliffs shining, steep high hills,
+          | headlands broad: Chimera was found.
+        p
+          | They set their shields of war,
+          | bucklers bright; on the bench were there
+          | over each peasant, the high battle-helmet,
+          | the haughty spear, the corselet of rings.
+          | ‘Twas their custom to be for battle prepared,
+          | at home, or harrying, which it were,
+          | even as oft-awful in fantasy fared
+          | their pitiful peasant-king, Coenwulf.
+        p
+          | Peasants battled, Rams attempted defense,
+          | many died, Coenwulf battled bravely,
+          | while leading peasants to death.
+          | Long-tried king,
+          | the hoary hero, at heart was sad
+          | when he knew all peasants no more lived,
+          | and pointless indeed were their efforts.
+        p
+          | A solitary soldier afield, Chimera summoned
+          | king. Familiar features found Coenwulf,
+          | In bestial eyes, his own; in lion’s whiskers,
+          | the fog-white beard of a forgotten father;
+          | in dripping saliva visions reflected
+          | of ivy-wrought vessel—Levprilstein’s ghost!
+        p
+          | The never-forgotten,
+          | crown-king of Teflon League, champion of
+          | two thousand eleven and
+          | two thousand fifteen,
+          | uniter of peasants, doting father to
+          | Coenwulf…until death dealt decay
+          | unto family and kingdom.
+        p
 
-                h2.section-header V.
+        h2.section-header V.
 
-                p
-                    | In Teflon League, peasants were no more,
-                    | serpentine streets, silent in Suburbia.
-                    | Ashley and Coenwulf walk alone at dusk,
-                    | their regal frog romping with rodents.
-                p
-                    | Chimera offered to spare Coenwulf,
-                    | a soldier’s surrender, a lone condition suffice:
-                    | Free the forest fair maiden from your peasant future,
-                    | return her to fate’s current, from whence
-                    | she was plucked.
-                    | Grant the angel Ashley hope of a heaven
-                    | apart from Coenwulf’s hellish fantasy team.
-                p
-                    | Amid peasant ashes, a voice:
-                    |      But in darkness must there be light.
-                p
-                    | Ashley, forest fair maiden, left forest
-                    | not for purity, but for pain,
-                    | not hope, but misery,
-                    | nay for bold—for meek,
-                    | for pitiful peasants. And what peasant
-                    | more deserving than The Peasant King!
-                p
-                    | As the candle burns on our season,
-                    | may our ashes lie among such embers
-                    | burning everlasting as Ashley,
-                    | superior bride to hopeless Coenwulf,
-                    | whose championship hopes rot
-                    | in a carousel of waiver-wire corpses.
-                    | May we honor our heroine,
-                    | the forest fair maiden,
-                    | in how her hope sustains
-                    | Coenwulf in hopelessness.
-                p
-                    | All peasants defeated, all peasants dead,
-                    | The Peasant King, Coenwulf, facing
-                    | Kirk Cousins, Devonta Freeman, Leonard Fournette,
-                    | Chris Carson, Brandin Cooks, JJ Nelson, Jack Doyle,
-                    | Ryan Succop, and the Buccaneers Defense.
-                p
-                    | Crows called to Levprilstein’s grave,
-                    | dark wings, dark words, all was known.
-                    | Chimera defeated Coenwulf,
-                    | no one surprised.
-            img.feature-image(src='/coenwulf-image.jpg')
-                    
+        p
+          | In Teflon League, peasants were no more,
+          | serpentine streets, silent in Suburbia.
+          | Ashley and Coenwulf walk alone at dusk,
+          | their regal frog romping with rodents.
+        p
+          | Chimera offered to spare Coenwulf,
+          | a soldier’s surrender, a lone condition suffice:
+          | Free the forest fair maiden from your peasant future,
+          | return her to fate’s current, from whence
+          | she was plucked.
+          | Grant the angel Ashley hope of a heaven
+          | apart from Coenwulf’s hellish fantasy team.
+        p
+          | Amid peasant ashes, a voice:
+          |      But in darkness must there be light.
+        p
+          | Ashley, forest fair maiden, left forest
+          | not for purity, but for pain,
+          | not hope, but misery,
+          | nay for bold—for meek,
+          | for pitiful peasants. And what peasant
+          | more deserving than The Peasant King!
+        p
+          | As the candle burns on our season,
+          | may our ashes lie among such embers
+          | burning everlasting as Ashley,
+          | superior bride to hopeless Coenwulf,
+          | whose championship hopes rot
+          | in a carousel of waiver-wire corpses.
+          | May we honor our heroine,
+          | the forest fair maiden,
+          | in how her hope sustains
+          | Coenwulf in hopelessness.
+        p
+          | All peasants defeated, all peasants dead,
+          | The Peasant King, Coenwulf, facing
+          | Kirk Cousins, Devonta Freeman, Leonard Fournette,
+          | Chris Carson, Brandin Cooks, JJ Nelson, Jack Doyle,
+          | Ryan Succop, and the Buccaneers Defense.
+        p
+          | Crows called to Levprilstein’s grave,
+          | dark wings, dark words, all was known.
+          | Chimera defeated Coenwulf,
+          | no one surprised.
+      img.feature-image(src='/coenwulf-image.jpg')
+
     script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
     script(src='vendor.js?__inline=true')
     script(src='app.js?__inline=true')
