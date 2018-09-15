@@ -1,89 +1,57 @@
 doctype html
 html
-    head
-        title.
-            The Trash Zone
-        meta(name='description', content='All the trash thats fit to stash')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=no')
-        link(rel='stylesheet', href='app.css', inline='true')
-        link(href="https://fonts.googleapis.com/css?family=Archivo+Narrow|IM+Fell+English|Old+Standard+TT|Philosopher|Raleway|Russo+One", rel="stylesheet")
-        link(rel="apple-touch-icon-precomposed", sizes="57x57", href="apple-touch-icon-57x57.png")
-        link(rel="apple-touch-icon-precomposed", sizes="114x114", href="apple-touch-icon-114x114.png")
-        link(rel="apple-touch-icon-precomposed", sizes="72x72", href="apple-touch-icon-72x72.png")
-        link(rel="apple-touch-icon-precomposed", sizes="144x144", href="apple-touch-icon-144x144.png")
-        link(rel="apple-touch-icon-precomposed", sizes="60x60", href="apple-touch-icon-60x60.png")
-        link(rel="apple-touch-icon-precomposed", sizes="120x120", href="apple-touch-icon-120x120.png")
-        link(rel="apple-touch-icon-precomposed", sizes="76x76", href="apple-touch-icon-76x76.png")
-        link(rel="apple-touch-icon-precomposed", sizes="152x152", href="apple-touch-icon-152x152.png")
-        link(rel="icon" type="image/png", href="favicon-196x196.png", sizes="196x196")
-        link(rel="icon" type="image/png", href="favicon-96x96.png", sizes="96x96")
-        link(rel="icon" type="image/png", href="favicon-32x32.png", sizes="32x32")
-        link(rel="icon" type="image/png", href="favicon-16x16.png", sizes="16x16")
-        link(rel="icon" type="image/png", href="favicon-128.png", sizes="128x128")
-        meta(name="application-name", content="&nbsp;")
-        meta(name="msapplication-TileColor", content="#FFFFFF")
-        meta(name="msapplication-TileImage", content="mstile-144x144.png")
-        meta(name="msapplication-square70x70logo", content="mstile-70x70.png")
-        meta(name="msapplication-square150x150logo", content="mstile-150x150.png")
-        meta(name="msapplication-wide310x150logo", content="mstile-310x150.png")
-        meta(name="msapplication-square310x310logo", content="mstile-310x310.png")
-    body
-        header
-            img#title(src='/logo.png')
-            #tagline "All the trash that's fit to stash"
-            .left-header
-                #date
-                #current-week
-            .right-header
-                #contact
-                    | Contribute:
-                    a(href="mailto:trashzone@gmail.com") trashzone@gmail.com
-        main
-            section.ab-section
-                section.a-section
-                    img#iscasino(src='/iscasino.png')
-                    h3.odds-heading Weekly Odds
-                    #weekly-odds.odds
-                    h3.odds-heading Playoff Odds
-                    #playoff-odds.odds
-                    h3.odds-heading Championship Odds
-                    #championship-odds.odds
-                section.b-section
-                    #matchups
-                        h1 This Weeks Matchups
+  head
+    title.
+      The Trash Zone
+    include ../../shared/html/head.jade
+  body
+    include ../../shared/html/header.jade
+    main
+      section.ab-section
+        section.a-section
+          img#iscasino(src='/iscasino.png')
+          h3.odds-heading Weekly Odds
+          #weekly-odds.odds
+          h3.odds-heading Playoff Odds
+          #playoff-odds.odds
+          h3.odds-heading Championship Odds
+          #championship-odds.odds
+        section.b-section
+          #matchups
+            h1 This Weeks Matchups
 
-                    img(src='/special_counsel.png')
-                    h2 Commissioner Appoints Special Counsel For Investigation into West Coast Collusion
-                    p
-                      | Earlier this week, the commissioner appointed a Special Counsel immediately following the news of the ISC forming two teams with the onboarding of Brian Feldman. The announcement of the change came with little details, allowing for it to be met with rampant speculations and accusations that culminated in the Special Counsels appointment. A source with knowledge about the investigation has said that the Special Counsel himself may need to recuse as he is not fit to lead the investigation due to an undisclosed conflict of interest. The source would not say much more other than to suggest that the Special Counsel himself may have been party to conversations that are now under investigation.
-                    p
-                      | The Special Counsels office has not made any public comments since being appointed and denied to comment on this story.
-            section.side-section
-                #drops
-                    h4 Trash
-                    ul.side-news
-                #adds
-                    h4 Recycled
-                    ul.side-news
-                #nfl-news
-                    h4 NFL Beat
-                    ul.side-news
-                #player-news
-                    h4 Player Beat
-                    ul.side-news
-                #trape-level
-                    h2 Trape Threat Level
-                    .level.blue
-                        .title Low
-                        .sub-title low risk of trape attacks
-                    p.tips
-                        | If you see something, say something
-                #standings
-                    h4 Standings
-                    ol.side-news
-                #most-points
-                    h4 Point Leaders
-                    ol.side-news
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
-    script(src='vendor.js?__inline=true')
-    script(src='app.js?__inline=true')
+          img(src='/special_counsel.png')
+          h2 Commissioner Appoints Special Counsel For Investigation into West Coast Collusion
+          p
+            | Earlier this week, the commissioner appointed a Special Counsel immediately following the news of the ISC forming two teams with the onboarding of Brian Feldman. The announcement of the change came with little details, allowing for it to be met with rampant speculations and accusations that culminated in the Special Counsels appointment. A source with knowledge about the investigation has said that the Special Counsel himself may need to recuse as he is not fit to lead the investigation due to an undisclosed conflict of interest. The source would not say much more other than to suggest that the Special Counsel himself may have been party to conversations that are now under investigation.
+          p
+            | The Special Counsels office has not made any public comments since being appointed and denied to comment on this story.
+      section.side-section
+        #drops
+          h4 Trash
+          ul.side-news
+        #adds
+          h4 Recycled
+          ul.side-news
+        #nfl-news
+          h4 NFL Beat
+          ul.side-news
+        #player-news
+          h4 Player Beat
+          ul.side-news
+        #trape-level
+          h2 Trape Threat Level
+          .level.blue
+            .title Low
+            .sub-title low risk of trape attacks
+          p.tips
+            | If you see something, say something
+        #standings
+          h4 Standings
+          ol.side-news
+        #most-points
+          h4 Point Leaders
+          ol.side-news
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
+  script(src='vendor.js?__inline=true')
+  script(src='app.js?__inline=true')

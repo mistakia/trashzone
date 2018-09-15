@@ -1,6 +1,6 @@
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
-let week_one = moment('2017-08-29')
+let week_one = moment('2018-08-28')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
@@ -65,7 +65,7 @@ App.data('/draft_analysis.json').get().success((data) => {
 	weeks[week].cost_min = cost
 
       if (weeks[week].efficiency_min > efficiency)
-	weeks[week].efficiency_min = efficiency      
+	weeks[week].efficiency_min = efficiency
     })
     drafted_points.push(drafted_item)
 
@@ -110,7 +110,7 @@ App.data('/draft_analysis.json').get().success((data) => {
     tag: 'tr',
     childs: thead_tds
   })
-  
+
 
   const drafted_parent_tbody = document.querySelector('main table.drafted tbody')
 
@@ -130,26 +130,26 @@ App.data('/draft_analysis.json').get().success((data) => {
 
       tds.push({
 	tag: 'td',
-	className: 'stat',	
+	className: 'stat',
 	text: team.weeks[week].cost
       })
 
       tds.push({
 	tag: 'td',
-	className: 'stat',	
+	className: 'stat',
 	text: team.weeks[week].points.toFixed(2),
 	style: {
 	  backgroundColor: `rgba(46,163,221,${team.weeks[week].points_percentage})`
-	}	
+	}
       })
 
       tds.push({
 	tag: 'td',
-	className: 'stat',	
+	className: 'stat',
 	text: team.weeks[week].efficiency.toFixed(2),
 	style: {
 	  backgroundColor: `rgba(46,163,221,${team.weeks[week].efficiency_percentage})`
-	}	
+	}
       })
     })
 
@@ -160,7 +160,7 @@ App.data('/draft_analysis.json').get().success((data) => {
     })
   })
 
-  const undrafted_parent = document.querySelector('#undrafted')  
+  const undrafted_parent = document.querySelector('#undrafted')
   let undrafted_rows = []
   undrafted_points.forEach(function(team) {
     undrafted_rows.push({
@@ -230,35 +230,35 @@ App.data('/player_draft_analysis.json').get().success((data) => {
   buildTable({
     data: top_points['rb'].slice(0, 40),
     title: 'Top 40 RB (Points)',
-    position: 'RB',    
+    position: 'RB',
     parent: parentTables
   })
 
   buildTable({
     data: top_points['wr'].slice(0, 40),
     title: 'Top 40 WR (Points)',
-    position: 'WR',    
+    position: 'WR',
     parent: parentTables
   })
 
   buildTable({
     data: top_points['te'].slice(0, 15),
     title: 'Top 15 TE (Points)',
-    position: 'TE',    
+    position: 'TE',
     parent: parentTables
   })
 
   buildTable({
     data: top_points['k'].slice(0, 10),
     title: 'Top 10 K (Points)',
-    position: 'K',    
+    position: 'K',
     parent: parentTables
   })
 
   buildTable({
     data: top_points['dst'].slice(0, 10),
     title: 'Top 10 DST (Points)',
-    position: 'DST',    
+    position: 'DST',
     parent: parentTables
   })
 
@@ -296,9 +296,8 @@ App.data('/player_draft_analysis.json').get().success((data) => {
     data: top_value['dst'].slice(0, 10),
     title: 'Top 10 DST Value',
     parent: document.querySelector('.list.dst')
-  })  
-  
+  })
+
 }).error((message) => {
   console.error(message.error)
 })
-  
