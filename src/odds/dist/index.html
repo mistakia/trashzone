@@ -599,12 +599,12 @@ const init = function() {
     console.error(message.error)
   })
 }
-
-const start = moment().day('Thursday').hour(12)
-console.log(start)
-const end = moment().day('Tuesday').add(1, 'week')
-console.log(end)
 const now = moment()
+let start = moment().day('Thursday').hour(12)
+if (now.day() === 0) {
+  start = start.subtract(1, 'week')
+}
+const end = moment().day('Tuesday').add(1, 'week')
 
 if (now.isBetween(start, end)) {
   init()

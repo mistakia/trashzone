@@ -5,6 +5,8 @@ const espnff = require('espnff')
 const fs = require('fs')
 const glob = require('glob')
 
+const config = require('../config')
+
 let schedules = {}
 let owners = {}
 
@@ -25,34 +27,43 @@ for (const type of types) {
 records.season.most_wins = { value: 0 }
 records.season.most_losses = { value: 0 }
 
-const loadSchedule = function(file_path, cb) {
+const addSchedule = (schedule, year) => {
+  console.log(`Adding schedule for ${year}`)
+  Object.keys(schedule).forEach(function(owner) {
+    owners[owner][year].schedule = schedule[owner]
+  })
+}
+
+const loadScheduleFile = (file_path, cb) => {
   fs.readFile(file_path, { encoding: 'utf8'}, function(err, html) {
     if (err)
       return cb(err)
 
     const result = espnff.schedule.parseHTMLByTeams(html)
     const year = /-([\d]*)/.exec(file_path)[1]
-
-    Object.keys(result).forEach(function(owner) {
-      owners[owner][year].schedule = result[owner]
-    })
+    addSchedule(result, year)
     cb()
   })
 }
 
-const loadStanding = function(file_path, cb) {
+const addStandings = (standings, year) => {
+  console.log(`Adding Standings for ${year}`)
+  Object.keys(standings).forEach(function(owner) {
+    if (!owners[owner])
+	  owners[owner] = {}
+
+    owners[owner][year] = standings[owner]
+  })
+}
+
+const loadStandingFile = (file_path, cb) => {
   fs.readFile(file_path, { encoding: 'utf8'}, function(err, html) {
     if (err)
       return cb(err)
 
     const result = espnff.standings.parseHTMLByOwner(html)
     const year = /-([\d]*)/.exec(file_path)[1]
-    Object.keys(result).forEach(function(owner) {
-      if (!owners[owner])
-	    owners[owner] = {}
-
-      owners[owner][year] = result[owner]
-    })
+    addStandings(result, year)
     cb()
   })
 }
@@ -260,20 +271,27 @@ async.parallel({
   schedules: function(cb) {
     glob(path.resolve(__dirname, '../data/league/schedules-*.html'), {}, cb)
   }
-}, function(err, results) {
+}, function(err, files) {
   if (err)
     return console.log(err)
 
   async.waterfall([
     function(cb) {
-      async.each(results.standings, loadStanding, cb)
+      async.each(files.standings, loadStandingFile, cb)
     },
     function(cb) {
-      async.each(results.schedules, loadSchedule, cb)
+      async.each(files.schedules, loadScheduleFile, cb)
     }
-  ], function(err) {
+  ], async (err) => {
     if (err)
       return console.log(err)
+
+    // TODO
+    //const currentStandings = await espnff.standings.getByOwner(config.espn)
+    //const currentSchedule = await espnff.schedule.getByTeams(config.espn)
+
+    //addStandings(currentStandings, config.espn.seasonId)
+    //addSchedule(currentSchedule, config.espn.seasonId)
 
     analyze(owners)
 
