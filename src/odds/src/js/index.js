@@ -277,7 +277,7 @@ const init = function() {
 }
 const now = moment()
 let start = moment().day('Thursday').hour(12)
-if (now.day() === 0) {
+if (now.day() === 0 || now.day() === 1) {
   start = start.subtract(1, 'week')
 }
 const end = moment().day('Tuesday').add(1, 'week')
