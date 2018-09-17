@@ -138,15 +138,22 @@ const init = function() {
     data.odds.forEach(function(matchup, index) {
       let team1Data = []
       let team2Data = []
-      for (let i=0; i<matchup[0].histogram.cutoff.length; i++) {
-        team1Data.push({
-          y: matchup[0].histogram.cutoff[i],
-          x: matchup[0].histogram.dens[i]
-        })
-        team2Data.push({
-          y: matchup[1].histogram.cutoff[i],
-          x: matchup[1].histogram.dens[i]
-        })
+      const histogram = matchup[0].histogram || matchup[1].histogram
+      const histogramLength = histogram ? histogram.cutoff.length : 0
+      for (let i=0; i < histogramLength; i++) {
+        if (matchup[0].histogram) {
+          team1Data.push({
+            y: matchup[0].histogram.cutoff[i],
+            x: matchup[0].histogram.dens[i]
+          })
+        }
+
+        if (matchup[1].histogram) {
+          team2Data.push({
+            y: matchup[1].histogram.cutoff[i],
+            x: matchup[1].histogram.dens[i]
+          })
+        }
       }
       new Chartist.Line(`#matchup${index} .ct-chart`, {
         series: [{
