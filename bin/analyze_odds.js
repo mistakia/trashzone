@@ -154,8 +154,6 @@ async.parallel({
 	    odds: []
       }
 
-      //console.log(predictions)
-
       predictions.forEach(function(prediction, index) {
 
 	    let teams = boxscores[index]
@@ -175,7 +173,7 @@ async.parallel({
 	          const now = moment().format()
 
               team.histogram = hist
-              team.mean = mean
+              team.mean = mean || team.projection
 
 	          team.history.probability.push({
 		        value: prob,
@@ -204,8 +202,8 @@ async.parallel({
 	      }
 	    }
 
-	    analyze(prediction.teams[0], teams[0])
-	    analyze(prediction.teams[1], teams[1])
+	    analyze(prediction.teams ? prediction.teams[0] : { prob: prediction.team1.prob }, teams[0])
+	    analyze(prediction.teams ? prediction.teams[1] : { prob: prediction.team2.prob }, teams[1])
 
 	    data.odds.push(teams)
       })
