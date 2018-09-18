@@ -69,7 +69,7 @@ const run = async () => {
         }
 
         if (!found) {
-          console.warn(`could not find ${player.name}:${p}`)
+          console.warn(`could not find ${player.name}`)
         } else {
           team.ceiling += projection.ceiling
           team.floor += projection.floor
@@ -93,7 +93,7 @@ const run = async () => {
   }
 
   const data_path = path.resolve(__dirname, '../data/weekly_odds.json')
-  jsonfile.writeFileSync(data_path, boxscores, {spaces: 4})
+  jsonfile.writeFileSync(data_path, { boxscores, updated_at: Date.now() }, {spaces: 4})
 }
 
-run()
+run().catch((err) => console.log(err))
