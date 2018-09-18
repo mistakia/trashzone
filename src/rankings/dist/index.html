@@ -350,13 +350,20 @@ function acr(s){
   return acronym
 }
 
-const markers = [{
-  date: new Date(moment('2018-09-11')),
-  label: 'Start of Week 2'
-}, {
-  date: new Date(moment('2018-09-12 6:00')),
-  label: 'Waivers clear'
-}]
+const start = moment('2018-09-04')
+const weeks = 13
+let markers = []
+for (let i=1;i<=13;i++) {
+  const base = moment(start).add(i, 'week')
+  markers.push({
+    date: new Date(base.hour(0)),
+    label: `End of Week ${i}`
+  })
+  markers.push({
+    date: new Date(base.add(1, 'day').hour(4)),
+    label: 'Waivers clear'
+  })
+}
 
 App.data('/power_rankings.json').get().success(({ standings, history }) => {
   parent.innerHTML = null
