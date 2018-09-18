@@ -434,11 +434,11 @@ App.api('/adds').get().success((data) => {
   console.log(message.error)
 })
 
-App.data('/weekly_odds.json').get().success((data) => {
-  console.log(data)
+App.data('/weekly_odds.json').get().success(({ boxscores, updated_at }) => {
+  console.log(boxscores)
   let odds = []
   let parent = document.querySelector('#matchups')
-  data.forEach(function(matchups) {
+  boxscores.forEach(function(matchups) {
     const child = (team) => {
       const probability = team.probability * 100
       odds.push({
@@ -477,6 +477,18 @@ App.data('/weekly_odds.json').get().success((data) => {
       className: 'matchup',
       childs: [child(matchups[1]), child(matchups[0])]
     })
+  })
+
+  Elem.create({
+    parent: parent,
+    className: 'timestamp',
+    text: `Last updated on ${moment(updated_at).format('dddd [the] Do [at] h:mm:ss a')}`
+  })
+
+  Elem.create({
+    parent: parent,
+    tag: 'small',
+    text: '*based on current, not optimized, lineup'
   })
 
   let weekly_odds_parent = document.querySelector('#weekly-odds')
