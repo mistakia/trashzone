@@ -6,84 +6,87 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     clean: {
       options: {
-	force: true
+	    force: true
       },
       index: {
-	src: ['tmp/**/*']
+	    src: ['tmp/**/*']
       }
     },
     jade: {
       index: {
-	files: [{
-	  'tmp/index.html' : ['src/index.jade']
-	}]
+	    files: [{
+	      'tmp/index.html' : ['src/index.jade']
+	    }]
       }
     },
     stylus: {
       options: {
-	compress: true,
-	'include css': true
+        import: [
+          path.resolve(__dirname, '../shared/css/index.styl')
+        ],
+	    compress: true,
+	    'include css': true
       },
       compile: {
-	files: {
-	  'tmp/app.css': 'src/css/*.styl'
-	}
+	    files: {
+	      'tmp/app.css': 'src/css/*.styl'
+	    }
       }
     },
     staticinline: {
       main: {
-	files: {
-	  'tmp/index.html': 'tmp/index.html'
-	}
+	    files: {
+	      'tmp/index.html': 'tmp/index.html'
+	    }
       }
-    },    
+    },
     inline: {
       index: {
-	src: [ 'tmp/index.html' ]
+	    src: [ 'tmp/index.html' ]
       }
     },
     copy: {
       index: {
-	files: [{
-	  expand: true,
-	  flatten: true,
-	  src: 'tmp/index.html',
-	  dest: 'dist'
-	}]
+	    files: [{
+	      expand: true,
+	      flatten: true,
+	      src: 'tmp/index.html',
+	      dest: 'dist'
+	    }]
       }
     },
     watch: {
       index: {
-	files: [
-	  'Gruntfile.js',
-	  'src/**/*',
-	  'node_modules/**/*'
-	],
-	tasks: ['default']
+	    files: [
+	      'Gruntfile.js',
+	      'src/**/*',
+	      'node_modules/**/*'
+	    ],
+	    tasks: ['default']
       }
     },
     concat: {
       vendor: {
-	files: {
-	  'tmp/vendor.js': [
-	    'modules/request.js',
-	    'modules/element.js',
+	    files: {
+	      'tmp/vendor.js': [
+	        'modules/request.js',
+	        'modules/element.js',
 
-	    'node_modules/moment/min/moment.min.js'
-	  ]
-	}
+	        'node_modules/moment/min/moment.min.js'
+	      ]
+	    }
       },
       js: {
-	files: {
-	  'tmp/app.js': ['src/js/**/*.js']
-	}
+	    files: {
+	      'tmp/app.js': ['src/js/**/*.js']
+	    }
       }
     },
     browserify: {
       dist: {
-	files: {
-	  'tmp/app.js': ['src/js/**/*.js']
-	}
+	    files: {
+	      'tmp/app.js': ['src/js/**/*.js']
+	    }
       }
     }
   })

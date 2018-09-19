@@ -21,6 +21,9 @@ module.exports = function(grunt) {
     },
     stylus: {
       options: {
+        import: [
+          path.resolve(__dirname, '../shared/css/index.styl')
+        ],
 	    compress: true,
 	    'include css': true
       },
