@@ -33,9 +33,10 @@ for (let i=1;i<=13;i++) {
   })
 }
 
-App.data('/power_rankings.json').get().success(({ standings, history }) => {
+App.data('/power_rankings.json').get().success(({ standings, history, transactions }) => {
   parent.innerHTML = null
 
+  console.log(transactions)
   console.log(standings)
   console.log(history)
   standings.forEach((team, index) => {
@@ -92,6 +93,20 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
 	  return item
     })
 
+    let events = []
+    if (transactions && Object.keys(transactions[team.team_id]).length) {
+      for (const timestamp in transactions[team.team_id]) {
+        console.log(timestamp)
+        const transaction = transactions[team.team_id][timestamp]
+        events.push({
+          date: new Date(moment(timestamp, 'ddd, MMM D h:m A')),
+          label: transaction.type.split(/\s+/)[1]
+        })
+      }
+
+      events = events.concat(markers)
+    }
+
     MG.data_graphic({
 	  data: [odds_data],
 	  full_width: true,
@@ -103,12 +118,10 @@ App.data('/power_rankings.json').get().success(({ standings, history }) => {
 	  area: true,
 	  x_extended_ticks: true,
 	  colors: ['#f05b4f'],
-      markers: markers,
+      markers: events.length ? events : markers,
 	  target: `#team${team.team_id} .chart`
     })
   })
-
-
 
 }).error((message) => {
   console.error(message.error)
