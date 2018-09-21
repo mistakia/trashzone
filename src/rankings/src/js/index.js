@@ -87,10 +87,18 @@ App.data('/power_rankings.json').get().success(({ standings, history, transactio
 
     const odds_history = history[team.team_id]
 
-    let odds_data = odds_history.map((item) => {
-	  item.date = new Date(item.date)
-      item.value = item.playoff
-	  return item
+    let playoff_odds = []
+    let championship_odds = []
+    odds_history.forEach((item) => {
+	  const date = new Date(item.date)
+      playoff_odds.push({
+        date: date,
+        value: item.playoff
+      })
+      championship_odds.push({
+        date: date,
+        value: item.championship
+      })
     })
 
     let events = []
@@ -108,16 +116,15 @@ App.data('/power_rankings.json').get().success(({ standings, history, transactio
     }
 
     MG.data_graphic({
-	  data: [odds_data],
+	  data: [playoff_odds, championship_odds],
 	  full_width: true,
 	  format: 'percentage',
 	  height: 200,
-	  right: 40,
 	  x_accessor: 'date',
 	  y_accessor: 'value',
-	  area: true,
 	  x_extended_ticks: true,
-	  colors: ['#f05b4f'],
+	  colors: ['#f05b4f', '#05b378'],
+      area: [true, true],
       markers: events.length ? events : markers,
 	  target: `#team${team.team_id} .chart`
     })
