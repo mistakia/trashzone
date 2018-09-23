@@ -8,6 +8,7 @@ const baseStats = [
   'count',
   'spent',
   'wasted',
+  'discarded',
   'max',
   'min',
   'points',
@@ -78,6 +79,12 @@ App.data('/waivers.json').get().success((data) => {
       text: teamData.spent.toString(),
 	  style: {
 	    backgroundColor: `rgba(46,163,221,${getPercentage('spent', teamData.spent)})`
+	  }
+    }, {
+      tag: 'td',
+      text: teamData.discarded.toString(),
+	  style: {
+	    backgroundColor: `rgba(46,163,221,${getPercentage('discarded', teamData.discarded)})`
 	  }
     }, {
       tag: 'td',
