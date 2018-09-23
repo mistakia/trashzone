@@ -276,7 +276,7 @@ App.data('/player_draft_analysis.json').get().success((data) => {
 
   buildList({
     data: top_value['wr'].slice(0, 20),
-    title: 'Top 20 QB Value',
+    title: 'Top 20 WR Value',
     parent: document.querySelector('.list.wr')
   })
 
