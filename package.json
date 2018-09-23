@@ -20,7 +20,14 @@
     "groupme": "^0.5.7"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run build:draft && npm run build:home && npm run build:league && npm run build:odds && npm run build:rankings && npm run build:waivers",
+    "build:draft": "cd src/draft && grunt",
+    "build:home": "cd src/home && grunt",
+    "build:league": "cd src/league && grunt",
+    "build:odds": "cd src/odds && grunt",
+    "build:rankings": "cd src/rankings && grunt",
+    "build:waivers": "cd src/odds && grunt"
   },
   "author": "",
   "license": "MIT"
