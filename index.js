@@ -36,6 +36,9 @@ app.get('/rankings', (req, res) => {
 app.get('/league', (req, res) => {
   res.sendFile(path.resolve('src/league/dist/index.html'))
 })
+app.get('/waivers', (req, res) => {
+  res.sendFile(path.resolve('src/waivers/dist/index.html'))
+})
 app.use('/data', express.static(path.join(__dirname, 'data')))
 app.use('/', express.static(path.join(__dirname, 'static')))
 app.get('/', (req, res) => {

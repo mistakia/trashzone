@@ -1,0 +1,36 @@
+doctype html
+html
+  head
+    title.
+      Waiver Analysis - The Trash Zone
+    include ../../shared/html/head.jade
+  body
+    include ../../shared/html/header.jade
+    main
+      section
+        table.waivers
+          thead
+            tr
+              td(colspan="100%") Waiver Analysis
+            tr
+              td Team
+              td Bids
+              td Spent
+              td Wasted
+              td Max
+              td Min
+              td Total Points
+              td Pts/$
+              td Starter Points
+              td Starter Pts/$
+          tbody
+        #tables
+        .list.qb
+        .list.rb
+        .list.wr
+        .list.te
+        .list.k
+        .list.dst
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js')
+    script(src='vendor.js?__inline=true')
+    script(src='app.js?__inline=true')
