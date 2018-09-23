@@ -45,6 +45,7 @@ const run = async () => {
   const boxscoresByTeam = emptyTeamsObject([])
   let resultsByTeam = emptyTeamsObject({
     wasted: 0,
+    discarded: 0,
     max: 0,
     min: 200,
     spent: 0,
@@ -166,6 +167,10 @@ const run = async () => {
       resultsPosition.count += 1
       resultsPosition.spent += bid
       //resultsPosition.waiverTransactions[add.date] = add
+
+      if (dropped) {
+        resultsTeam.discarded += bid
+      }
 
       if (dropped && games_started.length === 0) {
         resultsTeam.wasted += bid
