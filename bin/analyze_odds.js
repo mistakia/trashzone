@@ -59,10 +59,7 @@ async.parallel({
     return console.log(err)
 
   const current_matchups = result.schedule[current_week]
-
-  let home_ids = current_matchups.map(function(m) {
-    return m.home_id
-  })
+  let home_ids = current_matchups.map(m => m.home_id)
 
   async.mapLimit(home_ids, 2, function(home_id, next) {
     espn.boxscore.get({
