@@ -40,6 +40,7 @@ const byPositionDefault = () => {
 
 const run = async () => {
   const schedule = await espn.schedule.getByLeague(config.espn)
+  const teams = await espn.teams.get(config.espn)
 
   const boxscoresByTeam = emptyTeamsObject([])
   let resultsByTeam = emptyTeamsObject({
@@ -62,7 +63,6 @@ const run = async () => {
       ...config.espn
     })
     boxscores.forEach(boxscore => boxscoresByTeam[boxscore.id].push(boxscore))
-    return
   }
 
   for (let i=1; i<=current_week;i++) {
@@ -75,6 +75,7 @@ const run = async () => {
     const boxscore = boxscoresByTeam[teamId][0]
     resultsByTeam[teamId].name = boxscore.name
     resultsByTeam[teamId].image = boxscore.image
+    resultsByTeam[teamId].team = teams[teamId]
   }
 
   const waiverStartDate = '20180801'
@@ -131,7 +132,7 @@ const run = async () => {
       const endDate = add.date_dropped ?
         moment(add.date_dropped, 'ddd, MMM D h:m A') :
         moment()
-      const firstWeek = startDate.diff(config.week_one, 'weeks')
+      const firstWeek = startDate.diff(config.week_one, 'weeks') - 1
       const endWeek = endDate.diff(config.week_one, 'weeks')
       const boxscores = boxscoresByTeam[teamId].slice(firstWeek, endWeek)
       let games_started = []
@@ -139,7 +140,6 @@ const run = async () => {
         games_started = boxscores.filter((boxscore) => {
           const start = boxscore.players.find(p => p.name === player)
           const bench = boxscore.bench.find(p => p.name === player)
-
 
           if (start && start.points) {
             const points = parseInt(start.points, 10)
@@ -206,7 +206,6 @@ const run = async () => {
     // TODO: normalize points/starterPoints by week
   }
 
-  console.log(resultsByTeam)
   jsonfile.writeFileSync(data_path, resultsByTeam, {spaces: 4})
 }
 
