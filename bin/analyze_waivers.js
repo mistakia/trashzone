@@ -31,6 +31,7 @@ const byPositionDefault = () => {
       max: 0,
       min: 200,
       count: 0,
+      bids: [],
       points: 0,
       starterPoints: 0
     }
@@ -166,6 +167,7 @@ const run = async () => {
 
       resultsPosition.count += 1
       resultsPosition.spent += bid
+      resultsPosition.bids.push(bid)
       //resultsPosition.waiverTransactions[add.date] = add
 
       if (dropped) {
