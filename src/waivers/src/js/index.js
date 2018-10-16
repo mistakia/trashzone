@@ -38,6 +38,57 @@ const getPercentage = (stat, value) => {
   return (value - min) / (max - min)
 }
 
+const getMedian = (array) => {
+  array.sort((a, b) => {
+    return a - b
+  })
+
+  const half = Math.floor(array.length / 2)
+
+  if (array.length % 2) {
+    return array[half]
+  } else {
+    return (array[half-1] + array[half]) / 2.0
+  }
+}
+
+const createPositionTable = (position) => {
+  const parent = document.querySelector('#position--tables')
+
+  const columns = [
+    'Team',
+    'Bids',
+    'Total',
+    'Min',
+    'Max',
+    'Average',
+    'Median'
+  ]
+  let columnHeaders = ''
+  for (const header of columns) {
+    columnHeaders += `<td>${header}</td>`
+  }
+
+  Elem.create({
+    parent,
+    tag: 'table',
+    id: `${position}--table`,
+    html: `
+      <thead>
+        <tr><td colspan="100%">${position} Waiver Analysis</td></tr>
+        <tr>${columnHeaders}</tr>
+      </thead>
+      <tbody>
+      </tbody>
+    `
+  })
+}
+
+const positions = ['qb', 'rb', 'wr', 'te', 'k', 'dst']
+for (const pos of positions) {
+  createPositionTable(pos)
+}
+
 App.data('/waivers.json').get().success((data) => {
   console.log(data)
   const overall_parent = document.querySelector('main table.waivers tbody')
@@ -131,6 +182,39 @@ App.data('/waivers.json').get().success((data) => {
     }]
 
     console.log(tds)
+
+    for (const pos in teamData.positions) {
+      const positionData = teamData.positions[pos]
+      if (!positionData.count)
+        continue
+      const position_tds = [{
+        tag: 'td',
+        text: teamData.name
+      }, {
+        tag: 'td',
+        text: positionData.count
+      }, {
+        tag: 'td',
+        text: positionData.spent
+      }, {
+        tag: 'td',
+        text: positionData.min
+      }, {
+        tag: 'td',
+        text: positionData.max
+      }, {
+        tag: 'td',
+        text: (positionData.spent / positionData.count).toFixed(1)
+      }, {
+        tag: 'td',
+        text: getMedian(positionData.bids)
+      }]
+      Elem.create({
+        tag: 'tr',
+        childs: position_tds,
+        parent: document.querySelector(`#${pos}--table tbody`)
+      })
+    }
 
     Elem.create({
       parent: overall_parent,
