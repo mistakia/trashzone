@@ -212,7 +212,7 @@ const init = function() {
     let standings = data.standings.slice()
     let leaders = data.standings.sort((a, b) => {
       return b.projected_points_for - a.projected_points_for
-    }).slice(0,4)
+    })
 
     let leaders_parent = document.querySelector('#most-points')
     let most_points_rows = []
