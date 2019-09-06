@@ -1,5 +1,5 @@
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
-let week_one = moment('2018-08-28')
+let week_one = moment('2019-08-27')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
@@ -44,7 +44,7 @@ App.data('/power_rankings.json').get().success(({ standings, history, transactio
     const html = `
       <div class='heading'>
         <div class='team-name'>
-          <small>${index+1}.</small> ${team.team}<small>${team.record}</small>
+          <small>${index+1}.</small> ${team.team}<small>${team.projected_wins}-${team.projected_losses}-${team.projected_ties}</small>
         </div>
         <div class='stat-container'>
           <div class='stat'>

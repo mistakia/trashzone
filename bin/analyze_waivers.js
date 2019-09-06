@@ -40,8 +40,10 @@ const byPositionDefault = () => {
 }
 
 const run = async () => {
-  const schedule = await espn.schedule.getByLeague(config.espn)
-  const teams = await espn.teams.get(config.espn)
+  const { formatted: schedule } = await espn.schedule.get(config.espn)
+  console.log(schedule)
+  const { formatted: teams } = await espn.league.get(config.espn)
+  console.log(teams)
 
   const boxscoresByTeam = emptyTeamsObject([])
   let resultsByTeam = emptyTeamsObject({
@@ -58,29 +60,29 @@ const run = async () => {
     waiverTransactions: []
   })
 
-  const getBoxscores = async (teamId, week) => {
-    const boxscores = await espn.boxscore.get({
-      scoringPeriodId: week,
-      teamId,
-      ...config.espn
-    })
-    boxscores.forEach(boxscore => boxscoresByTeam[boxscore.id].push(boxscore))
-  }
+  /* const getBoxscores = async (teamId, week) => {
+   *   const boxscores = await espn.boxscore.get({
+   *     scoringPeriodId: week,
+   *     teamId,
+   *     ...config.espn
+   *   })
+   *   boxscores.forEach(boxscore => boxscoresByTeam[boxscore.id].push(boxscore))
+   * }
 
-  for (let i=1; i<=current_week;i++) {
-    const matchups = schedule[i]
-    let home_ids = matchups.map(m => m.home_id)
-    await Promise.all(home_ids.map(teamId => getBoxscores(teamId, i)))
-  }
-
-  for (const teamId in boxscoresByTeam) {
-    const boxscore = boxscoresByTeam[teamId][0]
-    resultsByTeam[teamId].name = boxscore.name
-    resultsByTeam[teamId].image = boxscore.image
-    resultsByTeam[teamId].team = teams[teamId]
-  }
-
-  const waiverStartDate = '20180801'
+   * for (let i=1; i<=current_week;i++) {
+   *   const matchups = schedule[i]
+   *   let home_ids = matchups.map(m => m.home_id)
+   *   await Promise.all(home_ids.map(teamId => getBoxscores(teamId, i)))
+   * }
+   */
+  /* for (const teamId in boxscoresByTeam) {
+   *   const boxscore = boxscoresByTeam[teamId][0]
+   *   resultsByTeam[teamId].name = boxscore.name
+   *   resultsByTeam[teamId].image = boxscore.image
+   *   resultsByTeam[teamId].team = teams[teamId]
+   * }
+   */
+  const waiverStartDate = config.week_one.format('YYYYMMDD')
   const waiverEndDate = moment().format('YYYYMMDD')
   const adds = await espn.activity.get({
     activityType: 2,
@@ -90,6 +92,7 @@ const run = async () => {
     endDate: waiverEndDate,
     ...config.espn
   })
+  console.log(adds)
   const drops = await espn.activity.get({
     activityType: 2,
     teamId: -1,
@@ -98,6 +101,7 @@ const run = async () => {
     endDate: waiverEndDate,
     ...config.espn
   })
+  console.log(drops)
 
   const waivers = adds.filter(add => add.type.includes('Waivers'))
   let waiversByTeam = emptyTeamsObject([])
@@ -136,31 +140,31 @@ const run = async () => {
         moment()
       const firstWeek = startDate.diff(config.week_one, 'weeks') - 1
       const endWeek = endDate.diff(config.week_one, 'weeks')
-      const boxscores = boxscoresByTeam[teamId].slice(firstWeek, endWeek)
-      let games_started = []
-      if (boxscores.length) {
-        games_started = boxscores.filter((boxscore) => {
-          const start = boxscore.players.find(p => p.name === player)
-          const bench = boxscore.bench.find(p => p.name === player)
+      /* const boxscores = boxscoresByTeam[teamId].slice(firstWeek, endWeek)
+       * let games_started = []
+       * if (boxscores.length) {
+       *   games_started = boxscores.filter((boxscore) => {
+       *     const start = boxscore.players.find(p => p.name === player)
+       *     const bench = boxscore.bench.find(p => p.name === player)
 
-          if (start && start.points) {
-            const points = parseInt(start.points, 10)
-            resultsTeam.starterPoints += points
-            resultsTeam.points += points
+       *     if (start && start.points) {
+       *       const points = parseInt(start.points, 10)
+       *       resultsTeam.starterPoints += points
+       *       resultsTeam.points += points
 
-            resultsPosition.points += points
-            resultsPosition.starterPoints += points
+       *       resultsPosition.points += points
+       *       resultsPosition.starterPoints += points
 
-          } else if (bench && bench.points) {
-            const points = parseInt(bench.points, 10)
-            resultsTeam.points += points
-            resultsPosition.points += points
-          }
+       *     } else if (bench && bench.points) {
+       *       const points = parseInt(bench.points, 10)
+       *       resultsTeam.points += points
+       *       resultsPosition.points += points
+       *     }
 
-          return start
-        })
-      }
-
+       *     return start
+       *   })
+       * }
+       */
       resultsTeam.spent += bid
       resultsTeam.count += 1
       resultsTeam.waiverTransactions.push(add)

@@ -10,7 +10,7 @@ const current_week = moment().diff(config.week_one, 'weeks')
 const draft_data_file = path.resolve(__dirname, '../data/draft.json')
 const draft_data = jsonfile.readFileSync(draft_data_file)
 
-espn.schedule.getByLeague(config.espn, function(err, schedule) {
+espn.schedule.get(config.espn, function(err, schedule) {
   if (err)
     console.log(err)
 

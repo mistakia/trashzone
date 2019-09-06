@@ -13,15 +13,17 @@ const data_path = path.resolve(__dirname, '../data/power_rankings.json')
 const { leagueId } = config.pff
 
 const run = async () => {
-  const teams = await espn.roster.get(config.espn.leagueId)
-  const standings = await espn.standings.get(config.espn)
-  const schedule = await espn.schedule.getByLeague(config.espn)
+  const teams = await espn.roster.get(config.espn)
+  const data = await espn.schedule.get(config.espn)
+  const { schedule, standings } = data.formatted
+
   const results = await machine.simulateSeason({
     current_week,
     leagueId,
-    teams,
+    teams: teams.formatted,
     standings,
-    schedule
+    schedule,
+    cookie: config.cookie
   })
 
   let history
@@ -44,33 +46,33 @@ const run = async () => {
     results.forEach((t) => transactions[t.team_id] = {})
   }
 
-  const trades = await espn.activity.get({
-    activityType: 2,
-    teamId: -1,
-    tranType: 4,
-    ...config.espn
-  })
-  trades.forEach((t) => {
-    if (!t.type.includes('Upheld')) {
-      return
-    }
+  /* const trades = await espn.activity.get({
+   *   activityType: 2,
+   *   teamId: -1,
+   *   tranType: 4,
+   *   ...config.espn
+   * })
+   * trades.forEach((t) => {
+   *   if (!t.type.includes('Upheld')) {
+   *     return
+   *   }
 
-    t.teams.forEach((teamId) => transactions[teamId][t.date] = t)
-  })
-  const adds = await espn.activity.get({
-    activityType: 2,
-    teamId: -1,
-    tranType: 2,
-    ...config.espn
-  })
-  adds.forEach((t) => {
-    if (t.type.includes('Waivers')) {
-      return
-    }
+   *   t.teams.forEach((teamId) => transactions[teamId][t.date] = t)
+   * })
+   * const adds = await espn.activity.get({
+   *   activityType: 2,
+   *   teamId: -1,
+   *   tranType: 2,
+   *   ...config.espn
+   * })
+   * adds.forEach((t) => {
+   *   if (t.type.includes('Waivers')) {
+   *     return
+   *   }
 
-    t.teams.forEach((teamId) => transactions[teamId][t.date] = t)
-  })
-
+   *   t.teams.forEach((teamId) => transactions[teamId][t.date] = t)
+   * })
+   */
   const now = moment().format()
   for (const team of results) {
     history[team.team_id].push({

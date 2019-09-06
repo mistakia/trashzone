@@ -1,20 +1,6 @@
-function acr(s){
-  var words, acronym, nextWord
-
-  words = s.split(' ')
-  acronym= ''
-  index = 0
-  while (index<words.length) {
-    nextWord = words[index]
-    acronym = acronym + nextWord.charAt(0)
-    index = index + 1
-  }
-  return acronym
-}
-
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
-let week_one = moment('2018-08-28')
+let week_one = moment('2019-08-27')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
@@ -29,6 +15,7 @@ const init = function() {
 
       let rows = []
       matchup.forEach(function(team, index) {
+        console.log(team)
 	    let probability = team.probability
 	    rows.push({
 	      tag: 'tr',
@@ -65,7 +52,7 @@ const init = function() {
 	      }, {
 	        tag: 'td',
 	        className: 'score',
-	        text: team.score
+	        text: team.points.toFixed(1)
 	      }, {
 	        tag: 'td',
 	        className: 'proj',
@@ -73,11 +60,11 @@ const init = function() {
 	      }, {
 	        tag: 'td',
 	        className: 'proj',
-	        text: team.projection
+	        text: team.projection.toFixed(1)
 	      }, {
 	        tag: 'td',
 	        className: 'proj',
-	        text: team.minutes_remaining
+	        text: Math.ceil(team.timeRemaining / 60)
 	      }]
 	    })
       })
@@ -157,10 +144,10 @@ const init = function() {
       }
       new Chartist.Line(`#matchup${index} .ct-chart`, {
         series: [{
-          name: acr(matchup[0].name),
+          name: matchup[0].abbrev,
           data: team1Data
         }, {
-          name: acr(matchup[1].name),
+          name: matchup[1].abbrev,
           data: team2Data
         }]
       }, {
@@ -203,20 +190,21 @@ const init = function() {
 	    y_accessor: 'value',
 	    area: true,
 	    x_extended_ticks: true,
-	    legend: [acr(matchup[0].name), acr(matchup[1].name)],
+	    legend: [matchup[0].abbrev, matchup[1].abbrev],
 	    colors: ['#3CB852', '#f05b4f'],
 	    target: `#matchup${index} .chart`
       })
     })
 
-    let standings = data.standings.slice()
-    let leaders = data.standings.sort((a, b) => {
+    let standings = Object.values(data.standings)
+    let leaders = Object.values(data.standings).sort((a, b) => {
       return b.projected_points_for - a.projected_points_for
     })
 
     let leaders_parent = document.querySelector('#most-points')
     let most_points_rows = []
     leaders.forEach(function(i) {
+      console.log(i)
       most_points_rows.push({
 	    tag: 'li',
 	    childs: [{

@@ -10,6 +10,8 @@ const config = require('../config')
 const format_player = require('../lib/player')
 
 const current_week = moment().diff(config.week_one, 'weeks')
+const weekStart = moment(config.week_one).add(current_week, 'weeks').format('YYYYMMDD')
+const weekEnd = moment(config.week_one).add(current_week + 1, 'weeks').format('YYYYMMDD')
 const data_path = path.resolve(__dirname, `../data/odds_analysis_${current_week}.json`)
 
 let odds_data
@@ -33,10 +35,12 @@ const getHistory = function(team_id) {
   for(let i=0; i<matchups.length; i++) {
     let matchup = matchups[i]
 
-    for (let t=0; t<matchup.length; t++) {
-      let team = matchup[t]
-      if (team.id === team_id)
-	    return team.history
+    if (matchup[0].id === team_id) {
+      return matchup[0].history
+    }
+
+    if (matchup[1].id === team_id) {
+      return matchup[1].history
     }
   }
 }
@@ -52,162 +56,161 @@ const getPlayers = function(cb) {
 
 async.parallel({
   players: getPlayers,
-  standings: espn.standings.get.bind(null, config.espn),
-  schedule: espn.schedule.getByLeague.bind(null, config.espn)
-}, function(err, result) {
+  league: espn.league.get.bind(null, config.espn),
+  schedule: espn.schedule.get.bind(null, config.espn),
+  boxscores: espn.boxscore.get.bind(null, {
+    scoringPeriodId: current_week,
+    weekStart,
+    weekEnd,
+    ...config.espn
+  })
+}, function(err, { boxscores, players, schedule, league }) {
   if (err)
     return console.log(err)
 
-  const current_matchups = result.schedule[current_week]
-  let home_ids = current_matchups.map(m => m.home_id)
+  const current_boxscores = boxscores.formatted.filter(b => b.week === current_week)
 
-  async.mapLimit(home_ids, 2, function(home_id, next) {
-    espn.boxscore.get({
-      teamId: home_id,
-      scoringPeriodId: current_week,
-      ...config.espn
-    }, next)
-  }, function(err, boxscores) {
-    if (err)
-      return console.log(err)
+  async.mapLimit(current_boxscores, 2, function(boxscore, next) {
+    let teams = []
+    const addTeam = (team) => {
+	  let item = {
+        id: team.id,
+	    pts: team.points,
+	    values: []
+	  }
 
-    async.mapLimit(boxscores, 2, function(boxscore, next) {
-      let teams = []
-      boxscore.forEach(function(team) {
-	    let item = {
-	      pts: team.score,
-	      values: []
+	  team.starters.forEach(function(player) {
+	    if (player.points || isNaN(player.points)) {
+	      //TODO: get previous prediction
+	      //TODO: calculate projection based on time remaining for player
+	      //TODO: add to spread
+	      return
 	    }
 
-	    team.players.forEach(function(player) {
-	      if (!isNaN(player.points)) {
-	        //TODO: get previous prediction
-	        //TODO: calculate projection based on time remaining for player
-	        //TODO: add to spread
-	        return
-	      }
+	    let name = format_player.get(player.name)
 
-	      let name = format_player.get(player.name)
-
-	      let found = false
-	      for (let i=0;i<result.players.length;i++) {
-	        if (result.players[i].value === name) {
-	          found = true
-	          break
-	        }
-	      }
-
-	      if (!found)
-	        console.log(`could not find ${name}`)
-	      else
-	        item.values.push(name)
-	    })
-
-	    teams.push(item)
-      })
-
-      let params = [
-	    'scoring=non_ppr',
-	    'qb=pass4',
-	    'dst=mfl',
-        'monday=True',
-	    'pts1=' + teams[0].pts,
-	    'pts2=' + teams[1].pts
-      ]
-
-      if (teams[0].values.length) {
-	    teams[0].values.forEach(v => params.push(`team1=${v}`))
-      }
-
-      if (teams[1].values.length) {
-        teams[1].values.forEach(v => params.push(`team2=${v}`))
-      }
-
-      const url = 'https://api.fantasymath.com/v2/matchup-monday/?' + params.join('&')
-
-      if (!teams[0].values.length && teams[0].pts < teams[1].pts)
-	    return next(null, {
-	      team1: { prob: 0 },
-	      team2: { prob: 1 }
-	    })
-
-      if (!teams[1].values.length && teams[1].pts < teams[0].pts)
-	    return next(null, {
-	      team1: { prob: 1 },
-	      team2: { prob: 0 }
-	    })
-
-      request({
-	    url: url,
-	    json: true
-      }, function(err, res, json) {
-	    next(err, json)
-      })
-    }, function(err, predictions) {
-      if (err)
-	    return console.log(err)
-
-      let data = {
-	    odds: []
-      }
-
-      predictions.forEach(function(prediction, index) {
-
-	    let teams = boxscores[index]
-	    const team1_id = teams[0].id
-	    const team2_id = teams[1].id
-
-	    const analyze = function({ hist, prob, mean }, team) {
-	      let teams = result.standings
-	      for (let i=0;i<teams.length;i++) {
-	        if (teams[i].team_id === team.id) {
-	          teams[i].projected_wins = teams[i].wins
-	          teams[i].projected_losses = teams[i].losses
-	          teams[i].projected_ties = teams[i].ties
-	          team.probability = prob
-	          team.history = getHistory(teams[i].team_id)
-
-	          const now = moment().format()
-
-              team.histogram = hist
-              team.mean = mean || team.projection
-
-	          team.history.probability.push({
-		        value: prob,
-		        date: now
-	          })
-
-	          team.history.projected.push({
-		        value: team.projection,
-		        date: now
-	          })
-
-	          team.history.score.push({
-		        value: team.score,
-		        date: now
-	          })
-
-	          if (prob > .5) {
-		        teams[i].projected_wins += 1
-	          } else {
-		        teams[i].projected_losses += 1
-	          }
-
-	          teams[i].projected_points_for = teams[i].points_for + team.projection
-	          break
-	        }
+	    let found = false
+	    for (let i = 0; i < players.length; i++) {
+	      if (players[i].value === name) {
+	        found = true
+	        break
 	      }
 	    }
 
-	    analyze(prediction.teams ? prediction.teams[0] : { prob: prediction.team1.prob }, teams[0])
-	    analyze(prediction.teams ? prediction.teams[1] : { prob: prediction.team2.prob }, teams[1])
+	    if (!found)
+	      console.log(`could not find ${name}`)
+	    else
+	      item.values.push(name)
+	  })
 
-	    data.odds.push(teams)
-      })
+	  teams.push(item)
+    }
 
-      data.standings = result.standings
+    addTeam(boxscore.home)
+    addTeam(boxscore.away)
 
-      jsonfile.writeFileSync(data_path, data, {spaces: 4})
+    let params = [
+	  'scoring=non_ppr',
+	  'qb=pass4',
+	  'dst=mfl',
+      'monday=True',
+	  'pts1=' + teams[0].pts,
+	  'pts2=' + teams[1].pts
+    ]
+
+    if (teams[0].values.length) {
+	  teams[0].values.forEach(v => params.push(`team1=${v}`))
+    }
+
+    if (teams[1].values.length) {
+      teams[1].values.forEach(v => params.push(`team2=${v}`))
+    }
+
+    const url = 'https://api.fantasymath.com/v2/matchup-monday/?' + params.join('&')
+
+    if (!teams[0].values.length && teams[0].pts < teams[1].pts)
+	  return next(null, {
+	    team1: { prob: 0 },
+	    team2: { prob: 1 }
+	  })
+
+    if (!teams[1].values.length && teams[1].pts < teams[0].pts)
+	  return next(null, {
+	    team1: { prob: 1 },
+	    team2: { prob: 0 }
+	  })
+
+    request({
+	  url: url,
+	  json: true
+    }, function(err, res, json) {
+	  next(err, json)
     })
+  }, function(err, predictions) {
+    if (err)
+	  return console.log(err)
+
+    let data = {
+	  odds: []
+    }
+
+    predictions.forEach(function(prediction, index) {
+      if (prediction.errors.length) {
+        console.log(prediction.errors)
+        return
+      }
+
+	  let boxscore = current_boxscores[index]
+
+	  const analyze = function({ hist, prob, mean }, team) {
+        let leagueTeam = league.formatted[team.id]
+        const { abbrev, name } = leagueTeam
+        team.abbrev = abbrev
+        team.name = name
+	    leagueTeam.projected_wins = leagueTeam.record.overall.wins
+	    leagueTeam.projected_losses = leagueTeam.record.overall.losses
+	    leagueTeam.projected_ties = leagueTeam.record.overall.ties
+	    team.probability = prob
+	    team.history = getHistory(leagueTeam.id)
+
+	    const now = moment().format()
+
+        team.histogram = hist
+        team.mean = mean || team.projection
+
+	    team.history.probability.push({
+		  value: prob,
+		  date: now
+	    })
+
+	    team.history.projected.push({
+		  value: team.projection,
+		  date: now
+	    })
+
+	    team.history.score.push({
+		  value: team.score,
+		  date: now
+	    })
+
+	    if (prob > .5) {
+		  leagueTeam.projected_wins += 1
+	    } else {
+		  leagueTeam.projected_losses += 1
+	    }
+
+	    leagueTeam.projected_points_for = leagueTeam.points + team.projection
+	  }
+
+	  analyze(prediction.teams ? prediction.teams[0] : { prob: prediction.team1.prob }, boxscore.home)
+	  analyze(prediction.teams ? prediction.teams[1] : { prob: prediction.team2.prob }, boxscore.away)
+
+	  data.odds.push([boxscore.home, boxscore.away])
+
+      data.standings = league.formatted
+
+    })
+
+    jsonfile.writeFileSync(data_path, data, {spaces: 4})
   })
 })

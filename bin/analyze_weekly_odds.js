@@ -10,6 +10,8 @@ const { getPlayerName } = machine.utils
 
 const config = require('../config')
 const current_week = moment().diff(config.week_one, 'weeks')
+const weekStart = moment(config.week_one).add(current_week, 'weeks').format('YYYYMMDD')
+const weekEnd = moment(config.week_one).add(current_week + 1, 'weeks').format('YYYYMMDD')
 
 const run = async () => {
   const positions = ['qb', 'rb', 'wr', 'te', 'k', 'dst']
@@ -19,20 +21,20 @@ const run = async () => {
     projection_data[position] = data
   }
 
-  const schedule = await espn.schedule.getByLeague(config.espn)
+  const data = await espn.boxscore.get({
+    weekStart,
+    weekEnd,
+    scoringPeriodId: current_week,
+    ...config.espn
+  })
+  const matchups = data.formatted.filter(m => m.week === current_week)
 
-  const matchups = schedule[current_week]
-  const home_ids = matchups.map(m => m.home_id)
-
-  let boxscores = []
-  for (const teamId of home_ids) {
-    const boxscore = await espn.boxscore.get({
-      scoringPeriodId: current_week,
-      teamId,
-      ...config.espn
-    })
-    boxscores.push(boxscore)
-  }
+  const boxscores = matchups.map((m) => {
+    let teams = []
+    teams.push(m.home)
+    teams.push(m.away)
+    return teams
+  })
 
   const defenseAlias = {
     'D/ST': 'dst',
@@ -45,14 +47,12 @@ const run = async () => {
 
   for (const boxscore of boxscores) {
     for (const team of boxscore) {
-
       team.ceiling = 0
       team.floor = 0
       team.fantasypros_projection = 0
 
-      for (const player of team.players) {
+      for (const player of team.starters) {
         let position = [normalizePosition(player.position)]
-        //console.log(position)
         if (position[0] === 'rb/wr') {
           position = ['rb', 'wr']
         }
@@ -74,7 +74,6 @@ const run = async () => {
           team.ceiling += projection.ceiling
           team.floor += projection.floor
           team.fantasypros_projection += projection.points
-          //console.log(projection)
         }
       }
     }

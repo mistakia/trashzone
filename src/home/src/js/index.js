@@ -1,6 +1,6 @@
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
-let week_one = moment('2018-08-28')
+let week_one = moment('2019-08-27')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
@@ -13,21 +13,7 @@ const getMoneyline = (decimal) => {
   return Math.ceil(moneyline / 10) * 10
 }
 
-App.api('/news/fantasy').get().success((data) => {
-  var parent = document.querySelector('#nfl-news ul')
-  data.items.forEach(function(i) {
-    Elem.create({
-      parent: parent,
-      tag: 'li',
-      text: i
-    })
-  })
-}).error((message) => {
-  console.error(message.error)
-})
-
 App.api('/odds').get().success((data) => {
-  console.log(data)
   let playoff_odds = []
   let championship_odds = []
 
@@ -74,46 +60,41 @@ App.api('/odds').get().success((data) => {
 })
 
 App.api('/news/rotoworld').get().success((data) => {
-  var parent = document.querySelector('#player-news ul')
+  const newsParent = document.querySelector('#player-news ul')
+  const analysisParent = document.querySelector('#player-analysis')
   data.items.forEach(function(i) {
-    Elem.create({
-      parent: parent,
-      tag: 'li',
-      childs: [{
-	    tag: i.source ? 'a' : 'span',
-	    text: i.report,
-	    attributes: {
-	      href: i.source,
-	      target: '_blank'
-	    }
-      }]
-    })
+    let childs = [{
+	  tag: i.attributes.source_url ? 'a' : 'span',
+	  text: i.attributes.headline,
+	  attributes: {
+	    href: i.attributes.source_url,
+	    target: '_blank'
+	  }
+    }]
+
+    if (i.attributes.analysis) {
+      childs.push({
+        tag: 'div',
+        html: i.attributes.analysis.processed
+      })
+      Elem.create({
+        parent: analysisParent,
+        tag: 'article',
+        childs
+      })
+    } else {
+      Elem.create({
+        parent: newsParent,
+        tag: 'li',
+        childs
+      })
+    }
   })
 }).error((message) => {
   console.error(message.error)
 })
 
-App.api('/adds').get().success((data) => {
-  var parent = document.querySelector('#adds ul')
-  var items = data.items.slice(0, 15)
-
-  items.forEach(function(i) {
-    console.log(i)
-    i.detail.forEach(function(d) {
-      console.log(d)
-      Elem.create({
-	    parent: parent,
-	    tag: 'li',
-	    text: `${d.team} - ${d.player}`
-      })
-    })
-  })
-}).error((message) => {
-  console.log(message.error)
-})
-
 App.data('/weekly_odds.json').get().success(({ boxscores, updated_at }) => {
-  console.log(boxscores)
   let odds = []
   let parent = document.querySelector('#matchups')
   boxscores.forEach(function(matchups) {
@@ -171,7 +152,6 @@ App.data('/weekly_odds.json').get().success(({ boxscores, updated_at }) => {
 
   let weekly_odds_parent = document.querySelector('#weekly-odds')
   odds.forEach((o) => {
-    console.log(o.team)
     o.moneyline = getMoneyline(o.odds)
   })
 
@@ -198,67 +178,74 @@ App.data('/weekly_odds.json').get().success(({ boxscores, updated_at }) => {
 })
 
 
-  /* App.api('/schedule').get().success((data) => {
-   *   let current_matchups = data.items[current_week]
-   *   console.log(current_matchups)
-   * }).error((message) => {
-   *   console.log(message.error)
-   * })
-   *  */
-  App.api('/standings').get().success((data) => {
-    let standings = data.items.slice()
-    let leaders = data.items.sort((a, b) => {
-      return b.points_for - a.points_for
-    }).slice(0,4)
-
-    let leaders_parent = document.querySelector('#most-points ol')
-    leaders.forEach(function(i) {
-      Elem.create({
-        parent: leaders_parent,
-        tag: 'li',
-        childs: [{
-	      tag: 'a',
-	      attributes: {
-	        href: i.team_href,
-	        target: '_blank'
-	      },
-	      text: `${i.team} (${i.points_for})`
-        }]
-      })
+App.data('/league.json').get().success((data) => {
+  console.log(data)
+  let standings = data.slice().sort((a, b) => a.playoffSeed - b.playoffSeed)
+  let leaders = data.sort((a, b) => b.points - a.points).slice(0,6)
+  let leaders_parent = document.querySelector('#most-points ol')
+  leaders.forEach(function(i) {
+    Elem.create({
+      parent: leaders_parent,
+      tag: 'li',
+      childs: [{
+	    tag: 'a',
+	    attributes: {
+	      href: i.href,
+	      target: '_blank'
+	    },
+	    text: `${i.name} (${i.points})`
+      }]
     })
-
-    let standings_parent = document.querySelector('#standings ol')
-    standings.forEach(function(i) {
-      Elem.create({
-        parent: standings_parent,
-        tag: 'li',
-        childs: [{
-	      tag: 'a',
-	      attributes: {
-	        href: i.team_href,
-	        target: '_blank'
-	      },
-	      text: `${i.team} (${i.record})`
-        }]
-      })
-    })
-  }).error((err) => {
-    console.log(err)
   })
 
-  App.api('/drops').get().success((data) => {
-    var parent = document.querySelector('#drops ul')
-    var items = data.items.slice(0, 15)
-
-    items.forEach(function(i) {
-      i.detail.forEach(function(d) {
-        Elem.create({
-	      parent: parent,
-	      tag: 'li',
-	      text: `${d.team} - ${d.player}`
-        })
-      })
+  let standings_parent = document.querySelector('#standings ol')
+  standings.forEach(function(i) {
+    Elem.create({
+      parent: standings_parent,
+      tag: 'li',
+      childs: [{
+	    tag: 'a',
+	    attributes: {
+	      href: i.href,
+	      target: '_blank'
+	    },
+	    text: `${i.name} (${i.record.overall.wins}-${i.record.overall.losses}-${i.record.overall.ties})`
+      }]
     })
-  }).error((message) => {
-    console.log(message.error)
   })
+}).error((err) => {
+  console.log(err)
+})
+
+App.data('/drops.json').get().success((data) => {
+  var parent = document.querySelector('#drops ul')
+  var items = data.slice(0, 15)
+
+  items.forEach(function(i) {
+    if (i.detail.player)
+      Elem.create({
+	    parent: parent,
+	    tag: 'li',
+	    text: i.detail.player
+      })
+  })
+}).error((message) => {
+  console.log(message.error)
+})
+
+App.data('/adds.json').get().success((data) => {
+  var parent = document.querySelector('#adds ul')
+  var items = data.slice(0, 15)
+
+  items.forEach(function(i) {
+    if (i.detail.player) {
+      Elem.create({
+	    parent: parent,
+	    tag: 'li',
+	    text: i.detail.player
+      })
+    }
+  })
+}).error((message) => {
+  console.log(message.error)
+})

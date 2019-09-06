@@ -1,10 +1,10 @@
 document.getElementById('date').innerHTML = moment().format('dddd, MMMM D, YYYY')
 
-let week_one = moment('2018-08-28')
+let week_one = moment('2019-08-27')
 let current_week = moment().diff(week_one, 'weeks')
 document.getElementById('current-week').innerHTML = `Week ${current_week}`
 
-App.data('/league.json').get().success((response) => {
+App.data('/league_stats.json').get().success((response) => {
   const data = response.owners
   const records = response.records
 
@@ -16,12 +16,16 @@ App.data('/league.json').get().success((response) => {
     const label = {
       'wins': 'Total Wins',
       'losses': 'Total Losses',
-      'points': 'Most Points (Single)',
+      'points': 'Total Points',
       'points_total':'Total Points',
       'highest_score': 'Highest Single Game Point Total',
       'lowest_score': 'Lowest Single Game Point Total',
       'most_wins': 'Single Season Most Wins',
-      'most_losses': 'Single Season Most Losses'
+      'most_losses': 'Single Season Most Losses',
+      'highest_score_in_loss': 'Highest Score in Loss',
+      'lowest_score_in_win': 'Lowest Score in Win',
+      'largest_margin': 'Largest Margin of Victory',
+      'smallest_margin': 'Smallest Margin of Victory'
     }
 
     for (const stat in records[type]) {
@@ -30,8 +34,10 @@ App.data('/league.json').get().success((response) => {
         continue
       }
 
+      const name = record.owners.map(o => `${o.firstName} ${o.lastName}`).join(', ')
+
       items.push({
-        html: `<div><span class="label">${label[stat]}</span>  ${record.owner} <strong>(${record.value.toFixed(0)})</strong> <small>${record.season}</small></div>`
+        html: `<div><span class="label">${label[stat]}</span>  ${name} <strong>(${record.value.toFixed(2)})</strong> <small>${record.season}</small></div>`
       })
     }
 
@@ -105,11 +111,12 @@ App.data('/league.json').get().success((response) => {
   }
 
   const overall_parent = document.querySelector('main table.overall tbody')
-  for (const name in data) {
-    if (name === 'status') {
+  for (const ownerId in data) {
+    if (ownerId === 'status') {
       continue
     }
-    const stats = data[name]
+    const stats = data[ownerId]
+    const { name } = stats
 
     const overall_tds = [{
       tag: 'td',
@@ -331,7 +338,7 @@ App.data('/league.json').get().success((response) => {
     for (const opponent in stats.opponents) {
       const stat = stats.opponents[opponent]
       opponents_childs.push({
-        html: `<div><strong>${stat.wins}-${stat.losses}</strong> vs ${opponent}<small>${stat.points.toFixed(0)} to ${stat.points_against.toFixed(0)}</small></div>`
+        html: `<div><strong>${stat.wins}-${stat.losses}</strong> vs ${stat.name}<small>${stat.points.toFixed(0)} to ${stat.points_against.toFixed(0)}</small></div>`
       })
     }
     Elem.create({

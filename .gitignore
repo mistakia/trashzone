@@ -3,6 +3,12 @@
 node_modules
 tmp
 
+config.js
+
+data/league.json
+data/drops.json
+data/adds.json
+data/league_stats.json
 data/draft_analysis.json
 data/odds_analysis.json
 data/odds_analysis_*.json
