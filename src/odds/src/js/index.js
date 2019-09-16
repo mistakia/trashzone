@@ -213,7 +213,7 @@ const init = function() {
 	        href: i.team_href,
 	        target: '_blank'
 	      },
-	      html: `${i.team} <small>${i.projected_points_for.toFixed(1)}</small>`
+	      html: `${i.name} <small>${i.projected_points_for.toFixed(1)}</small>`
 	    }]
       })
     })
@@ -244,7 +244,7 @@ const init = function() {
 	        href: i.team_href,
 	        target: '_blank'
 	      },
-	      html: `${i.team} <small>${i.projected_wins}-${i.projected_losses}-${i.projected_ties}</small>`
+	      html: `${i.name} <small>${i.projected_wins}-${i.projected_losses}-${i.projected_ties}</small>`
 	    }]
       })
     })

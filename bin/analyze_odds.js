@@ -155,7 +155,7 @@ async.parallel({
     }
 
     predictions.forEach(function(prediction, index) {
-      if (prediction.errors.length) {
+      if (prediction.errors && prediction.errors.length) {
         console.log(prediction.errors)
         return
       }

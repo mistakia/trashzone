@@ -32,6 +32,8 @@ for (const type of types) {
   }
 }
 
+records.season.win_streak = { value: 0 }
+records.season.loss_streak = { value: 0 }
 records.season.most_wins = { value: 0 }
 records.season.most_losses = { value: 0 }
 
@@ -283,6 +285,8 @@ const main = async ({ leagueId }) => {
     teams.forEach((team) => {
       seasonStats[team.id] = {
         id: team.id,
+        win_streak: 0,
+        loss_streak: 0,
         season_points: 0,
         playoff_points: 0,
         wins: 0,
@@ -299,8 +303,12 @@ const main = async ({ leagueId }) => {
       }
 
       if (win) {
+        team.win_streak += 1
+        team.loss_streak = 0
         team.wins += 1
       } else {
+        team.win_streak = 0
+        team.loss_streak += 1
         team.losses += 1
       }
     }
@@ -371,6 +379,22 @@ const main = async ({ leagueId }) => {
           const owner = owners[ownerId]
           owner.playoff.appearances += 1
         })
+      }
+
+      if (stats.win_streak > records.season.win_streak.value) {
+        records.season.win_streak = {
+          value: stats.win_streak,
+          season: seasonId,
+          owners: teamOwners
+        }
+      }
+
+      if (stats.loss_streak > records.season.loss_streak.value) {
+        records.season.loss_streak = {
+          value: stats.loss_streak,
+          season: seasonId,
+          owners: teamOwners
+        }
       }
 
       if (stats.season_points > records.season.points.value) {
