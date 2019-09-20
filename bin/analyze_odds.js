@@ -80,7 +80,7 @@ async.parallel({
 	  }
 
 	  team.starters.forEach(function(player) {
-	    if (player.points || isNaN(player.points)) {
+	    if (player.active) {
 	      //TODO: get previous prediction
 	      //TODO: calculate projection based on time remaining for player
 	      //TODO: add to spread
