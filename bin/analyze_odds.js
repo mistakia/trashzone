@@ -23,12 +23,13 @@ try {
 }
 
 const getHistory = function(team_id) {
-  if (!odds_data.odds || !odds_data.odds.length)
+  if (!odds_data.odds || !odds_data.odds.length) {
     return {
       probability: [],
       score: [],
       projected: []
     }
+  }
 
   let matchups = odds_data.odds
 
@@ -42,6 +43,12 @@ const getHistory = function(team_id) {
     if (matchup[1].id === team_id) {
       return matchup[1].history
     }
+  }
+
+  return {
+    probability: [],
+    score: [],
+    projected: []
   }
 }
 
