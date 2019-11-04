@@ -41,9 +41,7 @@ const byPositionDefault = () => {
 
 const run = async () => {
   const { formatted: schedule } = await espn.schedule.get(config.espn)
-  console.log(schedule)
-  const { formatted: teams } = await espn.league.get(config.espn)
-  console.log(teams)
+  const { formatted: teams, data } = await espn.league.get(config.espn)
 
   const boxscoresByTeam = emptyTeamsObject([])
   let resultsByTeam = emptyTeamsObject({
@@ -58,6 +56,12 @@ const run = async () => {
     starterPoints: 0,
     positions: byPositionDefault(),
     waiverTransactions: []
+  })
+
+  const teamIds = Object.keys(teams)
+  teamIds.forEach(teamId => {
+    resultsByTeam[teamId].name = teams[teamId].name
+    resultsByTeam[teamId].image = teams[teamId].logo
   })
 
   /* const getBoxscores = async (teamId, week) => {
@@ -92,7 +96,6 @@ const run = async () => {
     endDate: waiverEndDate,
     ...config.espn
   })
-  console.log(adds)
   const drops = await espn.activity.get({
     activityType: 2,
     teamId: -1,
@@ -101,7 +104,6 @@ const run = async () => {
     endDate: waiverEndDate,
     ...config.espn
   })
-  console.log(drops)
 
   const waivers = adds.filter(add => add.type.includes('Waivers'))
   let waiversByTeam = emptyTeamsObject([])
@@ -115,8 +117,9 @@ const run = async () => {
     let resultsTeam = resultsByTeam[teamId]
 
     for (const add of transactions) {
-      const detail = add.detail[0]
+      const { detail } = add
       const { player } = detail
+      if (!detail.position) console.log(detail)
       const playerPosition = formatPosition(detail.position)
       let resultsPosition = resultsTeam.positions[playerPosition]
       const bid = parseInt(/\$(\d+)/ig.exec(detail.full)[1], 10)
@@ -126,7 +129,7 @@ const run = async () => {
         moment(drop.date, 'ddd, MMM D h:m A').isAfter(add_timestamp)
       ))
       const drop = team_drops_after_pickup.filter((drop) => (
-        drop.detail[0].player === player
+        drop.detail.player === player
       ))[0]
       const dropped = !!drop
 
@@ -140,8 +143,9 @@ const run = async () => {
         moment()
       const firstWeek = startDate.diff(config.week_one, 'weeks') - 1
       const endWeek = endDate.diff(config.week_one, 'weeks')
+      let games_started = []
       /* const boxscores = boxscoresByTeam[teamId].slice(firstWeek, endWeek)
-       * let games_started = []
+       *
        * if (boxscores.length) {
        *   games_started = boxscores.filter((boxscore) => {
        *     const start = boxscore.players.find(p => p.name === player)
