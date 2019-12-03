@@ -51,6 +51,7 @@ const run = async () => {
       team.floor = 0
       team.fantasypros_projection = 0
 
+      if (!team.starters) continue
       for (const player of team.starters) {
         let position = [normalizePosition(player.position)]
         if (position[0] === 'rb/wr') {
@@ -81,7 +82,7 @@ const run = async () => {
 
   for (const boxscore of boxscores) {
     for (const team of boxscore) {
-      const dev = (team.ceiling - team.fantasypros_projection) / 2
+      const dev = ((team.ceiling - team.fantasypros_projection) / 2) || 10
       team.distribution = gaussian(team.fantasypros_projection, Math.pow(dev, 2))
     }
 
