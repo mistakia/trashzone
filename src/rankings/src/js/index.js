@@ -39,7 +39,23 @@ App.data('/power_rankings.json').get().success(({ standings, history, transactio
   console.log(transactions)
   console.log(standings)
   console.log(history)
-  standings.forEach((team, index) => {
+  const sorted_standings = standings.sort((a, b) => {
+    const p = b.playoff_odds - a.playoff_odds
+
+    if (p) {
+      return p
+    }
+
+    const f = b.first_round_bye_odds - a.first_round_bye_odds
+
+    if (f) {
+      return f
+    }
+
+    return b.championship_odds - a.championship_odds
+  })
+
+  sorted_standings.forEach((team, index) => {
 
     const html = `
       <div class='heading'>
